@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://ai-tools-compared.com/sitemap.xml
+
+# Block common bot paths
+Disallow: /api/
+Disallow: /_next/
