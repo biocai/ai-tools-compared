@@ -164,10 +164,14 @@
 - 英文撰写，目标1500-3000词
 
 **Step 5 — 配图** (30min)
-- 产品Logo/截图
-- 对比表格截图
-- 性能测试结果可视化
-- 用AI生成信息图（可选）
+- 图片保存目录：`site/images/articles/{文章slug}/`
+- HTML用相对路径引用：`/images/articles/{slug}/hero.png`
+- 每篇文章3-5张图，类型：
+  - Hero banner：对比主题banner（两个工具logo并排等）
+  - 数据可视化：benchmark柱状图、pricing对比条形图（Python matplotlib生成）
+  - 信息图：决策流程图、优劣势雷达图
+  - 功能截图：工具界面实际截图或高质量mockup
+  - 对比表格：做成可视化图表而非纯文字表格
 
 **Step 6 — 排版** (15min)
 - HTML模板填充
