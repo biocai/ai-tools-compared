@@ -1,603 +1,531 @@
-# AI Tools Compared — 项目规划
+# AI Tools Compared — 项目规划文档
 
-> 项目名称：AI Tools Compared  
-> 站点域名：ai-tools-compared.com  
-> 项目路径：`/Volumes/work/AI工具测评/`  
-> 站点路径：`/Volumes/work/AI工具测评/site/`  
-> 文章路径：`/Volumes/work/AI工具测评/site/articles/`  
-> 变现模式：Google AdSense (CPC $5-30, RPM $15-40)  
-> 部署方案：Vercel（免费）  
-> 技术方案：独立HTML + 内联CSS（零依赖，单文件）  
-> 起始日期：2026年7月28日  
-> 收入目标：月 $2,000（第6个月）  
+> **定位**: AI工具领域的 Wirecutter — 深度横向对比，帮用户做出选型决策
+> **域名**: https://ai-tools-compared.com
+> **项目路径**: `/Volumes/work/AI工具测评/`
+> **站点路径**: `/Volumes/work/AI工具测评/site/`
+> **Git仓库**: https://github.com/biocai/ai-tools-compared
+> **部署平台**: Vercel（project: shuai5）
+> **开始日期**: 2026年7月28日
+> **核心指标**: 12个月发布100篇对比文章，M14-16月达到 $2,000/月 AdSense 收入
 
 ---
 
-## 一、项目概述
+## 一、项目现状
 
-### 1.1 为什么要做AI工具测评站
+### 1.1 已完成基建
 
-AI工具是2024-2026年增长最快的搜索赛道之一，特点：
-- **CPC极高**：AI工具关键词单次点击成本 $5-30，远高于一般科技类 $1-5
-- **搜索量爆发**："best AI tools" 月搜索量 200K+，细分工具对比词数百个KD<30
-- **内容可规模化**：工具评测有固定模板（价格/功能/优缺点/适用人群），AI可批量生产
-- **广告主充沛**：OpenAI、Anthropic、Google、Microsoft等巨头每年数亿美金广告预算
-- **更新频率高**：AI工具迭代极快（周级别），需要持续更新的内容天然有SEO优势
+| 项目 | 状态 | 详情 |
+|------|------|------|
+| 域名注册 | ✅ | ai-tools-compared.com（Cloudflare Registrar，$9.77/年） |
+| DNS配置 | ✅ | A记录 + CNAME指向Vercel，灰云模式 |
+| SSL证书 | ✅ | Vercel自动签发，HTTPS正常 |
+| Vercel部署 | ✅ | CLI已登录，project: shuai5，自动部署 |
+| Git仓库 | ✅ | github.com/biocai/ai-tools-compared（public, main分支） |
+| GA4统计 | ✅ | 已注入所有页面 |
+| 首页 | ✅ | 深色科技风，8大分类，对比卡片（GPT-5.6 Sol / Claude Opus 5 / Gemini 3.6 Flash） |
+| 法律页面 | ✅ | About / Privacy / Terms / Contact |
+| SEO基础 | ✅ | robots.txt + sitemap.xml |
+| 已有文章 | 1篇 | ChatGPT vs Claude vs Gemini 三方对比 |
 
-### 1.2 竞品分析
+### 1.2 待完成
 
-| 维度 | 竞品A: there's an AI for that | 竞品B: futurpedia | 竞品C: PCMag/Forbes | 我们的机会 |
-|------|---------------------------|-----------------|---------------------|-----------|
-| 形式 | 工具目录/导航站 | 评测博客 | 传统科技媒体 | 深度对比评测 |
-| DR/DA | DR75+ | DR55+ | DR90+ | 新站长尾切入 |
-| 内容深度 | 浅（列表+简介） | 中（单工具评测） | 深（专业评测） | **横向深度对比** |
-| 更新频率 | 高（社区提交） | 中（2-3篇/周） | 低（月级别） | 高频更新 |
-| 内容缺口 | 缺乏横向对比 | 缺乏最新工具 | 缺乏性价比分析 | **用户最想看的：A vs B vs C** |
-
-**差异化定位**：不做工具目录（已有there's an AI for that），不做单工具评测（竞品太多），**专做横向对比评测**——用户决策的关键环节。定位为"AI工具界的Wirecutter"。
-
-### 1.3 当前状态
-
-| 项目 | 状态 |
-|------|------|
-| 域名 | ai-tools-compared.com（已注册） |
-| 首页 | ✅ 已完成（内联CSS独立HTML） |
-| 第1篇文章 | ✅ ChatGPT vs Claude vs Gemini（2026-07-28） |
-| AdSense | ❌ 未申请（需50+篇后再申请） |
-| 部署 | ❌ 未部署到Vercel |
-| SEO基础 | ❌ GSC/GA未配置 |
-| 文章总数 | 1篇 |
+| 项目 | 优先级 | 说明 |
+|------|--------|------|
+| Google Search Console | 🔴 高 | 待用户添加TXT验证记录完成域名验证 |
+| AdSense申请 | 🔴 高 | 需GSC验证通过+一定流量+内容量后申请 |
+| 文章模板标准化 | 🟡 中 | 需要一套可复用的对比文章HTML模板 |
+| 内链体系 | 🟡 中 | 首页→文章→文章间的交叉链接 |
+| 外链建设 | 🟢 低 | 内容到位后再做 |
 
 ---
 
-## 二、关键词策略
+## 二、内容策略
 
-### 2.1 关键词分层
-
-**Tier 1 — 支柱词（月搜索量 > 50K，KD 50-70）**
-做大型综合对比页，长文3000-5000字
-
-| 关键词 | 月搜索量(估) | CPC(估) | 文章类型 |
-|--------|-------------|---------|---------|
-| best AI tools 2026 | 200K | $8-15 | 年度综合榜单 |
-| AI chatbot comparison | 80K | $10-20 | 主流AI助手对比 |
-| ChatGPT alternatives | 60K | $8-15 | 免费替代方案 |
-
-**Tier 2 — 次级词（月搜索量 5K-50K，KD 20-40）**
-每篇2000-3500字的深度对比
-
-| 关键词 | 月搜索量(估) | CPC(估) | 文章类型 |
-|--------|-------------|---------|---------|
-| ChatGPT vs Claude | 40K | $12-25 | 双工具对比 |
-| best AI image generator | 35K | $10-18 | 5-8款工具对比 |
-| AI writing tools comparison | 25K | $8-15 | 细分品类对比 |
-| best AI coding assistant | 20K | $15-25 | 开发者工具对比 |
-| Perplexity vs ChatGPT | 15K | $10-20 | 搜索类AI对比 |
-| Claude vs GPT | 12K | $12-22 | 模型能力对比 |
-| Midjourney vs DALL-E | 10K | $8-15 | 图像生成对比 |
-| Notion AI vs alternatives | 8K | $8-15 | 生产力工具对比 |
-
-**Tier 3 — 长尾词（月搜索量 500-5K，KD < 20）**
-批量生产的主力区域，每篇1500-2500字
-
-| 关键词模板 | 举例 | 数量级 |
-|-----------|------|--------|
-| [ToolA] vs [ToolB] | Cursor vs Copilot, Gamma vs Tome | 50+ |
-| best AI for [use case] | best AI for resume, best AI for students | 30+ |
-| [Tool] pricing/alternatives/free | Claude free tier, Midjourney alternatives | 20+ |
-| best AI [category] for [audience] | best AI for small business 2026 | 20+ |
-| how to use [tool] for [task] | how to use ChatGPT for coding | 20+ |
-
-### 2.2 高价值长尾关键词清单（优先写）
-
-| 优先级 | 关键词 | 类型 | CPC | 预估字数 |
-|-------|--------|------|-----|---------|
-| P0 | ChatGPT vs Claude vs Gemini 2026 | 三方对比 | $15-25 | ✅已完成 |
-| P0 | best AI writing tools 2026 | 品类榜单 | $10-18 | 4000 |
-| P0 | best AI image generators 2026 | 品类榜单 | $10-18 | 4000 |
-| P0 | Cursor vs GitHub Copilot vs Windsurf | 三方对比 | $15-25 | 3000 |
-| P1 | Perplexity vs ChatGPT vs Gemini | 搜索AI对比 | $12-20 | 3000 |
-| P1 | Midjourney vs DALL-E 3 vs Stable Diffusion | 图像对比 | $8-15 | 3000 |
-| P1 | Claude vs ChatGPT for coding | 编程对比 | $15-25 | 2500 |
-| P1 | Notion AI vs Obsidian AI | 笔记对比 | $8-12 | 2500 |
-| P1 | best free AI tools 2026 | 免费榜单 | $8-15 | 4000 |
-| P2 | Claude free tier vs ChatGPT free | 免费层对比 | $10-20 | 2500 |
-| P2 | Grammarly vs AI alternatives | 写作辅助对比 | $8-12 | 2500 |
-| P2 | ElevenLabs vs Play.ht vs Murf | TTS对比 | $8-15 | 2500 |
-| P2 | Runway vs Pika vs Kling vs Sora | 视频AI对比 | $10-18 | 3000 |
-| P2 | Suno vs Udio vs MusicGen | 音乐AI对比 | $8-15 | 2500 |
-| P2 | Gamma vs Tome vs Beautiful.ai | PPT AI对比 | $8-12 | 2500 |
-| P3 | Otter.ai vs Fireflies vs tl;dv | 会议AI对比 | $8-15 | 2500 |
-| P3 | Canva AI vs Adobe Firefly vs Figma AI | 设计AI对比 | $8-15 | 2500 |
-| P3 | Jenni AI vs Copysmith vs Jasper | 营销文案对比 | $8-12 | 2500 |
-| P3 | best AI for students | 人群细分 | $8-15 | 3000 |
-| P3 | best AI for small business | 人群细分 | $10-18 | 3000 |
-| P3 | best AI research tools | 学术研究 | $10-18 | 3000 |
-| P3 | Descript vs Riverside vs Podcastle | 播客AI对比 | $8-12 | 2500 |
-| P3 | v0 vs Lovable vs Bolt.new | AI建站对比 | $10-20 | 2500 |
-
----
-
-## 三、内容分类与站点架构
-
-### 3.1 内容分类（8大支柱）
+### 2.1 八大内容支柱
 
 ```
-Home (综合入口)
-├── /articles/                          (所有文章)
-│   ├── chatbot-comparisons/            (AI对话助手对比)
-│   ├── image-generation/               (AI图像生成对比)
-│   ├── video-generation/                (AI视频生成对比)
-│   ├── writing-tools/                  (AI写作工具对比)
-│   ├── coding-tools/                   (AI编程工具对比)
-│   ├── productivity/                   (AI生产力工具对比)
-│   ├── audio-music/                    (AI音频/音乐对比)
-│   └── research-search/               (AI研究/搜索对比)
-├── /category/[slug].html              (分类索引页，每类1个)
-├── /about.html                        (关于页面)
-├── /privacy.html                      (隐私政策)
-├── /terms.html                        (服务条款)
-└── /contact.html                      (联系页面)
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│  ① Chatbot  │ │  ② Image   │ │   ③ Video   │ │  ④ Writing  │
+│  对话AI     │ │  AI绘画     │ │  AI视频     │ │  AI写作     │
+├─────────────┤ ├─────────────┤ ├─────────────┤ ├─────────────┤
+│  ⑤ Coding   │ │ ⑥ Product. │ │   ⑦ Audio   │ │  ⑧ Research │
+│  AI编程     │ │  效率工具   │ │  AI音频     │ │  AI搜索研究 │
+└─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘
 ```
 
-### 3.2 分类文章分布规划
+### 2.2 文章类型矩阵
 
-| 分类 | 目标文章数 | 典型文章 |
-|------|-----------|---------|
-| Chatbot Comparisons | 15篇 | ChatGPT vs Claude, Perplexity vs ChatGPT, Gemini vs ChatGPT, Grok vs ChatGPT, DeepSeek vs Claude, 免费AI对比 |
-| Image Generation | 12篇 | Midjourney vs DALL-E, Stable Diffusion vs MJ, Leonardo vs MJ, AI头像工具, AI设计工具 |
-| Video Generation | 8篇 | Runway vs Pika vs Sora, AI视频编辑器, AI广告制作, AI短视频工具 |
-| Writing Tools | 15篇 | AI写作工具总榜, Grammarly vs AI, AI论文工具, AI文案工具, AI小说工具 |
-| Coding Tools | 12篇 | Cursor vs Copilot, AI代码审查, AI编程教学, AI低代码平台 |
-| Productivity | 12篇 | Notion AI vs Obsidian, AI会议工具, AI日程管理, AI笔记工具 |
-| Audio & Music | 8篇 | ElevenLabs vs Murf, Suno vs Udio, AI播客工具, AI翻译工具 |
-| Research & Search | 8篇 | AI搜索引擎对比, AI学术工具, AI数据分析工具, AI知识管理 |
-| **合计** | **90篇** | + 10篇时效性/节日专题 = **100篇** |
+| 类型 | 说明 | 示例 | 占比 |
+|------|------|------|------|
+| **三方对比** | 3个以上工具的横向评测 | "GPT-5.6 vs Claude Opus 5 vs Gemini 3.6 Flash" | 30% |
+| **双雄对决** | 2个竞品的深度PK | "Midjourney v7 vs DALL-E 4: Which Creates Better Art?" | 40% |
+| **同类横评** | 同品类TOP5/10榜单 | "Best AI Coding Assistants in 2026 (Top 7 Tested)" | 20% |
+| **场景指南** | 基于使用场景的推荐 | "Best AI Tool for Academic Research: A PhD Student's Guide" | 10% |
+
+### 2.3 2026年AI工具全景（对比素材库）
+
+#### Chatbot / 通用AI
+- **OpenAI ChatGPT**: GPT-5.6 Sol (flagship), GPT-5.5 (default free), GPT-5.6 Terra/Luna
+- **Anthropic Claude**: Opus 5 (flagship, 7/24发布), Sonnet 5, Fable 5
+- **Google Gemini**: 3.6 Flash (7/21发布), 3.5 Flash, 3.1 Pro
+- **Meta**: Muse Spark 1.1 (7/9发布, 首次收费API)
+- **xAI**: Grok 3/4
+- **Mistral**: Large / Medium / Small
+- **DeepSeek**: V3/R1
+
+#### Image Generation
+- **Midjourney**: v7 (最新版)
+- **OpenAI**: DALL-E 4 / GPT Image
+- **Google**: Imagen 4
+- **Stability AI**: Stable Diffusion 4 / SDXL Turbo
+- **Adobe**: Firefly 4
+- **Ideogram**: v3
+- **Flux**: (Black Forest Labs)
+
+#### Video Generation
+- **OpenAI**: Sora
+- **Runway**: Gen-4
+- **Luma Dream Machine**: 最新版
+- **Kling (快手)**: 可灵
+- **Pika**: 最新版
+- **Google**: Veo 3
+- **Adobe**: Premiere AI
+
+#### AI Writing
+- **Jasper**: 最新版
+- **Copy.ai**: 最新版
+- **Writesonic**: 最新版
+- **Grammarly**: AI Writing
+- **Notion AI**: 最新版
+- **Lex**: 最新版
+
+#### AI Coding
+- **GitHub Copilot**: 最新版
+- **Cursor**: 最新版
+- **Windsurf** (Codeium): 最新版
+- **Cline / Continue**: 开源方案
+- **Replit**: AI Agent
+- **Amazon Q**: Developer
+- **Devin**: Cognition AI
+
+#### Productivity
+- **Notion AI** vs **Obsidian AI** vs **Logseq AI**
+- **Microsoft Copilot** vs **Google Workspace AI**
+- **Otter.ai** vs **Fireflies** vs **Fathom**
+- **Zapier AI** vs **Make.com AI**
+
+#### AI Audio
+- **ElevenLabs**: 最新版
+- **OpenAI TTS**: 最新版
+- **Suno**: v5
+- **Udio**: 最新版
+- **Descript**: AI音频编辑
+
+#### AI Research / Search
+- **Perplexity AI**: 最新版
+- **You.com**: 最新版
+- **Google AI Overviews**: 最新版
+- **Consensus**: 最新版
+- **Elicit**: 最新版
+- **Semantic Scholar**: AI增强
 
 ---
 
-## 四、内容生产标准
+## 三、内容生产流水线
 
-### 4.1 文章类型与字数规范
+### 3.1 文章生产SOP
 
-| 文章类型 | 字数 | 范围 | 示例 |
-|---------|------|------|------|
-| 年度榜单（Pillar） | 4000-5000 | 综合类 | "30 Best AI Tools in 2026" |
-| 三方对比（Comparison） | 3000-4000 | A vs B vs C | "ChatGPT vs Claude vs Gemini" |
-| 双方对比（Vs） | 2500-3500 | A vs B | "Cursor vs GitHub Copilot" |
-| 品类榜单（Best of） | 3000-4000 | 品类Top 5-8 | "Best AI Writing Tools" |
-| 深度评测（Review） | 2000-3000 | 单工具深度 | "Claude Pro Review 2026" |
-| 指南（How-to） | 2000-2500 | 教程类 | "How to Use AI for SEO" |
+```
+选题 → 调研 → 大纲 → 写作 → 配图 → 排版 → 审核 → 发布 → 推送
+```
 
-### 4.2 文章结构模板
+**Step 1 — 选题** (15min)
+- 关键词研究（Ahrefs/Ubersuggest/Google Trends）
+- 竞品分析（已有文章覆盖情况）
+- 搜索量预估（CPC越高优先级越高）
+- 记入选题池 Google Sheet
 
-**对比类文章（主力类型）：**
+**Step 2 — 调研** (30-60min)
+- 实际使用每个工具（注册、测试、记录）
+- 收集官方文档、定价、功能对比
+- 截图/录屏保存素材
+- 查阅Reddit/论坛真实用户反馈
+
+**Step 3 — 大纲** (15min)
+- 固定结构（见3.2模板）
+- 确定对比维度（至少5个维度）
+- 标注每个章节需要的数据/截图
+
+**Step 4 — 写作** (60-90min)
+- 用Hermes辅助生成初稿
+- 加入个人测试体验（差异化关键）
+- 数据驱动（性能测试、定价对比）
+- 英文撰写，目标1500-3000词
+
+**Step 5 — 配图** (30min)
+- 产品Logo/截图
+- 对比表格截图
+- 性能测试结果可视化
+- 用AI生成信息图（可选）
+
+**Step 6 — 排版** (15min)
+- HTML模板填充
+- 内链添加（关联文章）
+- Schema标记（FAQ、Review、HowTo）
+- 移动端适配检查
+
+**Step 7 — 审核** (15min)
+- 事实核查（定价、功能、版本号）
+- 代码检查（HTML有效性）
+- SEO检查（Title/Meta/H1/Alt）
+- AI味检测（humanizer skill）
+
+**Step 8 — 发布** (5min)
+- Git commit + push → Vercel自动部署
+- 更新sitemap.xml
+- 更新首页（最新文章卡片）
+
+### 3.2 文章标准结构
 
 ```html
-<!-- Hero: 标题 + 更新时间 + 快速结论 -->
-<!-- 目录(TOC) -->
-<!-- 快速对比表格: 价格/免费层/最佳用途/推荐人群 -->
-<!-- 详细对比: 逐项分析 -->
-  <!-- 1. 价格与计划 -->
-  <!-- 2. 核心功能 -->
-  <!-- 3. 输出质量(附截图) -->
-  <!-- 4. 易用性 -->
-  <!-- 5. API/集成 -->
-  <!-- 6. 隐私与安全 -->
-<!-- 优缺点总结: 每个工具独立列表 -->
-<!-- 适用场景推荐: 谁该选哪个 -->
-<!-- FAQ (3-5个) -->
-<!-- 最终结论 -->
-<!-- 相关文章推荐(3-5篇) -->
+Title: "[Tool A] vs [Tool B]: [Differentiator] in 2026"
+  └─ Meta Description: 含主关键词+核心结论（150-160字符）
+
+1. Quick Answer (TL;DR)
+   └─ 150字以内，直接给结论
+
+2. At a Glance (对比表)
+   └─ 表格：价格/功能/性能/易用性/适用场景
+
+3. [Tool A] Deep Dive
+   ├─ Overview + 最新更新
+   ├─ Key Features（配截图）
+   ├─ Pricing（含免费额度）
+   └─ Strengths & Weaknesses
+
+4. [Tool B] Deep Dive
+   └─ 同上结构
+
+5. Head-to-Head Comparison
+   ├─ 维度1：Output Quality（质量对比）
+   ├─ 维度2：Speed & Performance（速度/性能）
+   ├─ 维度3：Ease of Use（易用性）
+   ├─ 维度4：Pricing & Value（性价比）
+   ├─ 维度5：Ecosystem & Integration（生态）
+   └─ 维度6：Privacy & Security（隐私安全）
+
+6. Real-World Testing
+   └─ 3个标准化测试场景的对比结果
+
+7. The Verdict (最终推荐)
+   ├─ Best for [场景A] → 推荐 Tool X
+   ├─ Best for [场景B] → 推荐 Tool Y
+   └─ Overall Winner → 推荐 Tool Z
+
+8. FAQ
+   └─ 3-5个People Also Ask问题
 ```
 
-### 4.3 SEO技术标准
+---
 
-每篇文章必须包含：
-- `<title>` ≤ 60字符，包含主关键词
-- `<meta description>` ≤ 155字符，包含CTA
-- `<link rel="canonical">` 指向正确URL
-- Open Graph: og:title / og:description / og:type=article / og:image / og:url
-- JSON-LD: Article schema (headline, author, datePublished, dateModified, image)
-- 内链 ≥ 3条（链接到站内其他文章）
-- 响应式布局（移动端友好）
-- FAQ Schema（FAQSection标记）
+## 四、12个月发布计划
 
-### 4.4 内容质量红线
+### 4.1 里程碑总览
 
-1. ✅ 必须经过 humanizer skill 去AI味
-2. ✅ 价格信息必须基于实际测试或官方页面核实
-3. ❌ 不写主观推荐（"我强烈推荐"），用"X is best for Y"的客观表述
-4. ❌ 不堆砌关键词，密度控制在 1-2%
-5. ✅ 截图使用真实工具界面（AI生成需标注）
+```
+M1-2  ████░░░░░░░░░░░░  基建完善 + 首批10篇
+M3-4  ░░░░████░░░░░░░░  内容扩展 + 20篇（累计30篇）
+M5-6  ░░░░░░░░████░░░░  批量生产 + 25篇（累计55篇）
+M7-8  ░░░░░░░░░░░░████░  深度长文 + 20篇（累计75篇）
+M9-10 ░░░░░░░░░░░░░░████ 补缺更新 + 15篇（累计90篇）
+M11-12░░░░░░░░░░░░░░░░██ 更新维护 + 10篇（累计100篇）
+```
+
+### 4.2 第一季度详细计划（M1-M3，8月-10月）
+
+#### 8月 — 基建冲刺 + 首批文章（10篇）
+
+**第1周 (7/28-8/3): 基建收尾**
+- [ ] 完成Google Search Console域名验证
+- [ ] 创建文章HTML模板（对比文章/榜单文章）
+- [ ] 首页添加文章列表区域（动态展示最新文章）
+- [ ] 更新sitemap.xml添加文章URL
+- [ ] 重写/更新已有文章（ChatGPT vs Claude vs Gemini → GPT-5.6 vs Claude Opus 5 vs Gemini 3.6 Flash）
+
+**第2周 (8/4-8/10): Chatbot专题（4篇）**
+- [ ] GPT-5.6 Sol vs Claude Opus 5: Which Is Better in 2026?
+- [ ] Gemini 3.6 Flash vs ChatGPT: The Ultimate Showdown
+- [ ] DeepSeek V3 vs GPT-5.5: Budget AI Showdown
+- [ ] Best AI Chatbot for Coding (Top 5 Tested)
+
+**第3周 (8/11-8/17): Image专题（3篇）**
+- [ ] Midjourney v7 vs DALL-E 4: AI Image Generation Compared
+- [ ] Stable Diffusion 4 vs Midjourney: Which Should You Use?
+- [ ] Best Free AI Image Generator (Top 6 Tested)
+
+**第4周 (8/18-8/24): Coding专题（3篇）**
+- [ ] Cursor vs GitHub Copilot: Best AI Coding Assistant 2026
+- [ ] Windsurf vs Cursor vs Copilot: Coding AI Triple Threat
+- [ ] Best Free AI Code Assistant (Top 5 Compared)
+
+#### 9月 — 扩展覆盖（12篇）
+
+**第1周: Video专题（3篇）**
+- [ ] Sora vs Runway Gen-4: AI Video Generation Showdown
+- [ ] Kling vs Luma vs Pika: Best Budget AI Video Tool
+- [ ] Best AI Video Generator for Social Media (Top 5)
+
+**第2周: Writing专题（3篇）**
+- [ ] Jasper vs ChatGPT: Which Is Better for Content Writing?
+- [ ] Grammarly AI vs ProWritingAid: Writing Assistant Compared
+- [ ] Best AI Writing Tool for Bloggers (Top 6 Tested)
+
+**第3周: Audio专题（3篇）**
+- [ ] ElevenLabs vs OpenAI TTS: AI Voice Generation Compared
+- [ ] Suno v5 vs Udio: AI Music Generation Showdown
+- [ ] Best AI Tool for Podcasters (Top 5)
+
+**第4周: Research专题（3篇）**
+- [ ] Perplexity vs ChatGPT vs Gemini: AI Search Compared
+- [ ] Consensus vs Elicit: Best AI for Academic Research
+- [ ] Best AI Research Tool (Top 5 Tested)
+
+#### 10月 — Productivity + 更新（8篇）
+
+**第1周: Productivity专题（3篇）**
+- [ ] Notion AI vs Obsidian AI: Best AI Note-Taking App
+- [ ] Microsoft Copilot vs Google Gemini for Workspace
+- [ ] Otter.ai vs Fireflies vs Fathom: AI Meeting Assistant
+
+**第2周: 跨类别热门对比（3篇）**
+- [ ] Best AI Tool for Students in 2026 (Top 10)
+- [ ] Best AI Tool for Small Business (Top 8)
+- [ ] Best Free AI Tools (Top 15 Worth Using)
+
+**第3-4周: 旧文更新（2篇）**
+- [ ] 更新8月Chatbot文章（如有新模型发布）
+- [ ] 添加新测试数据/截图
+
+### 4.3 后续季度节奏
+
+| 季度 | 目标篇数 | 累计 | 重点方向 |
+|------|---------|------|---------|
+| Q1 (8-10月) | 30篇 | 30 | 8大分类全覆盖，建立基础内容库 |
+| Q2 (11-1月) | 25篇 | 55 | 深度长文、子话题扩展、竞品新版本对比 |
+| Q3 (2-4月) | 25篇 | 80 | 场景指南、年度榜单、特定行业应用 |
+| Q4 (5-7月) | 20篇 | 100 | 全面更新旧文、新模型对比、年度回顾 |
+
+### 4.4 选题优先级规则
+
+1. **CPC > $10 的关键词优先**（Chatbot、Coding、Image生成）
+2. **新模型/新工具发布时抢首发**（7天内发文，SEO红利最大）
+3. **已有文章的"VS"变体**（A vs B 写完，再写 A vs C、B vs C）
+4. **节日/季节性选题**（Q4 Black Friday deals、新年最佳AI工具）
+5. **长尾关键词**（Best AI tool for [specific use case]）
 
 ---
 
-## 五、12个月内容路线图
+## 五、SEO策略
 
-### Phase 1：基建 + 快速填充期（月1-2，7月底-9月底）
-**目标：20篇文章 + 站点基础设施完善**
+### 5.1 页面SEO要素
 
-| 周 | 文章 | 分类 | 类型 |
-|----|------|------|------|
-| W1 | ✅ ChatGPT vs Claude vs Gemini 2026 | Chatbot | 三方对比 |
-| W1 | Best AI Writing Tools 2026 (Top 10) | Writing | 品类榜单 |
-| W2 | Cursor vs GitHub Copilot vs Windsurf | Coding | 三方对比 |
-| W2 | Best AI Image Generators 2026 | Image | 品类榜单 |
-| W3 | Perplexity vs ChatGPT Search vs Google AI Mode | Research | 三方对比 |
-| W3 | Claude vs ChatGPT for Coding | Coding | 双方对比 |
-| W4 | Midjourney vs DALL-E 3 vs Stable Diffusion | Image | 三方对比 |
-| W4 | Runway vs Pika vs Kling vs Sora | Video | 四方对比 |
+每个文章页面必须包含：
+- `<title>` — "[Tool A] vs [Tool B]: [Benefit] in 2026" (50-60字符)
+- `<meta name="description">` — 含核心关键词+结论 (150-160字符)
+- `<h1>` — 与title一致或略长
+- `<h2>` — 每个对比维度
+- 图片 `<alt>` — 描述性文字
+- Schema标记：`FAQPage` + `Article` + `Review`
+- 内链：至少3个指向站内其他文章
+- 外链：1-2个指向权威来源（官方文档、研究论文）
 
-**Phase 1 基建任务（并行）：**
-- [ ] Vercel 部署站点 + 自定义域名绑定
-- [ ] 注册 Google Search Console + 提交 sitemap
-- [ ] 注册 Google Analytics 4
-- [ ] 注册 Bing Webmaster Tools
-- [ ] 创建 robots.txt
-- [ ] 生成 sitemap.xml（手动或脚本）
-- [ ] 首页优化：添加文章列表、分类导航
-- [ ] 创建8个分类索引页（每个分类1个）
-- [ ] 创建 About / Privacy / Terms / Contact 页面（AdSense必需）
-- [ ] 配置 Cloudflare DNS（如使用）
+### 5.2 技术SEO
 
-### Phase 2：核心内容期（月3-4，10月-11月）
-**目标：50篇 + 首批Google收录 + 开始有自然流量**
+- [x] robots.txt
+- [x] sitemap.xml（需随文章发布自动更新）
+- [ ] 每篇文章添加 canonical URL
+- [ ] Open Graph / Twitter Card meta标签
+- [ ] Core Web Vitals 优化（图片懒加载、字体预加载）
+- [ ] HTTPS（已配置）
+- [ ] 移动端响应式（需验证）
 
-**每周产出：3-4篇文章**
+### 5.3 长期SEO打法
 
-| 周 | 重点方向 | 文章数 | 累计 |
-|----|---------|--------|------|
-| W5-8 | Chatbot + Writing 深度对比 | 12 | 20 |
-| W9-12 | Image + Coding + Productivity | 12 | 32 |
-| W13-16 | Audio + Research + 更多Vs | 12 | 44 |
-| W17-18 | 补漏 + 时效性（年终结榜） | 6 | 50 |
-
-**Phase 2 关键文章清单：**
-- Notion AI vs Obsidian AI vs Craft
-- Claude Free vs ChatGPT Free vs Gemini Free
-- ElevenLabs vs Play.ht vs Murf
-- Suno vs Udio vs MusicGen
-- Gamma vs Tome vs Beautiful.ai
-- Otter.ai vs Fireflies vs tl;dv
-- Canva AI vs Adobe Firefly
-- v0.dev vs Lovable vs Bolt.new
-- Best AI Tools for Students
-- Best AI for Small Business
-- Best Free AI Tools 2026
-- AI Presentation Maker Comparison
-- AI Spreadsheet Tools (Rows vs Equals vs Sheet+)
-- Best AI for Research Papers
-- AI Video Editor Comparison (CapCut AI vs Descript)
-- Best AI Transcription Tools
-- AI Meeting Assistant Comparison
-- Claude vs GPT-4o for Creative Writing
-- DeepSeek vs Claude vs Gemini (Budget AI)
-- AI SEO Tools Comparison (Surfer vs Jasper)
-
-### Phase 3：增长期（月5-6，12月-次年1月）
-**目标：80篇 + 申请AdSense + 流量爬坡**
-
-**每周产出：3-4篇文章**
-
-| 周 | 重点方向 | 文章数 | 累计 |
-|----|---------|--------|------|
-| W19-22 | 补齐各品类长尾对比 | 12 | 56 |
-| W23-26 | 人群细分 + 场景细分 | 12 | 68 |
-| W27-30 | 2027年更新/新品 + 外链建设 | 12 | 80 |
-
-**Phase 3 关键动作：**
-- [ ] 月5：检查GSC数据，优化已索引页面
-- [ ] 月5：达到50篇后申请Google AdSense
-- [ ] 月5：开始外链建设（Reddit/Pinterest/Guest Post）
-- [ ] 月6：分析首批AdSense数据（RPM/CTR/CPC）
-- [ ] 月6：优化高流量页面的广告位
-
-### Phase 4：巩固期（月7-9）
-**目标：100篇 + 收入稳定化**
-
-**每周产出：2-3篇文章（重点转向更新旧文章）**
-
-| 周 | 重点方向 | 文章数 | 累计 |
-|----|---------|--------|------|
-| W31-38 | 新品评测 + 旧文章更新 | 12 | 92 |
-| W39-42 | 填补关键词缺口 + 季度榜单 | 8 | 100 |
-
-### Phase 5：成熟运营期（月10-12）
-**目标：100+篇 + 月收入$2000**
-
-- 每周2篇新文章（新品/更新）
-- 每周更新1-2篇旧文章（价格/功能变化）
-- 持续外链建设
-- 数据驱动的选题调整
-- A/B测试广告位布局
+1. **话题集群（Topic Clusters）**: 每个支柱一个pillar文章 + 多个cluster文章
+2. **定期更新**: 每季度更新一次旧文（SEO加分项）
+3. **FAQ富摘要**: 每篇文章5个FAQ → 争取Google Featured Snippet
+4. **数据驱动**: 发布原创测试数据 → 获取引用和外链
+5. **User Signals**: 高质量内容 → 低跳出率 → 高停留时间 → 排名提升
 
 ---
 
-## 六、技术架构
+## 六、变现策略
 
-### 6.1 文件结构
+### 6.1 收入模型
+
+```
+                    AdSense（主）
+                   /
+流量 → 页面浏览 → → Affiliate（辅）
+                   \
+                    Sponsored（远期）
+```
+
+### 6.2 收入预测
+
+| 阶段 | 时间 | 文章数 | 月UV | RPM预估 | 月收入 |
+|------|------|--------|------|---------|--------|
+| 冷启动 | M1-3 | 30 | 500 | $5 | $25 |
+| 增长期 | M4-6 | 55 | 3,000 | $10 | $300 |
+| 加速期 | M7-9 | 75 | 10,000 | $15 | $1,500 |
+| 成熟期 | M10-12 | 100 | 20,000 | $20 | $4,000 |
+| 稳定期 | M13+ | 100+ | 30,000 | $25 | $7,500 |
+
+**关键假设**：
+- AI工具类CPC $5-30，RPM $15-40（验证后可能更高）
+- 前3个月主要靠长尾关键词自然流量
+- 单篇爆文可贡献500-2000 UV/月
+
+### 6.3 AdSense申请时间线
+
+- **M2（9月）**: 申请AdSense（需GSC验证+15+篇内容+一定流量）
+- **M3**: 通过审核，开始投放广告
+- **M4+**: 优化广告位置，A/B测试
+
+### 6.4 远期变现扩展
+
+- **Affiliate Marketing**: 工具推荐链接（OpenAI API、Cursor Pro等）
+- **Sponsored Content**: 品牌合作（M6+，月收入$500+后）
+- **Newsletter**: AI工具周报，积累Email列表
+
+---
+
+## 七、技术架构
+
+### 7.1 当前架构
+
+```
+Markdown/HTML ──→ Git Push ──→ Vercel Auto Deploy ──→ CDN
+                                                     ↓
+                                    ai-tools-compared.com
+```
+
+### 7.2 文件结构（目标状态）
 
 ```
 /Volumes/work/AI工具测评/
-├── PROJECT-PLAN.md                    ← 本文件
-├── EXECUTION-PLAN.md                  ← iOS项目（已废弃）
-├── reference-links/                   ← 参考链接
-├── research-materials/                ← 研究资料
+├── PROJECT-PLAN.md              ← 本文档
+├── CONTENT-CALENDAR.md          ← 内容日历（待创建）
+├── TEMPLATE-ARTICLE.html        ← 文章模板（待创建）
 ├── site/
-│   ├── index.html                    ← 首页
-│   ├── articles/                      ← 所有文章
-│   │   ├── chatgpt-vs-claude-vs-gemini.html  ✅
-│   │   ├── best-ai-writing-tools-2026.html
-│   │   ├── cursor-vs-copilot-vs-windsurf.html
-│   │   └── ...
-│   ├── category/                     ← 分类索引页（待创建）
-│   │   ├── chatbot-comparisons.html
-│   │   ├── image-generation.html
-│   │   └── ...
-│   ├── about.html                    ← 关于页面
-│   ├── privacy.html                  ← 隐私政策
-│   ├── terms.html                    ← 服务条款
-│   ├── contact.html                  ← 联系页面
-│   ├── robots.txt                    ← 搜索引擎爬虫规则
-│   └── sitemap.xml                   ← 站点地图
-└── scripts/                          ← 辅助脚本（待创建）
-    ├── generate-sitemap.py           ← 自动生成sitemap
-    └── check-dead-links.py           ← 检查死链
+│   ├── index.html               ← 首页
+│   ├── about.html
+│   ├── privacy.html
+│   ├── terms.html
+│   ├── contact.html
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   ├── css/
+│   │   └── style.css            ← 统一样式（从内联CSS抽离）
+│   ├── images/
+│   │   ├── logos/               ← 工具Logo
+│   │   ├── screenshots/        ← 测试截图
+│   │   └── og/                  ← Open Graph图片
+│   └── articles/
+│       ├── chatgpt-vs-claude-vs-gemini.html
+│       ├── gpt56-vs-claude-opus5.html
+│       ├── midjourney-vs-dalle4.html
+│       ├── cursor-vs-copilot.html
+│       └── ... (100篇目标)
+├── research/                    ← 调研素材
+│   ├── tool-database.json       ← 工具数据库
+│   └── pricing-data/            ← 定价信息
+└── drafts/                      ← 文章草稿
 ```
 
-### 6.2 技术规范
+### 7.3 待办技术改进
 
-| 项目 | 规范 |
-|------|------|
-| 文件格式 | 独立HTML文件，内联CSS，零外部依赖 |
-| CSS框架 | 无（纯手写CSS，参考第一篇文章的样式体系） |
-| JS框架 | 无（仅导航交互用原生JS） |
-| 字体 | 系统字体栈（-apple-system, BlinkMacSystemFont, Segoe UI） |
-| 图片存储 | Unsplash/外部CDN（不存本地图片，减小仓库体积） |
-| 部署 | Vercel（Git push自动部署） |
-| CDN | Vercel Edge Network（全球加速） |
-| SSL | Vercel自动HTTPS |
-
-### 6.3 Vercel部署配置
-
-```json
-// vercel.json
-{
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/articles/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
-      ]
-    }
-  ]
-}
-```
+- [ ] 创建 `site/css/style.css` 统一样式（当前是内联CSS）
+- [ ] 创建文章HTML模板（一键生成新文章骨架）
+- [ ] 创建 `site/images/` 目录结构
+- [ ] sitemap.xml 自动生成脚本
+- [ ] 首页文章列表动态更新（或半自动）
 
 ---
 
-## 七、SEO策略
+## 八、每周执行节奏
 
-### 7.1 On-Page SEO清单
+### 8.1 固定节奏
 
-- [ ] 每篇文章 H1 包含主关键词
-- [ ] H2/H3 层级清晰，包含LSI关键词
-- [ ] Meta title ≤ 60字符，包含年份(2026/2027)
-- [ ] Meta description ≤ 155字符，含CTA
-- [ ] URL slug 短且包含关键词（小写+连字符）
-- [ ] 图片 alt 标签描述性
-- [ ] 内链 ≥ 3条/篇
-- [ ] 外链到官方工具页面（提升EEAT信号）
-- [ ] FAQ Schema 标记
-- [ ] 文章字数 ≥ 2000字
-
-### 7.2 Technical SEO
-
-- [ ] sitemap.xml 自动生成（新增文章后更新）
-- [ ] robots.txt 允许所有爬虫
-- [ ] 页面加载速度 < 2秒（无外部依赖天然快）
-- [ ] 移动端友好（已设计响应式）
-- [ ] HTTPS（Vercel自动）
-- [ ] Canonical URL（避免重复内容）
-- [ ] 结构化数据：Article + FAQPage + BreadcrumbList
-
-### 7.3 内容更新策略
-
-AI工具迭代极快，这是优势也是挑战：
-- **每月检查**：已发布文章中的价格、功能、免费层信息是否过期
-- **大版本更新**：工具重大更新时立即更新文章，dateModified同步更新
-- **年度大改**：每年发布新版"Best AI Tools 2027"等年度榜单
-- **更新标记**：文章顶部标注"Last updated: YYYY-MM-DD"
-
-### 7.4 外链建设
-
-| 渠道 | 策略 | 频率 |
+| 日期 | 任务 | 时间 |
 |------|------|------|
-| Reddit | 在 r/artificial, r/ChatGPT, r/LocalLLaMA 发有价值帖子 | 每周1次 |
-| Hacker News | 提交深度对比评测 | 每月1-2次 |
-| Product Hunt | 发布"产品"（我们的网站） | 1次（时机合适时） |
-| Pinterest | 创建AI工具对比Pin | 每周5-10个 |
-| Guest Post | 联系科技博客写客座文章 | 每月1-2次 |
-| Quora | 回答AI工具相关问题 | 每周2-3个 |
-| YouTube评论 | 在AI工具评测视频下留有价值评论 | 每周2-3个 |
+| 周一 | 选题+调研 | 1-2h |
+| 周二-周三 | 写作2篇文章 | 2-3h/篇 |
+| 周四 | 配图+排版+审核+发布 | 1-2h |
+| 周五 | 更新旧文1篇 + SEO检查 | 1h |
+| 周末 | 可选：额外文章或下周准备 | — |
+
+**目标产出**: 每周 2篇新文章 + 1篇旧文更新
+
+### 8.2 月度检查清单
+
+- [ ] 更新sitemap.xml
+- [ ] 检查Google Search Console索引状态
+- [ ] 查看GA4流量数据，分析热门文章
+- [ ] 根据数据调整下月选题优先级
+- [ ] 更新工具数据库（新版本/新定价）
 
 ---
 
-## 八、变现策略
+## 九、关键风险与应对
 
-### 8.1 Google AdSense（主力）
-
-**申请条件：**
-- 原创内容 50+ 篇
-- 运营时间 3+ 个月（建议）
-- 完整的 About / Privacy / Terms / Contact 页面
-- 无抄袭内容
-
-**预估收入模型（保守）：**
-
-| 月份 | 文章数 | 月PV(估) | RPM(估) | 月收入(估) |
-|------|--------|---------|---------|-----------|
-| M1-2 | 20 | 500 | $5 | ~$3 |
-| M3-4 | 50 | 3,000 | $10 | ~$30 |
-| M5-6 | 80 | 10,000 | $15 | ~$150 |
-| M6 | 80+ | 15,000 | $18 | ~$270 |
-| M7-9 | 100 | 30,000 | $20 | ~$600 |
-| M10-12 | 110+ | 60,000 | $22 | ~$1,320 |
-
-**AdSense广告位布局：**
-- 文章标题下方（728x90 横幅）
-- 段落间穿插（每3段插入1个 in-feed 广告）
-- 文章末尾（大尺寸矩形）
-- 侧边栏（仅桌面端）
-
-### 8.2 Affiliate（辅助）
-
-- Amazon Associates：在工具推荐中嵌入相关书籍/硬件链接
-- SaaS Affiliate：部分AI工具有推荐计划（Jasper $30/推荐, Notion $10/推荐等）
-- 预期贡献：占总收入 10-20%
-
-### 8.3 收入里程碑
-
-| 里程碑 | 预计时间 | 标准 |
-|--------|---------|------|
-| 首个$1 | M3-4 | AdSense获批 |
-| 月$100 | M7-8 | 30K+ PV/月 |
-| 月$500 | M9-10 | 50K+ PV/月 |
-| 月$1,000 | M11-12 | 80K+ PV/月 |
-| 月$2,000 | M14-16 | 120K+ PV/月 |
+| 风险 | 可能性 | 影响 | 应对策略 |
+|------|--------|------|---------|
+| AI工具更新频繁，文章快速过时 | 高 | 高 | 每月更新1-2篇旧文；标题加年份"2026" |
+| Google SEO算法变化 | 中 | 中 | 关注核心：高质量内容+用户体验+EEAT |
+| AdSense申请被拒 | 中 | 高 | 先积累内容（15+篇）和流量再申请；被拒后根据反馈修改 |
+| 竞争对手增多 | 高 | 中 | 深度对比（非目录站）+原创测试数据 = 护城河 |
+| 流量增长慢于预期 | 中 | 高 | 增加发布频率；尝试Reddit/社媒引流 |
+| GFW屏蔽vercel.app子域名 | 已解决 | — | 已绑定自定义域名 |
 
 ---
 
-## 九、运营节奏
+## 十、成功指标
 
-### 9.1 每日任务（15分钟）
+### 10.1 内容指标
 
-- [ ] 检查 Analytics 昨日数据（PV/来源/跳出率）
-- [ ] 检查 Search Console 新出现的查询词
-- [ ] 社交媒体分享1条内容
+- [ ] M3: 30篇文章上线
+- [ ] M6: 55篇文章上线
+- [ ] M12: 100篇文章上线
+- [ ] 每篇文章平均 2,000+ 词
+- [ ] 90%文章有FAQ Schema标记
 
-### 9.2 每周任务
+### 10.2 流量指标
 
-| 天 | 任务 | 时间 |
-|----|------|------|
-| 周一 | 数据复盘 + 本周选题 | 30min |
-| 周二 | 写文章 x1 | 1-2h |
-| 周三 | 写文章 x1 | 1-2h |
-| 周四 | 写文章 x1 | 1-2h |
-| 周五 | 写文章 x1 + 社交推广 | 1.5h |
-| 周六 | 内容优化（更新旧文章/修复SEO问题） | 1h |
-| 周日 | 下周计划 + 关键词研究 | 30min |
+- [ ] M3: 500 UV/月
+- [ ] M6: 3,000 UV/月
+- [ ] M9: 10,000 UV/月
+- [ ] M12: 20,000 UV/月
 
-### 9.3 内容生产流水线（单篇文章）
+### 10.3 收入指标
 
-```
-1. 关键词确认 → 2. 竞品TOP3分析 → 3. 生成文章大纲
-→ 4. AI撰写初稿 → 5. humanizer去AI味 → 6. 补充数据/截图
-→ 7. SEO优化(Title/Meta/Schema) → 8. 内链建设
-→ 9. HTML排版 → 10. 发布 → 11. 提交Search Console
-→ 12. 社交媒体分享
-```
-
-**预估单篇耗时：**
-- AI生成+humanize+排版：30-45分钟（AI辅助批量生产）
-- 数据核实+SEO优化：15分钟
-- 发布+推广：5分钟
-- **总计：约50-60分钟/篇**
+- [ ] M3: AdSense通过审核
+- [ ] M6: $300/月
+- [ ] M9: $1,500/月
+- [ ] M12: $4,000/月
 
 ---
 
-## 十、风险管理
+## 十一、立即行动（本周）
 
-| 风险 | 概率 | 影响 | 应对策略 |
-|------|------|------|---------|
-| Google AI Overviews 减少点击 | 高 | 高 | 专注长尾词(不易被AIO覆盖) + 品牌化建设 |
-| AdSense申请被拒 | 中 | 中 | 确保50+篇高质量 + 完善法律页面 + 30天后重申 |
-| AI内容被惩罚 | 中 | 高 | humanizer去AI味 + EEAT信号 + 作者页面 + 独家数据 |
-| 竞品抄袭内容 | 高 | 中 | 持续更新 + 独家对比维度 + 品牌/设计差异化 |
-| AI工具价格频繁变动 | 高 | 低 | 文章标注更新日期 + 每月批量检查 |
-| 流量增长低于预期 | 中 | 中 | 加大外链建设 + Reddit/Pinterest推广 + 时效性内容 |
-| 写不出内容 | 低 | 低 | 100+个长尾关键词储备 + AI辅助批量生产 |
+1. **完成Search Console验证** — 用户去GSC添加域名，获取TXT记录添加到Cloudflare DNS
+2. **创建文章HTML模板** — 可复用的对比文章骨架
+3. **重写已有文章** — ChatGPT vs Claude vs Gemini → 更新为最新模型
+4. **写第2篇新文章** — 从选题池中挑最高优先级的
+5. **抽离CSS到独立文件** — 提升代码可维护性
 
 ---
 
-## 十一、成功指标（KPI）
-
-| 指标 | M2 | M4 | M6 | M9 | M12 |
-|------|-----|-----|-----|-----|-----|
-| 已发布文章 | 20 | 50 | 80 | 100 | 110+ |
-| Google收录 | 10 | 35 | 60 | 90 | 100+ |
-| 月自然PV | 500 | 3,000 | 15,000 | 40,000 | 80,000 |
-| Top 10关键词 | 3 | 15 | 40 | 80 | 150 |
-| 月收入 | $0 | $30 | $150 | $600 | $1,320 |
-| 外部反链 | 5 | 30 | 80 | 200 | 400 |
-
----
-
-## 十二、文章产出优先级排期（前30篇详细）
-
-| # | 文章标题 | 分类 | 类型 | 优先级 | 预计字数 |
-|---|---------|------|------|-------|---------|
-| 1 | ChatGPT vs Claude vs Gemini 2026 | Chatbot | 三方对比 | ✅完成 | 4000 |
-| 2 | Best AI Writing Tools 2026 (Top 10 Tested) | Writing | 品类榜单 | P0 | 4000 |
-| 3 | Cursor vs GitHub Copilot vs Windsurf 2026 | Coding | 三方对比 | P0 | 3500 |
-| 4 | Best AI Image Generators 2026 | Image | 品类榜单 | P0 | 4000 |
-| 5 | Perplexity vs ChatGPT Search vs Google AI Mode | Research | 三方对比 | P0 | 3000 |
-| 6 | Claude vs ChatGPT for Coding | Coding | 双方对比 | P1 | 2500 |
-| 7 | Midjourney vs DALL-E 3 vs Stable Diffusion | Image | 三方对比 | P1 | 3500 |
-| 8 | Runway vs Pika vs Kling vs Sora | Video | 四方对比 | P1 | 3000 |
-| 9 | Claude vs ChatGPT for Writing | Chatbot | 双方对比 | P1 | 2500 |
-| 10 | Notion AI vs Obsidian AI vs Craft | Productivity | 三方对比 | P1 | 3000 |
-| 11 | Claude Free vs ChatGPT Free vs Gemini Free | Chatbot | 三方对比 | P1 | 2500 |
-| 12 | ElevenLabs vs Play.ht vs Murf | Audio | 三方对比 | P1 | 2500 |
-| 13 | Best Free AI Tools 2026 (50+ Tools) | 综合 | 品类榜单 | P0 | 5000 |
-| 14 | Suno vs Udio vs MusicGen | Audio | 三方对比 | P2 | 2500 |
-| 15 | Gamma vs Tome vs Beautiful.ai | Productivity | 三方对比 | P2 | 2500 |
-| 16 | Otter.ai vs Fireflies vs tl;dv | Productivity | 三方对比 | P2 | 2500 |
-| 17 | Canva AI vs Adobe Firefly vs Figma AI | Image | 三方对比 | P2 | 3000 |
-| 18 | v0.dev vs Lovable vs Bolt.new | Coding | 三方对比 | P1 | 2500 |
-| 19 | Best AI for Students 2026 | 综合 | 人群榜单 | P2 | 3500 |
-| 20 | Best AI for Small Business | 综合 | 人群榜单 | P2 | 3500 |
-| 21 | Descript vs Riverside vs Podcastle | Audio | 三方对比 | P3 | 2500 |
-| 22 | AI SEO Tools: Surfer vs Jasper vs Frase | Writing | 三方对比 | P2 | 3000 |
-| 23 | DeepSeek vs Claude vs Gemini (Budget AI) | Chatbot | 三方对比 | P1 | 2500 |
-| 24 | AI Spreadsheet Tools: Rows vs Equals vs Sheet+ | Productivity | 三方对比 | P3 | 2500 |
-| 25 | Best AI Transcription Tools 2026 | Audio | 品类榜单 | P3 | 3000 |
-| 26 | AI Presentation Maker Comparison | Productivity | 品类榜单 | P3 | 3000 |
-| 27 | Claude Pro Review 2026 (Worth $20/mo?) | Chatbot | 深度评测 | P2 | 2500 |
-| 28 | ChatGPT Plus Review 2026 (Still Worth It?) | Chatbot | 深度评测 | P2 | 2500 |
-| 29 | Best AI Research Tools 2026 | Research | 品类榜单 | P2 | 3500 |
-| 30 | AI Video Editor: CapCut AI vs Descript vs Opus Clip | Video | 三方对比 | P2 | 3000 |
-
----
-
-## 附录A：站点首页待办
-
-当前首页还是 ShortcutsJournal 主题，需要改版为 AI Tools Compared：
-
-- [ ] 更新品牌名、Logo、配色
-- [ ] 更新 meta 信息（title, description, OG tags）
-- [ ] Hero 区域：突出"AI工具对比评测"定位
-- [ ] 最新文章列表（动态展示）
-- [ ] 8大分类卡片导航
-- [ ] Newsletter 订阅（可选）
-- [ ] Footer 更新
-
-## 附录B：辅助脚本
-
-### sitemap.xml 生成脚本
-路径：`/Volumes/work/AI工具测评/scripts/generate-sitemap.py`
-
-自动扫描 `site/articles/` 目录下的所有HTML文件，生成sitemap.xml。
-
-### 死链检查脚本
-路径：`/Volumes/work/AI工具测评/scripts/check-dead-links.py`
-
-检查所有HTML文件中的内部链接是否有效。
-
----
-
-*文档创建时间：2026年7月29日*  
-*最后更新：2026年7月29日*
+*文档创建时间: 2026年7月30日*
+*最后更新: 2026年7月30日*
