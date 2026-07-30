@@ -1,0 +1,413 @@
+<!--
+  AI Tools Compared — 文章模板
+  
+  使用方法：
+  1. 复制本文件到 site/articles/ 目录
+  2. 重命名为 article-slug.html（如 gpt56-vs-claude-opus5.html）
+  3. 替换所有 {{PLACEHOLDER}} 标记
+  4. 删除不需要的章节（三方对比 vs 双方对比）
+  
+  可用变体：
+  - 2-tool comparison（双方对比）：保留2个deep dive + 2个pricing card
+  - 3-tool comparison（三方对比）：保留3个deep dive + 3个pricing card
+  - Top N list（榜单文章）：不用deep dive，用card-grid展示每个工具
+  
+  每篇文章必须包含：
+  ✅ GA4 script
+  ✅ meta description (150-160 chars)
+  ✅ canonical URL
+  ✅ Open Graph tags
+  ✅ Twitter Card tags
+  ✅ Schema.org Article + FAQPage markup
+  ✅ TL;DR
+  ✅ Comparison table
+  ✅ FAQ (3-5 questions)
+  ✅ Related links (内链)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{PAGE_TITLE}}</title>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDR8W6VH44"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BDR8W6VH44');
+</script>
+
+<!-- SEO Meta -->
+<meta name="description" content="{{META_DESCRIPTION}}">
+<meta name="author" content="AI Tools Compared">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ai-tools-compared.com/articles/{{SLUG}}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESCRIPTION}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ai-tools-compared.com/articles/{{SLUG}}">
+<meta property="og:image" content="{{OG_IMAGE_URL}}">
+<meta property="og:site_name" content="AI Tools Compared">
+<meta property="article:published_time" content="{{PUBLISH_DATE}}">
+<meta property="article:section" content="{{CATEGORY}}">
+<meta property="article:tag" content="{{TAG_1}}">
+<meta property="article:tag" content="{{TAG_2}}">
+<meta property="article:tag" content="{{TAG_3}}">
+<meta property="article:tag" content="{{TAG_4}}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{OG_TITLE}}">
+<meta name="twitter:description" content="{{OG_DESCRIPTION}}">
+<meta name="twitter:image" content="{{OG_IMAGE_URL}}">
+
+<!-- Schema.org Article Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{SCHEMA_HEADLINE}}",
+  "description": "{{META_DESCRIPTION}}",
+  "image": "{{OG_IMAGE_URL}}",
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tools Compared"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Tools Compared",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ai-tools-compared.com/logo.png"
+    }
+  },
+  "datePublished": "{{PUBLISH_DATE}}",
+  "dateModified": "{{MODIFIED_DATE}}",
+  "mainEntityOfPage": "https://ai-tools-compared.com/articles/{{SLUG}}"
+}
+</script>
+
+<!-- Schema.org FAQ (fill in each FAQ item) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "{{FAQ_1_QUESTION}}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{FAQ_1_ANSWER}}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{{FAQ_2_QUESTION}}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{FAQ_2_ANSWER}}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{{FAQ_3_QUESTION}}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{FAQ_3_ANSWER}}"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ===== HERO SECTION ===== -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">{{HERO_BADGE}}</div>
+    <h1>{{HERO_TITLE}}</h1>
+    <p class="hero-subtitle">{{HERO_SUBTITLE}}</p>
+    <div class="hero-meta">
+      <span>📅 {{PUBLISH_DATE_PRETTY}}</span>
+      <span>⏱️ {{READ_TIME}} min read</span>
+      <span>✍️ AI Tools Compared Editorial Team</span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== ARTICLE BODY ===== -->
+<main class="container">
+  <article class="article-body">
+
+    <!-- ===== TL;DR ===== -->
+    <div class="tldr-box">
+      <h3>⚡ Quick Summary — TL;DR</h3>
+      <ul>
+        <li><span class="highlight">{{TOOL_A}} ({{TOOL_A_PRICE}})</span> — {{TLDR_TOOL_A}}</li>
+        <li><span class="highlight">{{TOOL_B}} ({{TOOL_B_PRICE}})</span> — {{TLDR_TOOL_B}}</li>
+        <!-- ADD MORE FOR 3-TOOL COMPARISONS -->
+        <!-- <li><span class="highlight">{{TOOL_C}} ({{TOOL_C_PRICE}})</span> — {{TLDR_TOOL_C}}</li> -->
+      </ul>
+    </div>
+
+    <!-- ===== LOGOS ===== -->
+    <div class="logo-row">
+      <img src="{{TOOL_A_LOGO_URL}}" alt="{{TOOL_A}} Logo" onerror="this.style.display='none'">
+      <img src="{{TOOL_B_LOGO_URL}}" alt="{{TOOL_B}} Logo" onerror="this.style.display='none'">
+      <!-- <img src="{{TOOL_C_LOGO_URL}}" alt="{{TOOL_C}} Logo" onerror="this.style.display='none'"> -->
+    </div>
+
+    <!-- ===== INTRODUCTION ===== -->
+    <h2>Introduction: {{INTRO_HEADING}}</h2>
+    <p>{{INTRO_PARAGRAPH_1}}</p>
+    <p>{{INTRO_PARAGRAPH_2}}</p>
+    <p>{{INTRO_PARAGRAPH_3}}</p>
+
+    <!-- ===== SIDE-BY-SIDE COMPARISON TABLE ===== -->
+    <h2>{{COMPARISON_TABLE_HEADING}}</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>{{TOOL_A}}</th>
+            <th>{{TOOL_B}}</th>
+            <!-- <th>{{TOOL_C}}</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Monthly Price</strong></td>
+            <td>{{TOOL_A_PRICE}}</td>
+            <td>{{TOOL_B_PRICE}}</td>
+            <!-- <td>{{TOOL_C_PRICE}}</td> -->
+          </tr>
+          <tr>
+            <td><strong>Model / Version</strong></td>
+            <td>{{TOOL_A_MODEL}}</td>
+            <td>{{TOOL_B_MODEL}}</td>
+            <!-- <td>{{TOOL_C_MODEL}}</td> -->
+          </tr>
+          <tr>
+            <td><strong>Key Strength</strong></td>
+            <td>{{TOOL_A_STRENGTH}}</td>
+            <td>{{TOOL_B_STRENGTH}}</td>
+            <!-- <td>{{TOOL_C_STRENGTH}}</td> -->
+          </tr>
+          <!-- ADD MORE ROWS AS NEEDED -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== PROS/CONS ===== -->
+    <h3>Quick Pros & Cons</h3>
+    <div class="card-grid cols-2">
+      <!-- Tool A Card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-logo-placeholder" style="background:{{TOOL_A_COLOR}};">{{TOOL_A_INITIAL}}</div>
+          <h4>{{TOOL_A}}</h4>
+        </div>
+        <ul class="card-pros">
+          <li>{{TOOL_A_PRO_1}}</li>
+          <li>{{TOOL_A_PRO_2}}</li>
+          <li>{{TOOL_A_PRO_3}}</li>
+        </ul>
+        <ul class="card-cons">
+          <li>{{TOOL_A_CON_1}}</li>
+          <li>{{TOOL_A_CON_2}}</li>
+        </ul>
+      </div>
+      <!-- Tool B Card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-logo-placeholder" style="background:{{TOOL_B_COLOR}};">{{TOOL_B_INITIAL}}</div>
+          <h4>{{TOOL_B}}</h4>
+        </div>
+        <ul class="card-pros">
+          <li>{{TOOL_B_PRO_1}}</li>
+          <li>{{TOOL_B_PRO_2}}</li>
+          <li>{{TOOL_B_PRO_3}}</li>
+        </ul>
+        <ul class="card-cons">
+          <li>{{TOOL_B_CON_1}}</li>
+          <li>{{TOOL_B_CON_2}}</li>
+        </ul>
+      </div>
+      <!-- ADD MORE CARDS FOR 3-TOOL, use class="card-grid cols-3" above -->
+    </div>
+
+    <!-- ===== DEEP DIVE: TOOL A ===== -->
+    <h2>Deep Dive: {{TOOL_A}} ({{TOOL_A_MODEL}})</h2>
+    <div class="deep-dive">
+      <div>
+        <p>{{TOOL_A_DEEP_1}}</p>
+        <p>{{TOOL_A_DEEP_2}}</p>
+        <p>{{TOOL_A_DEEP_3}}</p>
+
+        <div class="callout">
+          <strong>💡 Tip:</strong> {{TOOL_A_TIP}}
+        </div>
+      </div>
+      <aside class="deep-dive-sidebar">
+        <h4>{{TOOL_A}} Specs</h4>
+        <div class="spec-row"><span class="spec-label">Model</span><span class="spec-value">{{TOOL_A_MODEL}}</span></div>
+        <div class="spec-row"><span class="spec-label">Price</span><span class="spec-value">{{TOOL_A_PRICE}}</span></div>
+        <div class="spec-row"><span class="spec-label">Free Tier</span><span class="spec-value">{{TOOL_A_FREE}}</span></div>
+        <div class="spec-row"><span class="spec-label">{{SPEC_LABEL_1}}</span><span class="spec-value">{{SPEC_VALUE_A1}}</span></div>
+        <div class="spec-row"><span class="spec-label">{{SPEC_LABEL_2}}</span><span class="spec-value">{{SPEC_VALUE_A2}}</span></div>
+        <div class="spec-row"><span class="spec-label">{{SPEC_LABEL_3}}</span><span class="spec-value">{{SPEC_VALUE_A3}}</span></div>
+        <div class="spec-row"><span class="spec-label">{{SPEC_LABEL_4}}</span><span class="spec-value">{{SPEC_VALUE_A4}}</span></div>
+        <div class="spec-row"><span class="spec-label">{{SPEC_LABEL_5}}</span><span class="spec-value">{{SPEC_VALUE_A5}}</span></div>
+      </aside>
+    </div>
+
+    <!-- ===== DEEP DIVE: TOOL B ===== -->
+    <h2>Deep Dive: {{TOOL_B}} ({{TOOL_B_MODEL}})</h2>
+    <div class="deep-dive">
+      <div>
+        <p>{{TOOL_B_DEEP_1}}</p>
+        <p>{{TOOL_B_DEEP_2}}</p>
+        <p>{{TOOL_B_DEEP_3}}</p>
+
+        <div class="callout">
+          <strong>💡 Tip:</strong> {{TOOL_B_TIP}}
+        </div>
+      </div>
+      <aside class="deep-dive-sidebar">
+        <h4>{{TOOL_B}} Specs</h4>
+        <div class="spec-row"><span class="spec-label">Model</span><span class="spec-value">{{TOOL_B_MODEL}}</span></div>
+        <div class="spec-row"><span class="spec-label">Price</span><span class="spec-value">{{TOOL_B_PRICE}}</span></div>
+        <div class="spec-row"><span class="spec-label">Free Tier</span><span class="spec-value">{{TOOL_B_FREE}}</span></div>
+        <div class="spec-row"><span class="spec-label">{{SPEC_LABEL_1}}</span><span class="spec-value">{{SPEC_VALUE_B1}}</span></div>
+        <div class="spec-row"><span class="spec-label">{{SPEC_LABEL_2}}</span><span class="spec-value">{{SPEC_VALUE_B2}}</span></div>
+        <div class="spec-row"><span class="spec-label">{{SPEC_LABEL_3}}</span><span class="spec-value">{{SPEC_VALUE_B3}}</span></div>
+        <div class="spec-row"><span class="spec-label">{{SPEC_LABEL_4}}</span><span class="spec-value">{{SPEC_VALUE_B4}}</span></div>
+        <div class="spec-row"><span class="spec-label">{{SPEC_LABEL_5}}</span><span class="spec-value">{{SPEC_VALUE_B5}}</span></div>
+      </aside>
+    </div>
+
+    <!-- ===== CATEGORY SHOWDOWN ===== -->
+    <h2>{{CATEGORY_HEADING}}</h2>
+
+    <h3>{{DIMENSION_1}}</h3>
+    <p><strong>Winner: {{WINNER_1}}.</strong> {{DIMENSION_1_DETAIL}}</p>
+
+    <h3>{{DIMENSION_2}}</h3>
+    <p><strong>Winner: {{WINNER_2}}.</strong> {{DIMENSION_2_DETAIL}}</p>
+
+    <h3>{{DIMENSION_3}}</h3>
+    <p><strong>Winner: {{WINNER_3}}.</strong> {{DIMENSION_3_DETAIL}}</p>
+
+    <h3>{{DIMENSION_4}}</h3>
+    <p><strong>Winner: {{WINNER_4}}.</strong> {{DIMENSION_4_DETAIL}}</p>
+
+    <!-- ===== PRICING BREAKDOWN ===== -->
+    <h2>Pricing Breakdown: Every Plan Compared</h2>
+    <div class="pricing-grid cols-2">
+      <div class="pricing-card popular">
+        <h4>{{TOOL_A}}</h4>
+        <div class="pricing-price">{{TOOL_A_PRICE_FROM}}<span>/mo</span></div>
+        <ul class="pricing-features">
+          <li>{{TOOL_A_PLAN_1}}</li>
+          <li>{{TOOL_A_PLAN_2}}</li>
+          <li>{{TOOL_A_PLAN_3}}</li>
+          <li>{{TOOL_A_PLAN_4}}</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <h4>{{TOOL_B}}</h4>
+        <div class="pricing-price">{{TOOL_B_PRICE_FROM}}<span>/mo</span></div>
+        <ul class="pricing-features">
+          <li>{{TOOL_B_PLAN_1}}</li>
+          <li>{{TOOL_B_PLAN_2}}</li>
+          <li>{{TOOL_B_PLAN_3}}</li>
+          <li>{{TOOL_B_PLAN_4}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== DECISION MATRIX ===== -->
+    <h2>Who Should Pick Which: Decision Matrix</h2>
+    <div class="decision-box">
+      <h3>Choose Based on Your Primary Use Case</h3>
+
+      <div class="decision-item">
+        <div class="decision-icon" style="background:{{TOOL_A_COLOR}};">{{TOOL_A_INITIAL}}</div>
+        <div class="decision-text">
+          <h4>Pick {{TOOL_A}} if…</h4>
+          <p>{{DECISION_TOOL_A}}</p>
+        </div>
+      </div>
+
+      <div class="decision-item">
+        <div class="decision-icon" style="background:{{TOOL_B_COLOR}};">{{TOOL_B_INITIAL}}</div>
+        <div class="decision-text">
+          <h4>Pick {{TOOL_B}} if…</h4>
+          <p>{{DECISION_TOOL_B}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FAQ ===== -->
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">{{FAQ_1_QUESTION}}</div>
+      <div class="faq-answer">{{FAQ_1_ANSWER}}</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">{{FAQ_2_QUESTION}}</div>
+      <div class="faq-answer">{{FAQ_2_ANSWER}}</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">{{FAQ_3_QUESTION}}</div>
+      <div class="faq-answer">{{FAQ_3_ANSWER}}</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">{{FAQ_4_QUESTION}}</div>
+      <div class="faq-answer">{{FAQ_4_ANSWER}}</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">{{FAQ_5_QUESTION}}</div>
+      <div class="faq-answer">{{FAQ_5_ANSWER}}</div>
+    </div>
+
+    <!-- ===== CONCLUSION ===== -->
+    <h2>{{CONCLUSION_HEADING}}</h2>
+    <p>{{CONCLUSION_1}}</p>
+    <p>{{CONCLUSION_2}}</p>
+    <p>{{CONCLUSION_3}}</p>
+
+    <!-- ===== RELATED LINKS (INTERNAL LINKS) ===== -->
+    <div class="related-links">
+      <h4>📄 Related Articles</h4>
+      <a href="/articles/{{RELATED_SLUG_1}}">→ {{RELATED_TITLE_1}}</a>
+      <a href="/articles/{{RELATED_SLUG_2}}">→ {{RELATED_TITLE_2}}</a>
+      <a href="/articles/{{RELATED_SLUG_3}}">→ {{RELATED_TITLE_3}}</a>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="article-footer">
+      <p>Last updated: {{MODIFIED_DATE_PRETTY}} · Next scheduled update: {{NEXT_UPDATE}}</p>
+      <p style="margin-top:8px;">AI Tools Compared — Independent, data-driven AI product reviews.</p>
+    </div>
+
+  </article>
+</main>
+
+</body>
+</html>
