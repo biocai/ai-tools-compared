@@ -30,4 +30,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://ai-tools-compared.com/articles/photoroom-vs-flair-vs-pebblely.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ai-tools-compared.com/articles/intercom-vs-zendesk-vs-tidio-vs-gorgias.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
