@@ -54,7 +54,56 @@
 └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘
 ```
 
-### 2.2 文章类型矩阵
+### 2.2 关键词驱动选题优先级（2026年8月更新）
+
+基于Google Trends、SERP竞争分析、CPC数据和搜索意图评估的选题排序。
+**评分公式 = 搜索量(1-10) × CPC(1-10) × (10-竞争度) / 10**
+
+#### Tier 1 — 高流量+高CPC+可竞争（优先写）
+| 排名 | 关键词组 | 预估月搜索 | CPC | 竞争 | 推荐文章类型 |
+|------|---------|-----------|-----|------|------------|
+| 1 | best AI chatbot 2026 | 40K+ | $15-25 | 高 | 榜单文 Top 7 |
+| 2 | ChatGPT vs Claude vs Gemini | 30K+ | $12-20 | 高 | 三方对比（已有，需更新） |
+| 3 | best free AI tools | 80K+ | $8-15 | 高 | 榜单文 Top 15 |
+| 4 | best AI video generator 2026 | 25K+ | $10-18 | 中 | 榜单文 Top 5 |
+| 5 | AI voice generator / text to speech | 35K+ | $10-15 | 低 | 对比 ElevenLabs vs Play.ht vs Murf |
+| 6 | AI music generator / Suno vs Udio | 20K+ | $8-12 | 低 | 双雄对决 |
+| 7 | Midjourney vs Flux vs SD4 | 15K+ | $10-20 | 中 | 三方对比 |
+| 8 | AI presentation maker / Gamma vs Tome | 15K+ | $8-15 | 低 | 对比+榜单 |
+| 9 | Perplexity vs ChatGPT for search | 12K+ | $10-18 | 中 | 对比 |
+| 10 | Cursor vs Windsurf vs Copilot | 10K+ | $15-25 | 中 | 三方对比（已有，需更新） |
+
+#### Tier 2 — 高流量+中CPC（第二批）
+| 排名 | 关键词组 | 预估月搜索 | CPC | 竞争 | 推荐文章类型 |
+|------|---------|-----------|-----|------|------------|
+| 11 | best AI image generator free | 50K+ | $5-10 | 高 | 榜单文 Top 6 |
+| 12 | AI meeting assistant / Otter vs Fireflies | 10K+ | $8-12 | 低 | 已有，可更新 |
+| 13 | AI resume builder 2026 | 25K+ | $5-10 | 高 | 榜单文 Top 8 |
+| 14 | AI email writer / best AI email tool | 15K+ | $8-15 | 低 | 对比 |
+| 15 | AI translation / DeepL vs Google Translate | 10K+ | $5-8 | 低 | 对比 |
+| 16 | AI data analysis tool / spreadsheet AI | 8K+ | $10-15 | 低 | 对比 |
+| 17 | AI photo editor / Photoroom vs Canva | 12K+ | $5-10 | 中 | 已有，可扩展 |
+| 18 | AI SEO tool / Surfer vs Semrush | 8K+ | $20-30 | 高 | 已有，可更新 |
+| 19 | AI customer support / Intercom vs Zendesk | 6K+ | $15-25 | 高 | 已有，可扩展 |
+| 20 | AI note-taking / Notion vs Obsidian | 5K+ | $5-10 | 低 | 已有 |
+
+#### Tier 3 — 长尾+低竞争（第三批，流量潜力大）
+| 排名 | 关键词组 | 预估月搜索 | CPC | 竞争 | 推荐文章类型 |
+|------|---------|-----------|-----|------|------------|
+| 21 | best AI tool for students | 20K+ | $3-8 | 中 | 场景指南 |
+| 22 | best AI for small business | 15K+ | $8-15 | 中 | 场景指南 |
+| 23 | AI podcast tool / best AI for podcasters | 5K+ | $8-12 | 低 | 榜单文 |
+| 24 | AI cover letter generator | 10K+ | $5-10 | 中 | 榜单文 |
+| 25 | AI coding assistant free | 15K+ | $10-18 | 中 | 榜单文 |
+| 26 | AI video editor / CapCut AI vs Premiere | 8K+ | $5-10 | 低 | 对比 |
+| 27 | AI social media manager / AI content scheduler | 6K+ | $8-12 | 低 | 对比 |
+| 28 | AI form builder / AI survey tool | 4K+ | $8-15 | 低 | 对比 |
+| 29 | AI diagram tool / AI flowchart maker | 3K+ | $5-10 | 低 | 对比 |
+| 30 | AI CRM / HubSpot AI vs Salesforce Einstein | 5K+ | $15-25 | 中 | 对比 |
+
+**注意：** "best AI X"榜单文搜索量通常是"X vs Y"对比文的3-5倍，但CPC略低。建议每3篇文章中2篇对比+1篇榜单。
+
+### 2.3 文章类型矩阵
 
 | 类型 | 说明 | 示例 | 占比 |
 |------|------|------|------|
@@ -75,8 +124,8 @@
 - **DeepSeek**: V3/R1
 
 #### Image Generation
-- **Midjourney**: v7 (最新版)
-- **OpenAI**: DALL-E 4 / GPT Image
+- **Midjourney**: v7 / v8.1 (最新版)
+- **OpenAI**: GPT Image 2 (替代DALL-E，已deprecated)
 - **Google**: Imagen 4
 - **Stability AI**: Stable Diffusion 4 / SDXL Turbo
 - **Adobe**: Firefly 4
@@ -84,13 +133,13 @@
 - **Flux**: (Black Forest Labs)
 
 #### Video Generation
-- **OpenAI**: Sora
-- **Runway**: Gen-4
-- **Luma Dream Machine**: 最新版
-- **Kling (快手)**: 可灵
+- **Runway**: Gen-4 (最新旗舰)
+- **Kling (快手)**: 可灵 2.0
 - **Pika**: 最新版
-- **Google**: Veo 3
+- **Google**: Veo 3 / Veo 3.1
+- **Luma Dream Machine**: 最新版
 - **Adobe**: Premiere AI
+- ~~OpenAI Sora~~: 已于2026年4月停运，勿再引用
 
 #### AI Writing
 - **Jasper**: 最新版
@@ -250,66 +299,63 @@ M11-12░░░░░░░░░░░░░░░░██ 更新维护 + 10�
 
 #### 8月 — 基建冲刺 + 首批文章（10篇）
 
-**第1周 (7/28-8/3): 基建收尾**
-- [ ] 完成Google Search Console域名验证
-- [ ] 创建文章HTML模板（对比文章/榜单文章）
-- [ ] 首页添加文章列表区域（动态展示最新文章）
-- [ ] 更新sitemap.xml添加文章URL
-- [ ] 重写/更新已有文章（ChatGPT vs Claude vs Gemini → GPT-5.6 vs Claude Opus 5 vs Gemini 3.6 Flash）
+**第1周 (7/28-8/3): 基建收尾** ✅ 已完成
+- [x] 重写首页（hero/stats/分类/featured/footer）
+- [x] 创建统一CSS样式
+- [x] 发布11篇文章（2篇新增：Notion/Obsidian/Logseq + Copilot/Gemini Workspace）
 
-**第2周 (8/4-8/10): Chatbot专题（4篇）**
-- [ ] GPT-5.6 Sol vs Claude Opus 5: Which Is Better in 2026?
-- [ ] Gemini 3.6 Flash vs ChatGPT: The Ultimate Showdown
-- [ ] DeepSeek V3 vs GPT-5.5: Budget AI Showdown
-- [ ] Best AI Chatbot for Coding (Top 5 Tested)
+**第2周 (8/4-8/10): Audio专题（填补空白支柱）**
+- [ ] ElevenLabs vs Play.ht vs Murf: AI Voice Generation Compared
+- [ ] Suno vs Udio: AI Music Generation Showdown
+- [ ] Best AI Tool for Podcasters (Top 5 Tested)
 
-**第3周 (8/11-8/17): Image专题（3篇）**
-- [ ] Midjourney v7 vs DALL-E 4: AI Image Generation Compared
-- [ ] Stable Diffusion 4 vs Midjourney: Which Should You Use?
-- [ ] Best Free AI Image Generator (Top 6 Tested)
+**第3周 (8/11-8/17): Research + 高流量榜单**
+- [ ] Perplexity vs ChatGPT vs Gemini: AI Search Compared
+- [ ] NotebookLM vs ChatGPT vs Claude for Research
+- [ ] Best Free AI Tools 2026 (Top 15 Worth Using) — **高流量榜单文**
 
-**第4周 (8/18-8/24): Coding专题（3篇）**
-- [ ] Cursor vs GitHub Copilot: Best AI Coding Assistant 2026
-- [ ] Windsurf vs Cursor vs Copilot: Coding AI Triple Threat
-- [ ] Best Free AI Code Assistant (Top 5 Compared)
+**第4周 (8/18-8/24): Image + Chatbot更新**
+- [ ] Midjourney v7 vs Flux Pro vs SD4: AI Image Battle
+- [ ] Best AI Chatbot 2026 (Top 7 Tested) — **高流量榜单文**
+- [ ] ChatGPT vs Claude vs Gemini → 更新至最新模型（GPT-5.6/Claude Opus 5）
 
-#### 9月 — 扩展覆盖（12篇）
+#### 9月 — Video + Writing + 电商（12篇）
 
-**第1周: Video专题（3篇）**
-- [ ] Sora vs Runway Gen-4: AI Video Generation Showdown
-- [ ] Kling vs Luma vs Pika: Best Budget AI Video Tool
-- [ ] Best AI Video Generator for Social Media (Top 5)
+**第1周: Video专题（3篇）**（Sora已停运，替换为活跃工具）
+- [ ] Runway Gen-4 vs Kling 2.0 vs Luma: AI Video Generation Battle
+- [ ] Pika vs Veo 3.1: Best AI Video for Social Media
+- [ ] Best AI Video Generator 2026 (Top 5 Tested) — **高流量榜单文**
 
 **第2周: Writing专题（3篇）**
-- [ ] Jasper vs ChatGPT: Which Is Better for Content Writing?
+- [ ] Jasper vs Copy.ai vs Writesonic: AI Content Writing Compared
 - [ ] Grammarly AI vs ProWritingAid: Writing Assistant Compared
 - [ ] Best AI Writing Tool for Bloggers (Top 6 Tested)
 
-**第3周: Audio专题（3篇）**
-- [ ] ElevenLabs vs OpenAI TTS: AI Voice Generation Compared
-- [ ] Suno v5 vs Udio: AI Music Generation Showdown
-- [ ] Best AI Tool for Podcasters (Top 5)
+**第3周: Presentation + 电商（3篇）**
+- [ ] Gamma vs Tome vs Beautiful.ai: AI Presentation Maker Compared
+- [ ] Best AI Resume Builder 2026 (Top 8 Tested) — **高流量榜单文**
+- [ ] DeepL vs Google Translate vs ChatGPT: AI Translation Compared
 
-**第4周: Research专题（3篇）**
-- [ ] Perplexity vs ChatGPT vs Gemini: AI Search Compared
-- [ ] Consensus vs Elicit: Best AI for Academic Research
-- [ ] Best AI Research Tool (Top 5 Tested)
+**第4周: 场景指南（3篇）**（首次引入场景指南类型）
+- [ ] Best AI Tools for Students in 2026 (Top 10) — **场景指南**
+- [ ] Best AI for Small Business (Top 8) — **场景指南**
+- [ ] Best AI Email Writer 2026 (Top 6 Tested)
 
-#### 10月 — Productivity + 更新（8篇）
+#### 10月 — 深度覆盖 + 更新（8篇）
 
-**第1周: Productivity专题（3篇）**
-- [ ] Notion AI vs Obsidian AI: Best AI Note-Taking App
-- [ ] Microsoft Copilot vs Google Gemini for Workspace
-- [ ] Otter.ai vs Fireflies vs Fathom: AI Meeting Assistant
+**第1周: Coding + Data（3篇）**
+- [ ] Windsurf vs Cursor vs Copilot Agent: AI Coding Triple Threat
+- [ ] ChatGPT vs Claude for Coding: Developer's Choice 2026
+- [ ] Best Free AI Coding Assistant (Top 5)
 
-**第2周: 跨类别热门对比（3篇）**
-- [ ] Best AI Tool for Students in 2026 (Top 10)
-- [ ] Best AI Tool for Small Business (Top 8)
-- [ ] Best Free AI Tools (Top 15 Worth Using)
+**第2周: SEO + CRM + 社媒（3篇）**
+- [ ] Best AI SEO Tool 2026 (Top 6) — **更新已有Surfer文章**
+- [ ] HubSpot AI vs Salesforce Einstein: AI CRM Compared
+- [ ] Best AI Social Media Manager (Top 5 Tested)
 
 **第3-4周: 旧文更新（2篇）**
-- [ ] 更新8月Chatbot文章（如有新模型发布）
-- [ ] 添加新测试数据/截图
+- [ ] ChatGPT vs Claude vs Gemini → 更新最新模型
+- [ ] Cursor vs GitHub Copilot → 更新最新版本
 
 ### 4.3 后续季度节奏
 
@@ -320,13 +366,17 @@ M11-12░░░░░░░░░░░░░░░░██ 更新维护 + 10�
 | Q3 (2-4月) | 25篇 | 80 | 场景指南、年度榜单、特定行业应用 |
 | Q4 (5-7月) | 20篇 | 100 | 全面更新旧文、新模型对比、年度回顾 |
 
-### 4.4 选题优先级规则
+### 4.4 选题优先级规则（2026年8月修订）
 
-1. **CPC > $10 的关键词优先**（Chatbot、Coding、Image生成）
-2. **新模型/新工具发布时抢首发**（7天内发文，SEO红利最大）
-3. **已有文章的"VS"变体**（A vs B 写完，再写 A vs C、B vs C）
-4. **节日/季节性选题**（Q4 Black Friday deals、新年最佳AI工具）
-5. **长尾关键词**（Best AI tool for [specific use case]）
+1. **关键词数据驱动**：优先从 §2.2 关键词优先级表选题，不靠直觉
+2. **文章类型均衡**：每3篇中2篇对比 + 1篇榜单/场景指南（当前100%对比→目标60%对比/30%榜单/10%场景指南）
+3. **CPC > $10 的关键词优先**（Chatbot、Coding、Image生成、SEO）
+4. **空白支柱优先填**：Audio（0篇）、Research（0篇）已列入8月计划
+5. **新模型/新工具发布时抢首发**（7天内发文，SEO红利最大）
+6. **"免费"关键词高搜索量**（best free AI X 搜索量是付费版的3-5倍），每批至少1篇免费向
+7. **已有文章的"VS"变体**（A vs B 写完，再写 A vs C、B vs C）
+8. **节日/季节性选题**（Q4 Black Friday deals、新年最佳AI工具）
+9. **长尾场景指南**（Best AI tool for students/small business/podcasters）
 
 ---
 
