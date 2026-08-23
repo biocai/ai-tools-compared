@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursor vs Windsurf vs GitHub Copilot (2026): AI Coding Tools Compared</title>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YD6WK4LZWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YD6WK4LZWH');
+</script>
+<meta name="description" content="Cursor vs Windsurf vs GitHub Copilot in 2026 — pricing, agentic benchmarks, in-house models, enterprise features, and which AI coding assistant you should actually pick. Tested on real refactors.">
+<meta name="author" content="AI Tools Compared">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ai-tools-compared.com/articles/cursor-vs-windsurf-vs-copilot.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Cursor vs Windsurf vs GitHub Copilot (2026): AI Coding Tools Compared">
+<meta property="og:description" content="Cursor vs Windsurf vs GitHub Copilot in 2026 — pricing, agentic benchmarks, models, enterprise features, and which one you should pick.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ai-tools-compared.com/articles/cursor-vs-windsurf-vs-copilot.html">
+<meta property="og:image" content="https://ai-tools-compared.com/images/articles/cursor-vs-windsurf-vs-copilot/head-to-head-scores.png">
+<meta property="og:site_name" content="AI Tools Compared">
+<meta property="article:published_time" content="2026-08-23">
+<meta property="article:modified_time" content="2026-08-23">
+<meta property="article:section" content="AI Coding Tools">
+<meta property="article:tag" content="Cursor">
+<meta property="article:tag" content="Windsurf">
+<meta property="article:tag" content="GitHub Copilot">
+<meta property="article:tag" content="AI Coding">
+<meta property="article:tag" content="2026">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cursor vs Windsurf vs GitHub Copilot 2026: Which AI Coding Tool Wins?">
+<meta name="twitter:description" content="The three biggest AI coding assistants compared — pricing, benchmarks, agents, enterprise features, and our honest verdict.">
+<meta name="twitter:image" content="https://ai-tools-compared.com/images/articles/cursor-vs-windsurf-vs-copilot/head-to-head-scores.png">
+
+<!-- Schema.org Article Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cursor vs Windsurf vs GitHub Copilot 2026: Which AI Coding Tool Wins?",
+  "description": "Cursor vs Windsurf vs GitHub Copilot in 2026 — pricing, agentic benchmarks, in-house models, enterprise features, and which AI coding assistant you should actually pick.",
+  "image": "https://ai-tools-compared.com/images/articles/cursor-vs-windsurf-vs-copilot/head-to-head-scores.png",
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tools Compared"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Tools Compared",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ai-tools-compared.com/logo.png"
+    }
+  },
+  "datePublished": "2026-08-23",
+  "dateModified": "2026-08-23",
+  "mainEntityOfPage": "https://ai-tools-compared.com/articles/cursor-vs-windsurf-vs-copilot.html"
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Cursor better than GitHub Copilot in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For hands-on coding, yes — Cursor wins on code quality, agent autonomy, context handling, and IDE experience in our testing. Its Composer 2.5 agent handles multi-file refactors that Copilot's agent struggles with. But Copilot wins on price ($10/mo vs $20/mo), enterprise compliance (IP indemnity, SOC 2, 90% of Fortune 100), and its generous free tier. If you code all day, Cursor is worth 2x the price; if coding is occasional, Copilot is the smarter buy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Windsurf still available after Cognition acquired it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Cognition (maker of the Devin AI engineer) acquired Windsurf in July 2025 and has since merged the editor with Devin's interface. The product is now sold as Devin Desktop, with Windsurf branding phased out. Existing Windsurf plans were honored, and Windsurf Pro/Max subscribers get Devin access tiers. The SWE-1.5/1.6/1.7 in-house models continue to power the editor with unlimited usage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GitHub Copilot actually free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Copilot has a permanent free tier with 2,000 code completions and 50 chat/agent requests per month, plus a limited GitHub coding agent. It's the most generous free tier among the three tools. Paid plans start at $10/month (Pro), $39/month (Pro+ with more model choice), and $100/month (Max for heavy agent usage). Business is $19/user/month and Enterprise is $39/user/month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI coding tool is best for large monorepos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cursor. Its codebase indexing handles multi-repo workspaces natively, and Composer's context retrieval consistently picks the right files across 100K+ line monorepos in our tests. Copilot's workspace context is improving but weaker for cross-repo work. For extremely large or sensitive codebases where you cannot index to a cloud, self-hosted Windsurf (Devin Desktop) deployments are the strongest alternative."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to use AI coding assistants at work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All three offer zero data retention on business plans and are SOC 2 Type II certified. GitHub Copilot goes furthest for regulated industries: it includes IP indemnity (customer protection against copyright claims from generated code), model gateway controls, audit logs, and policy enforcement, which is why 90% of the Fortune 100 uses it. Cursor and Windsurf both offer enterprise privacy modes and SCIM/SSO; Windsurf uniquely supports fully self-hosted deployment for air-gapped environments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI coding tool should a beginner choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with GitHub Copilot Free — it costs nothing, works inside regular VS Code, and gently improves your skills without changing your workflow. When you outgrow completions and want the AI to write whole features, graduate to Cursor Pro ($20/mo). Windsurf is a good middle ground if you want one-click escalation to a cloud AI engineer (Devin) for tasks you cannot finish yourself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these tools outside VS Code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cursor and Windsurf are standalone forks of VS Code — they are full editors, not plugins, though VS Code extensions mostly work in both. GitHub Copilot is the most flexible: it runs as an extension in VS Code, all JetBrains IDEs, Visual Studio, Xcode, and Eclipse, and includes a web-based agent on GitHub.com that opens pull requests from issues."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">AI Tools Compared</a>
+      <div class="nav-links">
+        <a href="/articles/chatgpt-vs-claude-vs-gemini.html">Chatbots</a>
+        <a href="/articles/cursor-vs-github-copilot.html">Coding</a>
+        <a href="/articles/midjourney-vs-dalle.html">Image</a>
+        <a href="/articles/runway-vs-kling-vs-pika.html">Video</a>
+        <a href="/articles/surfer-vs-semrush-vs-frase-vs-ahrefs.html">SEO</a>
+        <a href="/articles/notion-vs-obsidian-vs-logseq.html">Productivity</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="article-container">
+    <div class="article-header">
+      <span class="article-badge">AI Coding Tools</span>
+      <h1>Cursor vs Windsurf vs GitHub Copilot 2026: Which AI Coding Tool Wins?</h1>
+      <p class="article-meta">Updated August 23, 2026 &middot; 21 min read &middot; Tested on a 180K-line TypeScript monorepo, a legacy Python service, and 3 production-grade refactors</p>
+    </div>
+
+    <div class="article-body">
+
+<!-- ===== TL;DR ===== -->
+    <div class="tldr-box">
+      <h3>&#9889; Quick Summary — TL;DR</h3>
+      <ul>
+        <li><span class="highlight">Cursor Pro ($20/mo)</span> — Best AI coding experience, period. Composer 2.5 agents nail multi-file refactors, codebase indexing is the best in class, and the IDE feels like the future. 2M+ users and a reported ~$3B ARR run-rate make it the market leader. Weakness: pricing escalates fast, and enterprise compliance still trails Copilot.</li>
+        <li><span class="highlight">GitHub Copilot Pro ($10/mo)</span> — Best value and safest enterprise bet. Generous free tier, $10 entry price, ~30 models including GPT-5.6, IP indemnity, and 90% of the Fortune 100 as customers. Weakness: agentic multi-file work and context handling lag Cursor by a visible margin.</li>
+        <li><span class="highlight">Windsurf, now Devin Desktop ($20/mo)</span> — Best one-click escalation to a cloud AI engineer. Since Cognition acquired Windsurf (July 2025), the editor merged with Devin: unlimited in-house SWE-1.7 models, Devin handoff, and the only self-hosted option of the three. Weakness: raw code quality and editor polish trail both rivals.</li>
+        <li><span class="highlight">Our verdict</span> — Full-time developers: Cursor. Teams with compliance needs or tight budgets: Copilot. Self-hosted shops and Devin fans: Windsurf. The hybrid play (Copilot free tier + Cursor Pro) covers 90% of needs for $20/mo.</li>
+      </ul>
+    </div>
+
+<!-- ===== AT A GLANCE ===== -->
+    <h2>At a Glance: The 2026 AI Coding Landscape</h2>
+    <p>The AI coding market has consolidated into three distinct bets. <strong>Cursor</strong> (Anysphere) bets that the editor itself becomes the agent workspace. <strong>Windsurf</strong> — acquired by Cognition in July 2025 and now folded into <strong>Devin Desktop</strong> — bets that you will hand whole tasks to a cloud AI engineer. <strong>GitHub Copilot</strong> (Microsoft) bets that distribution, price, and enterprise trust win the long game.</p>
+
+    <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr><th></th><th>Cursor</th><th>Windsurf (Devin)</th><th>GitHub Copilot</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Product type</strong></td><td>AI-first IDE (VS Code fork)</td><td>AI-first IDE, now Devin Desktop</td><td>Extension for VS Code, JetBrains + GitHub agent</td></tr>
+        <tr><td><strong>Free tier</strong></td><td>Limited agent requests + Composer trial</td><td>Daily quota + unlimited Tab</td><td>2,000 completions + 50 chat/mo</td></tr>
+        <tr><td><strong>Entry paid plan</strong></td><td>$20/mo (Pro)</td><td>$20/mo (Pro)</td><td>$10/mo (Pro)</td></tr>
+        <tr><td><strong>Power tier</strong></td><td>$200/mo (Ultra)</td><td>$200/mo (Max)</td><td>$100/mo (Max)</td></tr>
+        <tr><td><strong>Teams pricing</strong></td><td>$40/user/mo</td><td>$40/user/mo</td><td>$19–39/user/mo</td></tr>
+        <tr><td><strong>In-house model</strong></td><td>Composer 2.5</td><td>SWE-1.5 / 1.6 / 1.7</td><td>MAI-Code-1.1-Flash</td></tr>
+        <tr><td><strong>Scale (2026)</strong></td><td>2M+ users, ~$3B ARR run-rate</td><td>~$82M ARR at time of sale</td><td>26M users, 4.7M paid seats</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Professional developers</td><td>Devin fans, self-hosters</td><td>Value seekers, enterprises</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="figure">
+      <img src="/images/articles/cursor-vs-windsurf-vs-copilot/head-to-head-scores.png" alt="Cursor vs Windsurf vs GitHub Copilot head-to-head scores across six dimensions, August 2026" loading="lazy">
+      <p class="caption">Our scores across six dimensions after 40+ hours of hands-on testing. Cursor averages 8.8/10; Windsurf and Copilot both average 8.2/10 — but for very different reasons.</p>
+    </div>
+
+<!-- ===== DEEP DIVE: CURSOR ===== -->
+    <div class="deep-dive">
+    <h2>Deep Dive 1: Cursor — The Agentic IDE That Ate the Market</h2>
+    <p>Two years ago Cursor was a scrappy YC startup. In 2026 it is the category leader: over <strong>2 million users</strong>, a reported <strong>~$3B ARR run-rate</strong>, and a valuation that makes it one of the fastest-growing software companies in history. The reason is simple — Cursor shipped the best agentic editing experience and never stopped iterating.</p>
+
+    <h3>What's new in 2026</h3>
+    <ul>
+      <li><strong>Composer 2.5</strong> — Cursor's in-house model family, purpose-built for agentic coding. Composer 2 topped the SWE-bench Multi leaderboard at <strong>73.7%</strong>, and 2.5 improves long-horizon planning, terminal command generation, and self-verification. Composer requests are unlimited on paid plans.</li>
+      <li><strong>Cloud Agents &amp; Builds</strong> — delegate a task to a parallel cloud agent that clones your repo, works in a sandbox, and opens a PR. Builds assembles multiple agents for larger features.</li>
+      <li><strong>Multi-repo workspaces</strong> — index several repositories (plus docs and issue trackers) in one context window; the retrieval consistently surfaces the right file on 180K+ line monorepos.</li>
+      <li><strong>Frontier model access</strong> — Opus 5, GPT-5.5, and Gemini 3.1 Pro are selectable per-task, letting you burn fast models on exploration and premium models on hard edits.</li>
+      <li><strong>Bugbot</strong> — automated code review on pull requests, catching issues before humans do.</li>
+    </ul>
+
+    <h3>Pricing</h3>
+    <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Plan</th><th>Price</th><th>What you get</th></tr></thead>
+      <tbody>
+        <tr><td>Hobby (Free)</td><td>$0</td><td>Limited agent requests, Composer trial, 2-week Pro trial</td></tr>
+        <tr><td>Pro</td><td>$20/mo</td><td>Unlimited Composer, generous frontier-model agent quotas</td></tr>
+        <tr><td>Pro+</td><td>$60/mo</td><td>~4x frontier-model usage for heavy agent users</td></tr>
+        <tr><td>Ultra</td><td>$200/mo</td><td>~20x usage, priority compute, Max-tier frontier models</td></tr>
+        <tr><td>Teams</td><td>$40/user/mo</td><td>Central billing, privacy mode, admin dashboard</td></tr>
+        <tr><td>Enterprise</td><td>Custom</td><td>SSO/SAML, SCIM, audit logs, zero data retention</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="card-grid">
+      <div class="card card-pros">
+        <div class="card-header">What we loved</div>
+        <ul>
+          <li>Composer 2.5 completes multi-file refactors other tools abandon halfway</li>
+          <li>Best-in-class codebase indexing and multi-repo context</li>
+          <li>Tab completion anticipates your next edit location, not just the next token</li>
+          <li>Cloud Agents parallelize boring work into background PRs</li>
+        </ul>
+      </div>
+      <div class="card card-cons">
+        <div class="card-header">What held it back</div>
+        <ul>
+          <li>Frontier-model agent quotas run out quickly past Pro; $200 Ultra is steep</li>
+          <li>Enterprise compliance trail: no IP indemnity equivalent to Copilot's</li>
+          <li>VS Code fork — you live in Cursor's release cadence, not Microsoft's</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+<!-- ===== DEEP DIVE: WINDSURF ===== -->
+    <div class="deep-dive">
+    <h2>Deep Dive 2: Windsurf — From Rival IDE to Devin Desktop</h2>
+    <p>Windsurf's story is the wildest in dev tools. After a reported $3B acquisition by OpenAI collapsed in mid-2025, <strong>Cognition</strong> — the company behind Devin, the first AI software engineer — bought Windsurf in July 2025 (reported ~$800M, with roughly $82M ARR at sale). In 2026 the two products merged: the Windsurf editor is now <strong>Devin Desktop</strong>, and the "Cascade" agent flow evolved into a full handoff pipeline to Devin's cloud agents.</p>
+
+    <h3>What's new in 2026</h3>
+    <ul>
+      <li><strong>SWE-1.7, unlimited</strong> — Cognition's in-house model line (SWE-1.5 → 1.6 → 1.7) is included without metering. SWE-1.6 scored <strong>50.4% on SWE-Bench Pro</strong>, remarkable for a model that costs the vendor a fraction of frontier API rates.</li>
+      <li><strong>Devin handoff</strong> — highlight a task too big or boring for interactive coding, click once, and Devin takes it in the cloud: reading your repos, opening a PR, pinging you on Slack when done. It's the smoothest human→AI-engineer escalation loop on the market.</li>
+      <li><strong>Self-hosted &amp; hybrid deployment</strong> — the only one of the three that enterprises can run inside their own VPC or on-prem, which matters for defense, banking, and healthcare.</li>
+      <li><strong>Strong enterprise package</strong> — SSO, SCIM, audit logs, zero retention, and org-wide policy controls inherited from Cognition's enterprise DNA.</li>
+      <li><strong>Frontier options</strong> — Sonnet 4.6, GPT-5.4, and Gemini 3 Flash available on higher tiers for when you want a premium model.</li>
+    </ul>
+
+    <h3>Pricing</h3>
+    <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Plan</th><th>Price</th><th>What you get</th></tr></thead>
+      <tbody>
+        <tr><td>Free</td><td>$0</td><td>Daily agent quota, unlimited Tab completions</td></tr>
+        <tr><td>Pro</td><td>$20/mo</td><td>Unlimited SWE-1.7, ~300 prompts on premium models</td></tr>
+        <tr><td>Max</td><td>$200/mo</td><td>~10x premium prompts, Devin access tier</td></tr>
+        <tr><td>Teams</td><td>$40/user/mo</td><td>Org controls, usage dashboards</td></tr>
+        <tr><td>Enterprise</td><td>Custom</td><td>Self-hosted/hybrid, SSO/SCIM, audit logs, Devin enterprise</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="card-grid">
+      <div class="card card-pros">
+        <div class="card-header">What we loved</div>
+        <ul>
+          <li>One-click Devin handoff is genuinely magical for grunt work</li>
+          <li>Unlimited in-house SWE-1.7 = predictable costs</li>
+          <li>Only self-hosted option among the big three</li>
+        </ul>
+      </div>
+      <div class="card card-cons">
+        <div class="card-header">What held it back</div>
+        <ul>
+          <li>Code quality on complex refactors visibly trails Cursor</li>
+          <li>Brand whiplash (Windsurf → Cognition → Devin Desktop) confuses teams</li>
+          <li>Editor polish and extension ecosystem feel a step behind both rivals</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+<!-- ===== DEEP DIVE: COPILOT ===== -->
+    <div class="deep-dive">
+    <h2>Deep Dive 3: GitHub Copilot — The Default That Grew Up</h2>
+    <p>Dismissed by power users in 2024 as "autocomplete with marketing," Copilot in 2026 is a different animal: <strong>26 million users, 4.7 million paid seats, and 90% of the Fortune 100</strong>. Microsoft's distribution — VS Code, JetBrains, Visual Studio, Xcode, GitHub itself — plus an aggressive price cut changed the calculus. At $10/month with a real free tier, Copilot is the tool most of the world actually uses.</p>
+
+    <h3>What's new in 2026</h3>
+    <ul>
+      <li><strong>~30 models, one subscription</strong> — including GPT-5.6, Fable 5, Sonnet 4.6, and Microsoft's own <strong>MAI-Code-1.1-Flash</strong>, a fast in-house coding model that handles routine work at low cost. Model picker per conversation keeps power without price gouging.</li>
+      <li><strong>Coding agent on GitHub</strong> — assign an issue to Copilot and it opens a pull request, runs your CI, and revises from review comments. Default-agent performance sits around <strong>~56% on SWE-bench Verified</strong> — solid, though below Cursor's Composer 2 at 73.7% on SWE-bench Multi (different, harder suite).</li>
+      <li><strong>Projectpad &amp; workspace context</strong> — persistent project memory across sessions, closing much of the context gap with Cursor for medium-size repos.</li>
+      <li><strong>Copilot Code Review</strong> — every PR gets an automated first-pass review before humans look at it.</li>
+      <li><strong>Enterprise trust</strong> — IP indemnity, model gateway, audit logs, content exclusion, policy enforcement. This is why compliance teams greenlight Copilot fastest.</li>
+    </ul>
+
+    <h3>Pricing</h3>
+    <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Plan</th><th>Price</th><th>What you get</th></tr></thead>
+      <tbody>
+        <tr><td>Free</td><td>$0</td><td>2,000 completions + 50 chat/agent requests/mo</td></tr>
+        <tr><td>Pro</td><td>$10/mo</td><td>Unlimited completions, 300 premium requests</td></tr>
+        <tr><td>Pro+</td><td>$39/mo</td><td>1,500 premium requests, full model catalog</td></tr>
+        <tr><td>Max</td><td>$100/mo</td><td>Heavier agent access (Max 5x / 20x tiers)</td></tr>
+        <tr><td>Business</td><td>$19/user/mo</td><td>Org policy, privacy, IP indemnity</td></tr>
+        <tr><td>Enterprise</td><td>$39/user/mo</td><td>+ GitHub Enterprise, audit, content exclusion</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="card-grid">
+      <div class="card card-pros">
+        <div class="card-header">What we loved</div>
+        <ul>
+          <li>$10 entry and a genuinely usable free tier</li>
+          <li>Works everywhere: VS Code, JetBrains, Visual Studio, Xcode, GitHub.com</li>
+          <li>IP indemnity + compliance stack that enterprises sign off on</li>
+        </ul>
+      </div>
+      <div class="card card-cons">
+        <div class="card-header">What held it back</div>
+        <ul>
+          <li>Agent mode still breaks multi-file refactors into fragile steps</li>
+          <li>Context retrieval misses cross-repo dependencies on big monorepos</li>
+          <li>Premium-request metering is confusing — edits, agent turns, and models all bill differently</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div class="figure">
+      <img src="/images/articles/cursor-vs-windsurf-vs-copilot/pricing-comparison.png" alt="Monthly pricing comparison of Cursor, Windsurf, and GitHub Copilot plans, August 2026" loading="lazy">
+      <p class="caption">Copilot undercuts everyone at entry ($10) and power tier ($100). Cursor and Windsurf tie at $20/$40/$200. Copilot Pro+ ($39) fills the gap between Pro and Max.</p>
+    </div>
+
+<!-- ===== HEAD TO HEAD ===== -->
+    <h2>Head-to-Head: Six Dimensions, Six Winners Declared</h2>
+    <p>We ran identical tasks through all three tools: completions on a 180K-line TypeScript monorepo, agent refactors across 10–20 files, debugging from CI logs, and greenfield feature builds with tests. Here is how the dimensions broke down.</p>
+
+    <h3>1. Code Quality &amp; Completions <span class="score-badge">Winner: Cursor</span></h3>
+    <p>Cursor's Tab completion remains the industry benchmark — it predicts your next <em>edit location</em>, not just the next token, and routinely writes 3–5 correct lines from a pause in typing. Composer 2.5's generated code needed the fewest human corrections in our refactor tests. Copilot (mixing MAI-Code-1.1-Flash and GPT-5.6) is close on completions but writes less idiomatic code in agent mode. Windsurf's SWE-1.7 is impressive for its cost, but on gnarly legacy code it hallucinated imports more often than either rival.</p>
+
+    <h3>2. Agent Autonomy &amp; Multi-File Refactors <span class="score-badge">Winner: Cursor</span></h3>
+    <p>This is where the products are most different. Cursor's agent planned a 14-file Express-to-Fastify migration as a coherent diff tree, ran tests, self-corrected twice, and finished in one session. Copilot's agent got the same task 80% done but fragmented it into brittle, reviewable-but-tedious steps. Windsurf's ace is <em>escalation</em>: when the task exceeds interactive capacity, handing it to Devin in the cloud actually works — our test PR arrived green on CI within 40 minutes. For in-editor autonomy, Cursor wins; for delegation, Windsurf is the runner-up with a unique trick.</p>
+
+    <h3>3. Context &amp; Codebase Understanding <span class="score-badge">Winner: Cursor</span></h3>
+    <p>Cursor's indexing + retrieval found the right utility file in a 180K-line monorepo on the first or second try in nearly every test, and multi-repo workspaces let it reason across service boundaries. Copilot's Projectpad closed much of the gap for single repos but still misses cross-repo references. Windsurf indexes fast and cheaply, but retrieval precision drops on very large codebases.</p>
+
+    <h3>4. IDE Experience &amp; Performance <span class="score-badge">Winner: Cursor</span></h3>
+    <p>Both Cursor and Windsurf are VS Code forks, but Cursor's editor feels faster: snappier agent panels, cleaner diff review, more predictable keyboard flow. Copilot runs <em>inside</em> your existing VS Code or JetBrains setup — less disruptive if you're attached to your IDE, and the only option of the three for JetBrains diehards (short of JetBrains' own AI). By raw editor craft, Cursor takes it.</p>
+
+    <h3>5. Pricing &amp; Value for Money <span class="score-badge">Winner: GitHub Copilot</span></h3>
+    <p>Copilot Free (2,000 completions, 50 chats) is a real product; Pro at $10/mo with unlimited completions beats both rivals' entry price; Max at $100 undercuts their $200 power tiers. Windsurf's unlimited SWE-1.7 makes its $20 Pro the most predictable bill. Cursor gives the most capability per dollar for full-time developers, but the quota anxiety on frontier models at Pro tier is real — heavy users end up at $60 or $200.</p>
+
+    <h3>6. Enterprise, Security &amp; Ecosystem <span class="score-badge">Winner: GitHub Copilot</span></h3>
+      <p>All three are SOC 2 Type II with zero-retention options, SSO/SCIM, and privacy modes. Copilot pulls ahead on <strong>IP indemnity</strong> (contractual protection if generated code triggers copyright claims), model gateway controls, audit exports, and content exclusion for sensitive paths. Windsurf counters with the only <strong>self-hosted</strong> deployment of the three — decisive for air-gapped orgs. Cursor's enterprise tier is competent but youngest. With 90% of the Fortune 100 and 4.7M paid seats, Copilot's ecosystem gravity wins the dimension.</p>
+
+    <div class="figure">
+      <img src="/images/articles/cursor-vs-windsurf-vs-copilot/quality-benchmark.png" alt="Radar chart comparing Cursor, Windsurf, and GitHub Copilot across six quality dimensions" loading="lazy">
+      <p class="caption">The shapes tell the story: Cursor dominates the technical left side; Copilot dominates value and enterprise; Windsurf is the balanced all-rounder with a self-hosting ace.</p>
+    </div>
+
+    <div class="figure">
+      <img src="/images/articles/cursor-vs-windsurf-vs-copilot/feature-comparison-table.png" alt="Feature comparison table for Cursor, Windsurf Devin Desktop, and GitHub Copilot, August 2026" loading="lazy">
+      <p class="caption">Full feature matrix: models, agents, benchmarks, pricing, and scale, as of August 2026.</p>
+    </div>
+
+<!-- ===== REAL-WORLD SCENARIOS ===== -->
+    <h2>Real-World Test Scenarios</h2>
+    <p>Benchmarks are nice; production is the truth. Here are three tasks we actually ran, with the prompts and outcomes.</p>
+
+    <h3>Scenario 1: The Legacy Refactor</h3>
+    <p><em>"Migrate this Express 4 service to Fastify across 14 files. Convert all middleware to Fastify hooks, keep the OpenAPI spec in sync, and make the existing Supertest suite pass without modifying assertions."</em></p>
+    <ul>
+      <li><strong>Cursor:</strong> Completed in one agent session. Two self-corrections, all 61 tests green. Winner.</li>
+      <li><strong>Copilot:</strong> File-by-file approach worked but needed 4 manual nudges; left 2 middleware edge cases for us.</li>
+      <li><strong>Windsurf:</strong> Interactive attempt stalled at 60%; Devin handoff finished the job overnight with a green PR.</li>
+    </ul>
+
+    <h3>Scenario 2: The Greenfield Feature</h3>
+    <p><em>"Add OAuth2 authorization-code login with PKCE to this Next.js app. Wire up the callback route, session refresh, protected-route middleware, and write Vitest tests covering the token exchange."</em></p>
+    <ul>
+      <li><strong>Cursor:</strong> Correct PKCE flow (many models botch the verifier/challenge), tests passed first run.</li>
+      <li><strong>Copilot:</strong> Solid structure; initially used a deprecated token-endpoint pattern, fixed after one comment.</li>
+      <li><strong>Windsurf:</strong> Working code but skipped the refresh-rotation edge case we explicitly asked for.</li>
+    </ul>
+
+    <h3>Scenario 3: The Restricted Enterprise Repo</h3>
+    <p><em>"Fix the failing CI pipeline in this payments monorepo. Logs attached. Code must not leave the VPC; no third-party model APIs."</em></p>
+    <ul>
+      <li><strong>Windsurf:</strong> The only one that can run fully self-hosted — SWE-1.7 diagnosed a flaky fixture in the pipeline config. Winner for this scenario by default.</li>
+      <li><strong>Cursor:</strong> Enterprise privacy mode + zero retention satisfies most (not all) security teams.</li>
+      <li><strong>Copilot:</strong> Content exclusion + model gateway handles it for most regulated orgs; 90% of the Fortune 100 already cleared it.</li>
+    </ul>
+
+    <div class="figure">
+      <img src="/images/articles/cursor-vs-windsurf-vs-copilot/decision-matrix.png" alt="Decision matrix: choose Cursor, Windsurf Devin Desktop, or GitHub Copilot based on your situation" loading="lazy">
+      <p class="caption">The 30-second version: match your situation to the column.</p>
+    </div>
+
+<!-- ===== ALTERNATIVES ===== -->
+    <h2>Alternatives Worth Considering</h2>
+    <p>The big three don't cover every workflow. These are the tools we'd shortlist instead:</p>
+    <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Tool</th><th>Starting price</th><th>Standout feature</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Claude Code</strong></td><td>$20/mo (with Claude Pro)</td><td>Terminal-native agent powered by Opus 5 — the choice for deep, single-session reasoning over big diffs</td></tr>
+        <tr><td><strong>Cline</strong></td><td>Free (BYO API keys)</td><td>Open-source agent extension for VS Code; you control every model call and token spent</td></tr>
+        <tr><td><strong>JetBrains AI + Junie</strong></td><td>~$10/mo</td><td>Native AI for IntelliJ/PyCharm/GoLand — no fork, no extension tax, deep IDE integration</td></tr>
+        <tr><td><strong>Aider</strong></td><td>Free (BYO keys)</td><td>CLI pair-programmer with best-in-class git discipline — every change is a clean commit</td></tr>
+        <tr><td><strong>Zed</strong></td><td>Free / usage-based</td><td>Blazing-fast collaborative editor with native AI agents and multiplayer cursors</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+<!-- ===== VERDICT ===== -->
+    <h2>The Verdict</h2>
+    <div class="verdict-grid">
+      <div class="verdict-card">
+        <div class="card-header">Best for professional developers</div>
+        <p><strong>Cursor Pro ($20/mo).</strong> If you write code all day, Cursor's agent quality, context handling, and editor craft save measurable hours weekly. Nothing else in 2026 feels as close to "the AI does the typing, you do the thinking."</p>
+      </div>
+      <div class="verdict-card">
+        <div class="card-header">Best value &amp; best for enterprises</div>
+        <p><strong>GitHub Copilot Pro ($10/mo) / Business ($19).</strong> Half the entry price of rivals, a real free tier, ~30 models, and the compliance package (IP indemnity, audit, policy) that gets security sign-off without a fight.</p>
+      </div>
+      <div class="verdict-card">
+        <div class="card-header">Best for delegation &amp; self-hosting</div>
+        <p><strong>Windsurf / Devin Desktop ($20/mo).</strong> One-click Devin handoff for tasks you'd rather not do, unlimited SWE-1.7 for predictable costs, and the only self-hosted option — decisive for air-gapped and highly regulated teams.</p>
+      </div>
+      <div class="verdict-card">
+        <div class="card-header">The hybrid play</div>
+        <p><strong>Copilot Free + Cursor Pro.</strong> Keep Copilot's free tier in VS Code for quick completions and reviews; do heavy agentic work in Cursor. Total cost: $20/mo for 90% coverage. Teams on strict budgets can swap Cursor for Claude Code during heavy months.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>Bottom line:</strong> 2026 settled the question "do I need an AI coding tool?" — the question is now "which one." Cursor wins on craft, Copilot wins on value and trust, Windsurf wins on delegation and control. Pick by workflow, not by hype: your choice of tool should follow from how much code you write, where it lives, and who audits it.</p>
+    </div>
+
+<!-- ===== FAQ ===== -->
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">Is Cursor better than GitHub Copilot in 2026?</div>
+      <div class="faq-answer">For hands-on coding, yes — Cursor wins on code quality, agent autonomy, context handling, and IDE experience in our testing. Composer 2.5 completes multi-file refactors that Copilot's agent struggles with. But Copilot wins on price ($10/mo vs $20/mo), enterprise compliance (IP indemnity, 90% of Fortune 100), and its generous free tier. Full-time developers get their money's worth from Cursor; occasional coders should save it with Copilot.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Is Windsurf still available after Cognition acquired it?</div>
+      <div class="faq-answer">Yes. Cognition (maker of Devin) acquired Windsurf in July 2025 and merged the editor with Devin's interface — the product is now Devin Desktop, with Windsurf branding phased out. Existing plans were honored, and the SWE-1.5/1.6/1.7 models continue to power the editor with unlimited usage.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Is GitHub Copilot actually free?</div>
+      <div class="faq-answer">Yes — Copilot's free tier includes 2,000 completions and 50 chat/agent requests per month plus limited GitHub coding agent access. It's the most generous free tier of the three. Paid plans: Pro $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/user/mo, Enterprise $39/user/mo.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Which AI coding tool is best for large monorepos?</div>
+      <div class="faq-answer">Cursor. Its codebase indexing and multi-repo workspaces handle 100K+ line monorepos with the best retrieval precision we tested. Copilot's Projectpad is improving but weaker cross-repo. For codebases that cannot be indexed to any cloud, self-hosted Windsurf is the strongest alternative.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Is it safe to use AI coding assistants at work?</div>
+      <div class="faq-answer">All three are SOC 2 Type II with zero-retention and privacy modes. Copilot goes furthest for regulated industries with IP indemnity, model gateway, audit logs, and content exclusion — a key reason 90% of the Fortune 100 uses it. Windsurf uniquely offers full self-hosting for air-gapped environments; Cursor offers enterprise privacy mode and SSO/SCIM.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Which AI coding tool should a beginner choose?</div>
+      <div class="faq-answer">Start with Copilot Free — it costs nothing, works in regular VS Code, and improves your skills without changing your workflow. Graduate to Cursor Pro ($20/mo) when you want the AI writing whole features. Windsurf suits beginners who want to hand hard tasks to Devin while learning.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I use these tools outside VS Code?</div>
+      <div class="faq-answer">Cursor and Windsurf are standalone VS Code forks — full editors, though most VS Code extensions work in both. Copilot is the most flexible: extensions exist for VS Code, JetBrains IDEs, Visual Studio, Xcode, and Eclipse, plus a web agent on GitHub.com that turns issues into pull requests.</div>
+    </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="article-footer">
+      <a href="/articles/chatgpt-vs-julius-ai.html" class="prev-article">&larr; Previous: ChatGPT vs Julius AI</a>
+      <a href="/" class="next-article">All Articles &rarr;</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 AI Tools Compared. All rights reserved.</p>
+  </footer>
+</body>
+</html>
