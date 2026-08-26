@@ -12,10 +12,21 @@ def get_token():
     # 优先环境变量，其次 vercel CLI 会话文件
     if os.environ.get('VERCEL_TOKEN'):
         return os.environ['VERCEL_TOKEN']
-    for p in [os.path.expanduser('~/Library/Application Support/com.vercel.cli/auth.json')]:
-        if os.path.exists(p):
-            return json.load(open(p))['token']
-    raise SystemExit('无 Vercel token')
+    p = os.path.expanduser('~/Library/Application Support/com.vercel.cli/auth.json')
+    if not os.path.exists(p):
+        raise SystemExit('无 Vercel token')
+    d = json.load(open(p))
+    # vca_ token 是短期访问令牌(约1个月过期)，过期后需 CLI 用 refreshToken 刷新。
+    # 检查 expiresAt，临近/已过期就跑一次 `vercel whoami` 触发 CLI 自动刷新再读。
+    import subprocess, time
+    exp = d.get('expiresAt')
+    if not exp or exp - time.time() < 3600:
+        try:
+            subprocess.run(['vercel', 'whoami'], capture_output=True, timeout=30)
+            d = json.load(open(p))  # 重新读刷新后的token
+        except Exception:
+            pass
+    return d['token']
 
 TOKEN = get_token()
 
