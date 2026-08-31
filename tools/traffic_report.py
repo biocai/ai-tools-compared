@@ -14,7 +14,7 @@ def get_token():
         return os.environ['VERCEL_TOKEN']
     p = os.path.expanduser('~/Library/Application Support/com.vercel.cli/auth.json')
     if not os.path.exists(p):
-        raise SystemExit('无 Vercel token')
+        raise SystemExit('未找到 Vercel 登录凭证(CLI 曾因凭证失效删除 auth.json)。请在终端跑一次 vercel login 重新登录, 之后的日报会自动恢复。')
     d = json.load(open(p))
     # vca_ token 是短期访问令牌(约1个月过期)，过期后需 CLI 用 refreshToken 刷新。
     # 检查 expiresAt，临近/已过期就跑一次 `vercel whoami` 触发 CLI 自动刷新再读。
@@ -26,6 +26,12 @@ def get_token():
             d = json.load(open(p))  # 重新读刷新后的token
         except Exception:
             pass
+    # 2026-08-30 实测: refresh token 也可能彻底失效, 此时 CLI 会直接删掉 auth.json,
+    # 上面的 json.load 抛异常被吞掉后 d 还是旧 token → 打出看不懂的 403 invalidToken。
+    # 改为明确报错并给出修复动作。
+    exp = d.get('expiresAt')
+    if not exp or exp - time.time() < 3600:
+        raise SystemExit('Vercel 登录凭证已彻底失效(自动刷新失败)。请在终端跑一次 vercel login 重新登录, 之后的日报会自动恢复。')
     return d['token']
 
 TOKEN = get_token()
