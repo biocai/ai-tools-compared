@@ -13,8 +13,16 @@ def get_token():
     if os.environ.get('VERCEL_TOKEN'):
         return os.environ['VERCEL_TOKEN']
     p = os.path.expanduser('~/Library/Application Support/com.vercel.cli/auth.json')
+    # 2026-09-05 实测: auth.json 不存在时, 只跑一次 `vercel whoami` 即可用残留的
+    # refresh token 重建凭证文件, 无需人工 vercel login。先自愈再报错。
+    import subprocess
     if not os.path.exists(p):
-        raise SystemExit('未找到 Vercel 登录凭证(CLI 曾因凭证失效删除 auth.json)。请在终端跑一次 vercel login 重新登录, 之后的日报会自动恢复。')
+        try:
+            subprocess.run(['vercel', 'whoami'], capture_output=True, timeout=30)
+        except Exception:
+            pass
+    if not os.path.exists(p):
+        raise SystemExit('未找到 Vercel 登录凭证(自动重建失败)。请在终端跑一次 vercel login 重新登录, 之后的日报会自动恢复。')
     d = json.load(open(p))
     # vca_ token 是短期访问令牌(约1个月过期)，过期后需 CLI 用 refreshToken 刷新。
     # 检查 expiresAt，临近/已过期就跑一次 `vercel whoami` 触发 CLI 自动刷新再读。
