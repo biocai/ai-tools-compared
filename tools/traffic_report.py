@@ -12,47 +12,51 @@ def get_token():
     # 优先环境变量，其次 vercel CLI 会话文件
     if os.environ.get('VERCEL_TOKEN'):
         return os.environ['VERCEL_TOKEN']
-    p = os.path.expanduser('~/Library/Application Support/com.vercel.cli/auth.json')
-    # 2026-09-05 实测: auth.json 不存在时, 只跑一次 `vercel whoami` 即可用残留的
-    # refresh token 重建凭证文件, 无需人工 vercel login。先自愈再报错。
-    import subprocess
-    if not os.path.exists(p):
-        try:
-            subprocess.run(['vercel', 'whoami'], capture_output=True, timeout=30)
-        except Exception:
-            pass
-    if not os.path.exists(p):
-        raise SystemExit('未找到 Vercel 登录凭证(自动重建失败)。请在终端跑一次 vercel login 重新登录, 之后的日报会自动恢复。')
-    d = json.load(open(p))
-    # vca_ token 是短期访问令牌(约1个月过期)，过期后需 CLI 用 refreshToken 刷新。
-    # 检查 expiresAt，临近/已过期就跑一次 `vercel whoami` 触发 CLI 自动刷新再读。
     import subprocess, time
-    exp = d.get('expiresAt')
-    if not exp or exp - time.time() < 3600:
+    p = os.path.expanduser('~/Library/Application Support/com.vercel.cli/auth.json')
+    # 自愈1: auth.json 不存在 → 跑一次 vercel whoami 用残留 refresh token 重建(2026-09-05实测有效)
+    if not os.path.exists(p):
         try:
             subprocess.run(['vercel', 'whoami'], capture_output=True, timeout=30)
-            d = json.load(open(p))  # 重新读刷新后的token
         except Exception:
             pass
-    # 2026-08-30 实测: refresh token 也可能彻底失效, 此时 CLI 会直接删掉 auth.json,
-    # 上面的 json.load 抛异常被吞掉后 d 还是旧 token → 打出看不懂的 403 invalidToken。
-    # 改为明确报错并给出修复动作。
+    try:
+        d = json.load(open(p))
+    except Exception:
+        raise SystemExit('未找到 Vercel 登录凭证(自动重建失败)。请跑一次 vercel login 重新登录。')
+    # 自愈2: vca_ token TTL 很短(实测约15分钟)。临期就先让 CLI 刷新一次;
+    # 刷新后仍临期也照常返回——剩余几十秒足够本脚本完成全部查询。
+    # (2026-09-06教训: 旧版"剩余<3600s即报彻底失效"是误判, token实际有效。真正的失效
+    #  由 q() 里 API 401/403 兜底: 强制刷新后重试一次, 仍失败才报错。)
     exp = d.get('expiresAt')
-    if not exp or exp - time.time() < 3600:
-        raise SystemExit('Vercel 登录凭证已彻底失效(自动刷新失败)。请在终端跑一次 vercel login 重新登录, 之后的日报会自动恢复。')
-    return d['token']
+    if not exp or exp - time.time() < 120:
+        try:
+            subprocess.run(['vercel', 'whoami'], capture_output=True, timeout=30)
+            d = json.load(open(p))
+        except Exception:
+            pass
+    return d.get('token', '')
 
-TOKEN = get_token()
+def force_refresh():
+    import subprocess
+    try:
+        subprocess.run(['vercel', 'whoami'], capture_output=True, timeout=30)
+    except Exception:
+        pass
 
 def q(dataset, style, params):
     params = {'slug': SLUG, 'projectId': PID, **params}
     url = f'https://api.vercel.com/v1/query/web-analytics/{dataset}/{style}?' + urllib.parse.urlencode(params, doseq=True)
-    req = urllib.request.Request(url, headers={'Authorization': f'Bearer {TOKEN}'})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            return json.loads(r.read())
-    except urllib.error.HTTPError as e:
-        return {'_error': e.code, '_msg': e.read().decode()[:200]}
+    for attempt in (1, 2):
+        req = urllib.request.Request(url, headers={'Authorization': f'Bearer {get_token()}'})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return json.loads(r.read())
+        except urllib.error.HTTPError as e:
+            if attempt == 1 and e.code in (401, 403):
+                force_refresh()
+                continue
+            return {'_error': e.code, '_msg': e.read().decode()[:200]}
 
 def fmt_aggregate(rows, key, metrics=('visitors', 'pageviews')):
     out = []
