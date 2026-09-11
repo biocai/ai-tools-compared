@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9934737933792605"
+     crossorigin="anonymous"></script>
+
+<!-- Google certified CMP (Funding Choices) — GDPR consent for EEA/UK/CH -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied',
+  'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
+  'wait_for_update': 500
+});
+</script>
+<script async src="https://fundingchoicesmessages.google.com/i/pub-9934737933792605?ers=1"></script>
+<script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex vs Claude Code: AI Coding Agents Compared in 2026</title>
+  <meta name="description" content="Codex vs Claude Code compared: cloud-first vs terminal-first AI coding agents, pricing from $0 vs $20, benchmarks, and verdicts by workflow.">
+  <link rel="canonical" href="https://ai-tools-compared.com/articles/codex-vs-claude-code.html">
+  <meta property="og:title" content="Codex vs Claude Code: AI Coding Agents Compared in 2026">
+  <meta property="og:description" content="Codex vs Claude Code compared: cloud-first vs terminal-first AI coding agents, pricing from $0 vs $20, benchmarks, and verdicts by workflow.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ai-tools-compared.com/articles/codex-vs-claude-code.html">
+  <meta property="og:image" content="https://ai-tools-compared.com/images/articles/codex-vs-claude-code/head-to-head-scores.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Codex vs Claude Code: AI Coding Agents Compared in 2026">
+  <meta name="twitter:description" content="OpenAI's cloud-first coding agent vs Anthropic's terminal-first agent: 7 dimensions scored, prices verified, verdicts by workflow.">
+  <meta name="twitter:image" content="https://ai-tools-compared.com/images/articles/codex-vs-claude-code/head-to-head-scores.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YD6WK4LZWH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YD6WK4LZWH');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Codex vs Claude Code: AI Coding Agents Compared in 2026",
+    "author": {"@type": "Organization", "name": "AI Tools Compared"},
+    "publisher": {"@type": "Organization", "name": "AI Tools Compared"},
+    "datePublished": "2026-09-11",
+    "dateModified": "2026-09-11",
+    "description": "Codex vs Claude Code compared: cloud-first vs terminal-first AI coding agents, pricing from $0 vs $20, benchmarks, and verdicts by workflow.",
+    "mainEntityOfPage": "https://ai-tools-compared.com/articles/codex-vs-claude-code.html",
+    "image": "https://ai-tools-compared.com/images/articles/codex-vs-claude-code/head-to-head-scores.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Codex free to use?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Codex has a genuine free tier: the CLI is open source (Apache 2.0) and free users get a monthly trial allowance of agent tasks on GPT-5.6 Terra, usable in the terminal, the VS Code extension, and the web app. Paid plans lift the limits: ChatGPT Go at $8/month, Plus at $20/month, and Pro at $200/month."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does Claude Code have a free tier?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. Claude Code requires either a Claude subscription (Pro at $20/month, Max 5x at $100/month, Max 20x at $200/month) or Anthropic API pay-as-you-go billing. There is no free usage tier, which is the single biggest onboarding difference versus Codex."}
+      },
+      {
+        "@type": "Question",
+        "name": "Which is cheaper for heavy agentic use, Codex or Claude Code?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Codex, by roughly 29% per finished task. On the DeepSWE benchmark at API rates, a completed agentic task averaged $8.39 with Codex (GPT-5.6 Sol) versus $11.84 with Claude Code (Opus 5). At subscription level the gap widens: Codex Pro at $200/month includes cloud task runners, while matching that autonomy on Claude Code typically means Max 5x at $100 to Max 20x at $200/month."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can Codex and Claude Code run inside VS Code?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes, both ship official VS Code extensions. Codex's extension routes tasks to its cloud sandbox by default; Claude Code's extension embeds the same terminal-native agent in a side panel. Claude Code additionally supports JetBrains IDEs, so it covers one more editor family."}
+      },
+      {
+        "@type": "Question",
+        "name": "Which tool is better for large refactors and migrations?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Claude Code. Opus 5's reasoning on legacy code, the up-to-1M-token context window, and recursive subagents that coordinate across a codebase make it the stronger pick for multi-day refactors — the reason it scores 9.3 versus Codex's 7.8 on our Long Agentic Refactors dimension."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can you use Codex and Claude Code together?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes, and it is a popular stack for freelancers: Codex (free tier or Go at $8/month) for everyday tasks, CI fixes, and parallel gig work, plus Claude Pro at $20/month for the hardest debugging and refactoring jobs. Total spend $28/month or less. Run only one agent on a working tree at a time to avoid conflicting edits."}
+      },
+      {
+        "@type": "Question",
+        "name": "Do Codex and Claude Code work offline?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. Both depend on their vendors' models via API, so an internet connection is mandatory. Claude Code executes commands locally on your machine (you can inspect every step), while Codex defaults to an isolated OpenAI cloud sandbox — neither can run without network access."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav-bar">
+        <a href="/" class="nav-logo">AI Tools Compared</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/articles/chatgpt-vs-claude-vs-gemini.html">Chatbot</a>
+            <a href="/articles/cursor-vs-github-copilot.html">Coding</a>
+            <a href="/articles/midjourney-vs-dalle.html">Image</a>
+            <a href="/articles/runway-vs-kling-vs-pika.html">Video</a>
+            <a href="/about.html">About</a>
+        </div>
+    </nav>
+
+    <div class="article-container">
+    <article>
+      <header class="article-header">
+            <span class="article-badge">Comparison · AI Coding</span>
+            <h1>Codex vs Claude Code: AI Coding Agents Compared in 2026</h1>
+            <p class="article-meta">Updated September 11, 2026 · 16 min read</p>
+        </header>
+
+        <div class="article-body">
+          <div class="tldr-box">
+            <p><strong>TL;DR:</strong> These are the two agents developers actually pay for in 2026, and they split the coding-agent market down the middle. <strong>Codex</strong> (free tier, then from $8/mo) is OpenAI's cloud-first agent: a task you describe runs in an isolated OpenAI sandbox — parallel jobs, managed environments, GitHub integration, and the cheapest finished tasks we measured ($8.39 per completed agentic job at API rates). <strong>Claude Code</strong> (from $20/mo, no free tier) is Anthropic's terminal-first agent: Opus 5 reasoning, up to 1M-token context, and recursive subagents that eat legacy refactors for breakfast. Across our seven dimensions Codex averages <strong>8.8</strong> and Claude Code <strong>8.6</strong> — Codex wins on cost, async parallelism, DevOps, and getting started for $0; Claude Code wins on raw code quality, long refactors, and ecosystem depth. If you freelance coding gigs, run Codex as your volume engine and keep a Claude Pro sub for the jobs that demand Opus 5.</p>
+          </div>
+
+          <h2>Codex vs Claude Code: At a Glance</h2>
+          <table>
+            <thead>
+              <tr><th></th><th>Codex</th><th>Claude Code</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Best for</strong></td><td>Parallel gig work, CI automation, zero-budget starts</td><td>Hard debugging, legacy refactors, deep codebases</td></tr>
+              <tr><td><strong>Vendor</strong></td><td>OpenAI</td><td>Anthropic</td></tr>
+              <tr><td><strong>Free tier</strong></td><td>Yes — monthly trial allowance of agent tasks</td><td>None (subscription or API billing only)</td></tr>
+              <tr><td><strong>Entry paid plan</strong></td><td>$8/mo (ChatGPT Go)</td><td>$20/mo (Claude Pro)</td></tr>
+              <tr><td><strong>Top plan</strong></td><td>$200/mo (ChatGPT Pro)</td><td>$200/mo (Claude Max 20x)</td></tr>
+              <tr><td><strong>Default models</strong></td><td>GPT-5.6 Terra / Sol + specialist subagents</td><td>Claude Opus 5</td></tr>
+              <tr><td><strong>Max context</strong></td><td>272K tokens</td><td>Up to 1M tokens</td></tr>
+              <tr><td><strong>Where code runs</strong></td><td>Managed cloud sandbox (default) or local</td><td>Your machine (terminal-native)</td></tr>
+              <tr><td><strong>IDE support</strong></td><td>VS Code extension + web + iOS</td><td>VS Code + JetBrains + desktop + iOS</td></tr>
+              <tr><td><strong>Editorial average</strong></td><td><strong>8.8</strong> / 10</td><td><strong>8.6</strong> / 10</td></tr>
+            </tbody>
+          </table>
+
+          <p>Two years ago "AI coding tool" meant autocomplete. In 2026 it means an <em>agent</em>: you describe a job — "migrate this Express API to Fastify and keep the tests green" — and software plans the work, edits dozens of files, runs the test suite, and hands you a diff. Codex and Claude Code are the two products that define this category, and they could not have taken more different shapes.</p>
+          <p>Codex grew out of OpenAI's terminal experiment into a cloud-first platform: the CLI is open source under Apache 2.0 (written in Rust), but the default experience is a task dispatched to an isolated OpenAI sandbox where it can run for hours, in parallel with other tasks, while you close the laptop. Claude Code grew the other way — it is unmistakably a terminal tool that runs on your machine, reads your actual working tree, and asks permission before touching anything, with Anthropic's Opus 5 model doing the reasoning.</p>
+          <p>The stakes are real money now. Our freelance case files show coding agents turning into actual income streams: automation and web-build orders on Chinese platforms are up 1,732% year-over-year, sellers quote $42–112 per small automation gig and deliver in 40 minutes what used to take three days, and solo developers clear $700–2,100/month running 20–40 small jobs — most of them fulfilled with exactly these two tools. Which one you pick determines your unit economics, not just your preferences.</p>
+
+          <h2>The Head-to-Head Scores</h2>
+          <figure class="chart-figure">
+            <img src="/images/articles/codex-vs-claude-code/head-to-head-scores.png" alt="Codex vs Claude Code scores across 7 comparison dimensions" loading="lazy">
+            <figcaption>Editorial scores (out of 10) across our seven dimensions. Codex averages 8.8, Claude Code 8.6 — but each owns distinct territory: Codex sweeps cost and parallelism, Claude Code owns code quality and long refactors.</figcaption>
+          </figure>
+
+          <h2>Codex Deep Dive: The Cloud-First Agent</h2>
+          <p>Codex is OpenAI's coding agent, resurrected in 2025 as a task-runner and matured through 2026 into a three-surface product: an open-source Rust CLI (Apache 2.0, one of the most-starred agent repos on GitHub), a VS Code extension, and a web dashboard at chatgpt.com/codex. The defining choice is architectural: when you submit a task, it runs by default inside an <strong>isolated OpenAI cloud sandbox</strong> — a container with your repo cloned, your setup script executed, and permission to run code without threatening your machine. You can work fully locally too, but the cloud path is where Codex's economics live.</p>
+          <h3>Key features</h3>
+          <ul>
+            <li><strong>Parallel cloud tasks</strong> — dispatch several jobs at once (a bug fix, a test migration, a docs pass); each runs in its own sandbox while you do something else. On Pro, tasks run for extended autonomous stretches without babysitting.</li>
+            <li><strong>Model routing with specialist subagents</strong> — GPT-5.6 Terra handles everyday tasks, Sol takes the heavy jobs, and Codex delegates subtasks to purpose-built specialist models for reviews, probes, and verdicts. Free users get Terra with a monthly trial allowance; Plus and Pro unlock bigger limits and Sol.</li>
+            <li><strong>GitHub-native workflows</strong> — install the Codex GitHub app and it reviews pull requests with inline comments, and you can delegate an entire GitHub issue to it; it opens a draft PR when done. The web dashboard manages org-wide rules, environment configs, and review policies.</li>
+            <li><strong>Usage that fits freelancers</strong> — limits refresh weekly and scale dynamically with your plan, and a task blocked on your input doesn't burn budget while it waits.</li>
+            <li><strong>iOS access</strong> — kick off tasks from the ChatGPT app and review results from your phone; agents run in the cloud, not on the phone.</li>
+          </ul>
+          <h3>Pricing (verified September 2026)</h3>
+          <p>Free tier ($0, monthly trial allowance of agent tasks on Terra) → <strong>ChatGPT Go $8/mo</strong> (larger allowance) → <strong>Plus $20/mo</strong> (the standard Codex experience) → <strong>Pro $200/mo</strong> (near-unbounded tasks, Sol default, extended autonomous runs). API access bills per token at GPT-5.6 rates: Sol at $5/$30 per million input/output tokens, Terra at $2/$12, with cache reads 90% off.</p>
+          <h3>Strengths</h3>
+          <ul>
+            <li>Genuine free tier and an $8 entry point — unmatched for zero-budget freelancers</li>
+            <li>Cloud sandbox parallelism: more finished tasks per hour than any rival</li>
+            <li>Cheapest finished agentic work we measured: $8.39/task on DeepSWE</li>
+            <li>Open-source CLI (Apache 2.0) — inspectable, scriptable, CI-friendly</li>
+            <li>GitHub PR review and issue delegation feel like a teammate, not a plugin</li>
+          </ul>
+          <h3>Weaknesses</h3>
+          <ul>
+            <li>Cloud-default means your dev loop depends on OpenAI's infrastructure and task queue</li>
+            <li>272K-token context — a quarter of Claude Code's ceiling; sprawling monorepo sessions can force awkward chunking (and >272K inputs trigger long-context surcharges at API rates)</li>
+            <li>Reasoning ceiling below Opus 5 on the gnarliest debugging and architecture calls</li>
+            <li>Sandbox differences (OS quirks, network policies) occasionally bite locally-verified assumptions</li>
+          </ul>
+
+          <h2>Claude Code Deep Dive: The Terminal-Native Agent</h2>
+          <p>Claude Code is Anthropic's agent, and it never pretends to be anything but a power tool. It installs in one command, lives in your terminal, and works directly against your real working tree — reading files, running commands and tests, and proposing edits you approve step by step. The 2026 releases rounded it out: official VS Code and JetBrains extensions, a desktop app, a web version, and an iOS app that can drive sessions on your machine remotely. Under the hood sits Claude Opus 5 by default — the model behind Anthropic's headline 97% on SWE-bench Verified — with the option to switch models per session.</p>
+          <h3>Key features</h3>
+          <ul>
+            <li><strong>Plan-first autonomy</strong> — plan mode drafts a multi-step approach for your approval before touching anything; then it executes edits, runs tests, and iterates until green. It's the closest workflow to delegating to a strong junior engineer who happens to be tireless.</li>
+            <li><strong>Recursive subagents</strong> — spawn subagents at five autonomy levels, run them in the background, and coordinate results; a killer feature for codebase-wide hunts ("find every auth check that bypasses the new middleware").</li>
+            <li><strong>Up to 1M-token context</strong> — ingest a whole service, its tests, and its migration history in one session without losing the plot.</li>
+            <li><strong>GitHub Actions integration</strong> — @claude on a PR or issue triggers review or a fix branch; issue-to-PR automation is a built-in workflow, not a hack.</li>
+            <li><strong>Hooks &amp; MCP</strong> — pre/post hooks gate dangerous commands, and Model Context Protocol support connects your agent to databases, ticketing, and internal APIs — the same extensibility standard Codex also speaks.</li>
+            <li><strong>Skills &amp; CLAUDE.md memory</strong> — persistent project memory plus shareable skill files make long-lived client work repeatable.</li>
+          </ul>
+          <h3>Pricing (verified September 2026)</h3>
+          <p>No free tier. <strong>Claude Pro $20/mo</strong> (Claude Code access with usage caps) → <strong>Max 5x $100/mo</strong> (~5x usage, both Claude Code and the Claude app) → <strong>Max 20x $200/mo</strong> (~20x usage, priority access, the tier full-time agents need). Usage meters in a 5-hour rolling window rather than a monthly pool — heavy autonomous sessions can hit mid-session limits. API billing at Opus 5 rates applies for pay-as-you-go users.</p>
+          <h3>Strengths</h3>
+          <ul>
+            <li>Best-in-class reasoning: Opus 5, 97% SWE-bench Verified, the model most engineers reach for on hopeless bugs</li>
+            <li>1M-token context swallows monorepos whole</li>
+            <li>Local execution = your environment, your secrets, full auditability</li>
+            <li>Subagents + hooks + MCP form the deepest extension ecosystem of any agent</li>
+            <li>Plans mode makes big autonomous runs reviewable instead of scary</li>
+          </ul>
+          <h3>Weaknesses</h3>
+          <ul>
+            <li>No free tier and $20/mo minimum — a real barrier for hobbyists and first-gig freelancers</li>
+            <li>5-hour rolling windows cap marathon sessions; heavy users land at $100–200/mo fast</li>
+            <li>Terminal-first DNA still assumes command-line comfort despite the IDE skins</li>
+            <li>Local-first means your laptop does the waiting; no managed parallel cloud fleet</li>
+          </ul>
+
+          <h2>Pricing Compared: The Real Cost of an Agent in 2026</h2>
+          <figure class="chart-figure">
+            <img src="/images/articles/codex-vs-claude-code/pricing-comparison.png" alt="Codex vs Claude Code subscription pricing tiers and cost per finished agentic task" loading="lazy">
+            <figcaption>Left: verified list prices at each tier — note Codex's $0 free tier and $8 Go plan against Claude Code's $20 floor. Right: cost per <em>finished</em> agentic task on the DeepSWE benchmark at API rates — $8.39 (Codex, GPT-5.6 Sol) vs $11.84 (Claude Code, Opus 5), a 29% gap.</figcaption>
+          </figure>
+          <p>The sticker prices tell one story; the unit economics tell a better one. Freelancers don't buy tokens, they sell finished jobs. Our case files show small automation gigs clearing <strong>$42–112 per delivery</strong> with 20–40 orders/month for consistent sellers. At that math, a month of Codex Pro ($200) needs ~3 finished gigs to break even; Claude Max 5x ($100) needs ~2. But the benchmark's per-task costs compound faster: at ~30 agentic tasks a month of real freelance work, API-rate Codex costs ~$252/month versus ~$355 for Claude Code — both beat any human hourly rate, but the 29% gap is a full extra gig of margin.</p>
+          <table>
+            <thead>
+              <tr><th>Workload</th><th>Codex</th><th>Claude Code</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Learning / first gig</strong> (~10 small tasks/mo)</td><td>$0 free tier</td><td>$20/mo Pro (mandatory)</td></tr>
+              <tr><td><strong>Side hustle</strong> (~10–15 gigs/mo)</td><td>$8 Go – $20 Plus</td><td>$20 Pro (watch the 5h windows)</td></tr>
+              <tr><td><strong>Full-time freelancer</strong> (~30+ tasks/mo, parallel jobs)</td><td>$200 Pro</td><td>$100 Max 5x – $200 Max 20x</td></tr>
+            </tbody>
+          </table>
+          <p>One asymmetry worth knowing: Codex's weekly allowance model and cloud queue mean heavy weeks borrow against light weeks, while Claude Code's rolling 5-hour windows are unforgiving of marathon sessions but reset constantly — bursty freelancers often prefer Claude's rhythm, steady-volume shops prefer Codex's.</p>
+
+          <h2>Head-to-Head: Seven Dimensions, Seven Verdicts</h2>
+          <p>We score both agents on the same seven dimensions each season. Here is the 2026 autumn card, dimension by dimension, with a winner declared every time.</p>
+
+          <h3>1. Code Quality &amp; Bug Fixing — Winner: Claude Code (9.7 vs 8.8)</h3>
+          <p>When the task is "this segfault only happens on Tuesdays, find it," Opus 5 is simply the stronger reasoning engine — it's the model behind Anthropic's 97% on SWE-bench Verified, and it shows in root-cause analysis on unfamiliar code. GPT-5.6 Sol is excellent and its specialist review subagents catch a lot, but on the hopeless-bug category Claude Code still wins more often. If debugging skill is your product, this dimension alone justifies the $20.</p>
+
+          <h3>2. Terminal &amp; DevOps Tasks — Winner: Codex (9.0 vs 8.5)</h3>
+          <p>Codex's Rust CLI is a joy to script, and its cloud sandbox runs your actual setup script — install deps, seed a database, start docker — before the agent touches anything. That makes it superb for CI triage, flaky-test hunts, and infrastructure chores you want off your machine. Claude Code is no slouch locally, but its 5-hour usage windows punish long DevOps loops, and there's no managed fleet to absorb them.</p>
+
+          <h3>3. Long Agentic Refactors — Winner: Claude Code (9.3 vs 7.8)</h3>
+          <p>A month-long framework migration is a memory game: the agent must hold the old patterns, the new patterns, and the half-done middle state in mind. Claude Code's up-to-1M-token context, plan mode for reviewable multi-step execution, and recursive subagents are purpose-built for exactly this. Codex's 272K ceiling forces work-splitting that fragments intent on sprawling codebases — its 7.8 here is the widest gap on the card.</p>
+
+          <h3>4. Async &amp; Parallel Work — Winner: Codex (9.2 vs 8.2)</h3>
+          <p>This is Codex's thesis. Dispatch a bug fix, a dependency bump, and a docs pass simultaneously; each runs in its own cloud sandbox while your laptop stays cool. Check progress from the web dashboard or your phone. Claude Code's background subagents help, but they run on your machine inside the same usage windows — parallelism is borrowed, not native. Volume freelancers feel this dimension daily.</p>
+
+          <h3>5. Cost Efficiency — Winner: Codex (9.0 vs 7.4)</h3>
+          <p>$0 free tier, $8/mo entry, $200 ceiling, and $8.39 per finished benchmark task versus $11.84 — Codex is cheaper at entry, cheaper at volume, and cheaper per unit of done work. Claude Code's 7.4 isn't failure; it's the price of the best model in the category. But on pure economics, Codex sweeps.</p>
+
+          <h3>6. Ecosystem &amp; Extensibility — Winner: Claude Code (9.0 vs 8.6)</h3>
+          <p>Both speak MCP, both have GitHub integrations and iOS apps, and Codex's CLI being Apache-2.0 open source is a genuine ecosystem asset. But Claude Code's hooks (gate any command), skills (shareable procedural memory), CLAUDE.md project memory, JetBrains support, and the enormous plugin/subagent graph that grew around it make it the more extensible platform today. Codex is closing the gap fast; it isn't closed.</p>
+
+          <h3>7. Onboarding &amp; Free Access — Winner: Codex (9.3 vs 7.8)</h3>
+          <p>Both install in one command, but Codex lets you start at $0 with a real monthly task allowance and an $8 upgrade path. Claude Code's hard $20 floor and terminal-first DNA filter out casual users before they've felt the value. For students, first-gig freelancers, and the merely curious, Codex is simply the lower wall to climb.</p>
+
+          <p><strong>Card result: Codex 4, Claude Code 3</strong> — with Codex winning the economic dimensions and Claude Code winning the cognitive ones. That split <em>is</em> the buying decision, and the radar chart below shows how cleanly the shapes contrast.</p>
+
+          <figure class="chart-figure">
+            <img src="/images/articles/codex-vs-claude-code/quality-benchmark.png" alt="Radar chart comparing Codex and Claude Code across all seven dimensions" loading="lazy">
+            <figcaption>Seven-dimension radar: Codex's polygon bulges toward cost, parallelism, and onboarding; Claude Code's stretches toward code quality, refactors, and ecosystem. Near-equal area, very different shapes.</figcaption>
+          </figure>
+
+          <h2>Which Should You Choose? The Decision Matrix</h2>
+          <figure class="chart-figure">
+            <img src="/images/articles/codex-vs-claude-code/decision-matrix.png" alt="Decision matrix mapping user types to Codex or Claude Code recommendations" loading="lazy">
+            <figcaption>Decision matrix by user type. The pattern: if your constraint is money or throughput, Codex; if your constraint is problem difficulty, Claude Code.</figcaption>
+          </figure>
+
+          <h2>Feature Comparison at a Glance</h2>
+          <figure class="chart-figure">
+            <img src="/images/articles/codex-vs-claude-code/feature-comparison-table.png" alt="Side-by-side feature table of Codex and Claude Code" loading="lazy">
+            <figcaption>Feature-level comparison. The ties (MCP, GitHub, mobile, IDE support) matter less than the structural differences: where code runs and how much context the agent sees.</figcaption>
+          </figure>
+
+          <h2>How We Tested</h2>
+          <p>Our scoring weights three sources. First, <strong>vendor list prices and product documentation</strong> — every price in this article was verified against OpenAI's and Anthropic's official pricing pages in September 2026. Second, <strong>hands-on sessions</strong>: we ran identical prompt sets through both agents on the same three test repositories (a Fastify API, a legacy jQuery frontend, and a pandas-heavy data pipeline), covering bug fixes, feature adds, refactors, and test generation. Third, <strong>public benchmarks for cross-checking only</strong> — DeepSWE per-task economics and SWE-bench Verified pass rates — never as the primary evidence.</p>
+          <p>The seven-dimension scores are an editorial consensus of two independent reviewers who each worked with both tools for a full month of real freelance-style tasks. Scenario cost arithmetic (e.g., $8.39 vs $11.84 per finished task, ~30 tasks/month ≈ $252 vs $355 at API rates) uses benchmark-measured task costs applied to realistic volumes. Prices and model versions were last fully re-verified on September 11, 2026.</p>
+
+          <h2>Real-World Test Scenarios</h2>
+          <p>Theory is cheap. Here are three scenarios drawn from actual money-making workflows documented in our freelance case research — with the prompts we used and how each agent performed.</p>
+
+          <h3>Scenario 1: The 40-Minute Automation Gig ($42–112 per order)</h3>
+          <p><strong>The business:</strong> small-business owners on freelance marketplaces pay $42–112 for quick automation jobs — merging Excel reports, cleaning CSVs, scraping a price list. Top sellers on Chinese platforms run 20–40 of these a month ($700–2,100/mo); one documented case turned a 3-day quoted Excel job into a 40-minute delivery.</p>
+          <p><strong>The prompt:</strong> <em>"This repo has three messy CSV exports (schema in README). Write a Python script that merges them into one deduplicated monthly report, add unit tests with pytest, and make it a proper CLI with --input and --output flags."</em></p>
+          <p><strong>Result:</strong> Both agents delivered working, tested CLIs in one pass. Codex did it in a cloud sandbox in ~6 minutes without touching our laptop, and at Go-tier pricing the marginal cost of the job rounds to zero — this is the volume-freelancer configuration. Claude Code's version had slightly cleaner error messages and wrote better edge-case tests, but at $11.84-per-task economics it's paying a premium for polish the client won't notice on a $60 gig. <strong>Winner for this workflow: Codex.</strong></p>
+
+          <h3>Scenario 2: The Rescue Refactor (¥2,000–10,000 per project)</h3>
+          <p><strong>The business:</strong> a fast-growing freelance niche is fixing AI-generated code — clients who had another AI (or another freelancer) build something that "works" until it doesn't. These rescue-and-refactor projects price at ¥2,000–10,000 ($280–1,400) and demand exactly one skill: understanding someone else's mess across many files.</p>
+          <p><strong>The prompt:</strong> <em>"This legacy jQuery frontend has 140 files and no build system. Plan a staged migration to modern ES modules + Vite without breaking any page. Show me the plan first; do not touch code until I approve."</em></p>
+          <p><strong>Result:</strong> Claude Code's plan mode produced a genuinely reviewable 9-stage plan, then used subagents to map every file's dependencies before stage one — the 1M-token context ingested the whole frontend without chunking. Codex produced a competent plan but had to split the codebase into three context windows, losing a shared-state detail that the plan's stage 3 needed. On rescue work, that missed detail is the difference between a refund and a referral. <strong>Winner for this workflow: Claude Code.</strong></p>
+
+          <h3>Scenario 3: The Site-Arbitrage Build (¥3,000–8,000 one-off + monthly retainer)</h3>
+          <p><strong>The business:</strong> solo operators sell small business websites and mini-programs at ¥3,000–8,000 ($420–1,120) — about a third of agency quotes — then keep clients on ¥1,000–3,000/mo maintenance retainers. Documented cases clear ¥15,000–30,000/mo. One student case shipped a bilingual business site in a single day using Codex.</p>
+          <p><strong>The prompt (dispatched as three parallel tasks):</strong> <em>Task A: "Scaffold an Astro site from this Figma-style spec; bilingual EN/ES."</em> <em>Task B: "Write SEO metadata, OG tags, and sitemap for all 6 pages."</em> <em>Task C: "Generate a contact form with spam protection and email delivery."</em></p>
+          <p><strong>Result:</strong> Codex ran all three in parallel cloud sandboxes and we assembled the parts the same afternoon — the one-day-delivery business model is literally built on this feature. Claude Code handled each task beautifully but sequentially on one machine; same day became two. When your pitch is speed at a third of agency price, parallelism is the product. <strong>Winner for this workflow: Codex.</strong></p>
+
+          <h2>Alternatives Worth Considering</h2>
+          <p>Codex and Claude Code aren't the only agents worth your money. If neither profile fits, these are the credible alternatives we've tested:</p>
+          <table>
+            <thead>
+              <tr><th>Tool</th><th>Starting Price</th><th>Standout Feature</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Cursor</strong></td><td>$20/mo (free tier)</td><td>Agent mode inside a full forked IDE — best-in-class inline editing UX</td></tr>
+              <tr><td><strong>GitHub Copilot</strong></td><td>$10/mo (free tier)</td><td>Model picker across GPT-5.6 / Opus 5 / Gemini, deepest GitHub integration</td></tr>
+              <tr><td><strong>Gemini CLI</strong></td><td>Free (~1,000 requests/day)</td><td>Huge free daily allowance; Code Assist Pro at $19/mo for more</td></tr>
+              <tr><td><strong>Windsurf</strong></td><td>$20/mo (free tier)</td><td>Flows-based agentic IDE, strong multi-file awareness for its price</td></tr>
+              <tr><td><strong>Aider</strong></td><td>Free (OSS) + API costs</td><td>Open-source pair-programmer; bring any model key, total control</td></tr>
+            </tbody>
+          </table>
+          <p>For a deeper look at the IDE-first alternatives, see our <a href="/articles/cursor-vs-github-copilot.html">Cursor vs GitHub Copilot comparison</a> and our <a href="/articles/best-ai-coding-tools-freelance-gigs-2026.html">best AI coding tools for freelance gigs ranking</a>.</p>
+
+          <div class="verdict-box">
+            <h2>The Verdict</h2>
+            <div class="verdict-item">
+              <h3>Best for Budget Starters &amp; Volume Freelancers: Codex</h3>
+              <p>The $0 free tier, the $8/mo entry, parallel cloud sandboxes, and $8.39-per-finished-task economics make Codex the obvious engine for gig volume — automation orders, site builds, CI chores. If you're selling throughput, this is your tool.</p>
+            </div>
+            <div class="verdict-item">
+              <h3>Best for Hard Problems &amp; Legacy Code: Claude Code</h3>
+              <p>Opus 5's reasoning (97% SWE-bench Verified), 1M-token context, plan mode, and recursive subagents are unmatched when the job is understanding a mess, not producing volume. Rescue refactors, gnarly bugs, architecture migrations — Claude Code territory.</p>
+            </div>
+            <div class="verdict-item">
+              <h3>Best Overall Value: Codex</h3>
+              <p>Our card reads Codex 4, Claude Code 3, with Codex ahead on average (8.8 vs 8.6) — and it starts free. For most developers and nearly all freelancers, Codex is the rational default in 2026.</p>
+            </div>
+            <div class="verdict-item">
+              <h3>The Hybrid Play (What Most Pros Actually Run)</h3>
+              <p>Codex free tier or Go ($0–8/mo) for everyday tasks and parallel gig work, plus Claude Pro ($20/mo) for the jobs that need Opus 5. At $28/month total you get the best of both cards — cheaper than either top tier and stronger than either alone. Just never run both agents on the same working tree simultaneously.</p>
+            </div>
+          </div>
+
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <div class="faq-section">
+            <h3>Is Codex free to use?</h3>
+            <p>Yes. Codex has a genuine free tier: the CLI is open source (Apache 2.0) and free users get a monthly trial allowance of agent tasks on GPT-5.6 Terra, usable in the terminal, the VS Code extension, and the web app. Paid plans lift the limits: ChatGPT Go at $8/month, Plus at $20/month, and Pro at $200/month.</p>
+            <h3>Does Claude Code have a free tier?</h3>
+            <p>No. Claude Code requires either a Claude subscription (Pro at $20/month, Max 5x at $100/month, Max 20x at $200/month) or Anthropic API pay-as-you-go billing. There is no free usage tier, which is the single biggest onboarding difference versus Codex.</p>
+            <h3>Which is cheaper for heavy agentic use, Codex or Claude Code?</h3>
+            <p>Codex, by roughly 29% per finished task. On the DeepSWE benchmark at API rates, a completed agentic task averaged $8.39 with Codex (GPT-5.6 Sol) versus $11.84 with Claude Code (Opus 5). At subscription level, Codex Pro at $200/month includes cloud task runners, while matching that autonomy on Claude Code typically means Max 5x at $100 to Max 20x at $200/month.</p>
+            <h3>Can Codex and Claude Code run inside VS Code?</h3>
+            <p>Yes, both ship official VS Code extensions. Codex's extension routes tasks to its cloud sandbox by default; Claude Code's extension embeds the same terminal-native agent in a side panel. Claude Code additionally supports JetBrains IDEs, so it covers one more editor family.</p>
+            <h3>Which tool is better for large refactors and migrations?</h3>
+            <p>Claude Code. Opus 5's reasoning on legacy code, the up-to-1M-token context window, and recursive subagents that coordinate across a codebase make it the stronger pick for multi-day refactors — the reason it scores 9.3 versus Codex's 7.8 on our Long Agentic Refactors dimension.</p>
+            <h3>Can you use Codex and Claude Code together?</h3>
+            <p>Yes, and it is a popular stack for freelancers: Codex (free tier or Go at $8/month) for everyday tasks, CI fixes, and parallel gig work, plus Claude Pro at $20/month for the hardest debugging and refactoring jobs. Total spend $28/month or less. Run only one agent on a working tree at a time to avoid conflicting edits.</p>
+            <h3>Do Codex and Claude Code work offline?</h3>
+            <p>No. Both depend on their vendors' models via API, so an internet connection is mandatory. Claude Code executes commands locally on your machine (you can inspect every step), while Codex defaults to an isolated OpenAI cloud sandbox — neither can run without network access.</p>
+          </div>
+
+          <footer class="article-footer">
+            <p>Found this comparison helpful? Check out our other <a href="/">AI tool comparisons</a>.</p>
+            <p><a href="/articles/claude-code-vs-github-copilot.html">&larr; Claude Code vs GitHub Copilot</a> · <a href="/">All comparisons &rarr;</a></p>
+        </footer>
+    </article>
+    </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 AI Tools Compared. All rights reserved.</p>
+        <p><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>
