@@ -4,7 +4,7 @@
 """
 import json, re, urllib.request, urllib.error
 
-KEY = "a1b2c3d4e5f6478291a3b4c5d6e7f809"
+KEY = "329e929222c19fc8121b90e93aa7a9e0"
 HOST = "ai-tools-compared.com"
 
 # 取线上 sitemap 全部 URL
