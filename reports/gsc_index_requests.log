@@ -1,0 +1,6 @@
+2026-09-18 手工补录（stdout未被采集，凭面板证据）:
+{"https://ai-tools-compared.com/articles/deepseek-vs-claude.html": "DONE", "https://ai-tools-compared.com/articles/claude-vs-gemini.html": "DONE", "https://ai-tools-compared.com/articles/midjourney-vs-dalle.html": "SKIP(已被自动补全劫持,确认已收录)", "结论": "v1被自动补全劫持无实害；v2未跑"}
+2026-09-18 v2批跑实测（后台日志迟到回传，全确认）:
+{"https://ai-tools-compared.com/articles/chatgpt-vs-claude-for-writing.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-chatbots-2026.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-writing-tools-2026.html": "DONE", "https://ai-tools-compared.com/articles/kling-vs-hailuo-vs-vidu.html": "DONE", "https://ai-tools-compared.com/articles/claude-code-vs-cursor.html": "QUOTA(点击后弹配额窗,请求未受理)"}
+当日汇总: 确认请求成功6条(deepseek-vs-claude, claude-vs-gemini, chatgpt-vs-claude-for-writing, best-ai-chatbots-2026, best-ai-writing-tools-2026, kling-vs-hailuo-vs-vidu)，配额于第7条触发，实测配额≈6条/天
+明日队列(15:00配额重置后): claude-code-vs-cursor, best-ai-coding-assistant-free-2026, grok-vs-chatgpt, deepseek-vs-chatgpt, chatgpt-vs-claude-vs-gemini
