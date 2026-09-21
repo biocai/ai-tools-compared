@@ -19,17 +19,17 @@
 | best-ai-chatbots-2026.html | 未收录 | ✅ 已请求(确认DONE) | |
 | best-ai-writing-tools-2026.html | 未收录 | ✅ 已请求(确认DONE) | |
 | kling-vs-hailuo-vs-vidu.html | 未收录 | ✅ 已请求(确认DONE) | |
-| claude-code-vs-cursor.html | 已抓取-尚未编入索引 | ❌ 配额耗尽 | 09-18 10:57 被Googlebot抓取 |
-| best-ai-coding-assistant-free-2026.html | 待查 | ❌ 排队中 | 明日优先 |
-| grok-vs-chatgpt.html | 待查 | ❌ 排队中 | |
-| deepseek-vs-chatgpt.html | 待查 | ❌ 排队中 | |
-| chatgpt-vs-claude-vs-gemini.html | 待查(有曝光,大概率已收录) | ❌ 排队中 | |
+| claude-code-vs-cursor.html | 已抓取-尚未编入索引 | ✅ 已请求(确认DONE 09-21) | 09-18 10:57 被Googlebot抓取 |
+| best-ai-coding-assistant-free-2026.html | 待查 | ✅ 已请求(确认DONE 09-21) | |
+| grok-vs-chatgpt.html | 待查 | ✅ 已请求(确认DONE 09-21) | |
+| deepseek-vs-chatgpt.html | 待查 | ✅ 已请求(确认DONE 09-21) | |
+| chatgpt-vs-claude-vs-gemini.html | 待查(有曝光,大概率已收录) | ✅ 已请求(确认DONE 09-21) | |
 | cursor-vs-github-copilot.html | 已收录(有曝光117) | 跳过 | |
 
 ## 配额与节奏
-- GSC"请求编入索引"每日配额: 实测第7条触发配额弹窗，即≈6条/天(09-18: 6条确认成功+第7条被拒)
+- GSC"请求编入索引"每日配额: 实测第7条触发配额弹窗，即≈6条/天(09-18: 6条成功+第7条被拒; 09-21: 5条全成功未触顶)
 - 配额重置: 太平洋时间零点 = 北京时间 15:00
-- 明日队列: claude-code-vs-cursor → best-ai-coding-assistant-free-2026 → grok-vs-chatgpt → deepseek-vs-chatgpt → chatgpt-vs-claude-vs-gemini (脚本自动跳过已收录页,不浪费配额)
+- 当前队列: 已清空。下一批从 gsc_tracker 待查URL中补(09-22 周二10:00 周检cron会盘点)
 
 ## 工具链
 - 驱动脚本: /Users/mxh/.hermes/scripts/gsc_request_indexing.py (v2, 日志落盘 reports/gsc_index_requests.log)
