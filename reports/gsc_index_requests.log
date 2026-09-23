@@ -26,3 +26,66 @@
 [09:26:06]   wait chatgpt-vs-claude-vs-gemini: READY
 [09:26:31] DONE chatgpt-vs-claude-vs-gemini
 2026-09-21 {"https://ai-tools-compared.com/articles/claude-code-vs-cursor.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-coding-assistant-free-2026.html": "DONE", "https://ai-tools-compared.com/articles/grok-vs-chatgpt.html": "DONE", "https://ai-tools-compared.com/articles/deepseek-vs-chatgpt.html": "DONE", "https://ai-tools-compared.com/articles/chatgpt-vs-claude-vs-gemini.html": "DONE"}
+[11:26:09] EXC https://ai-tools-compared.com/articles/deepseek-vs-claude.html: RuntimeError 无打开页面
+[11:26:12] EXC https://ai-tools-compared.com/articles/claude-vs-gemini.html: RuntimeError 无打开页面
+[11:26:15] EXC https://ai-tools-compared.com/articles/chatgpt-vs-claude-for-writing.html: RuntimeError 无打开页面
+[11:26:18] EXC https://ai-tools-compared.com/articles/best-ai-chatbots-2026.html: RuntimeError 无打开页面
+[11:26:21] EXC https://ai-tools-compared.com/articles/best-ai-writing-tools-2026.html: RuntimeError 无打开页面
+[11:26:24] EXC https://ai-tools-compared.com/articles/kling-vs-hailuo-vs-vidu.html: RuntimeError 无打开页面
+[11:26:27] EXC https://ai-tools-compared.com/articles/claude-code-vs-cursor.html: RuntimeError 无打开页面
+[11:26:30] EXC https://ai-tools-compared.com/articles/best-ai-coding-assistant-free-2026.html: RuntimeError 无打开页面
+[11:26:33] EXC https://ai-tools-compared.com/articles/grok-vs-chatgpt.html: RuntimeError 无打开页面
+[11:26:36] EXC https://ai-tools-compared.com/articles/deepseek-vs-chatgpt.html: RuntimeError 无打开页面
+[11:26:39] EXC https://ai-tools-compared.com/articles/chatgpt-vs-claude-vs-gemini.html: RuntimeError 无打开页面
+2026-09-23 {"https://ai-tools-compared.com/articles/deepseek-vs-claude.html": "exc:RuntimeError", "https://ai-tools-compared.com/articles/claude-vs-gemini.html": "exc:RuntimeError", "https://ai-tools-compared.com/articles/chatgpt-vs-claude-for-writing.html": "exc:RuntimeError", "https://ai-tools-compared.com/articles/best-ai-chatbots-2026.html": "exc:RuntimeError", "https://ai-tools-compared.com/articles/best-ai-writing-tools-2026.html": "exc:RuntimeError", "https://ai-tools-compared.com/articles/kling-vs-hailuo-vs-vidu.html": "exc:RuntimeError", "https://ai-tools-compared.com/articles/claude-code-vs-cursor.html": "exc:RuntimeError", "https://ai-tools-compared.com/articles/best-ai-coding-assistant-free-2026.html": "exc:RuntimeError", "https://ai-tools-compared.com/articles/grok-vs-chatgpt.html": "exc:RuntimeError", "https://ai-tools-compared.com/articles/deepseek-vs-chatgpt.html": "exc:RuntimeError", "https://ai-tools-compared.com/articles/chatgpt-vs-claude-vs-gemini.html": "exc:RuntimeError"}
+[11:38:29]   poll deepseek-vs-claude: READY panel_ok=True
+[11:38:29] CLICKED deepseek-vs-claude (btn=CLICKED)
+[11:38:34]   wait deepseek-vs-claude: READY
+[11:39:04]   wait deepseek-vs-claude: READY
+[11:39:19] DONE deepseek-vs-claude
+[11:39:39]   poll claude-vs-gemini: READY panel_ok=True
+[11:39:39] CLICKED claude-vs-gemini (btn=CLICKED)
+[11:39:44]   wait claude-vs-gemini: READY
+[11:40:04] DONE claude-vs-gemini
+[11:40:25]   poll chatgpt-vs-claude-for-writing: READY panel_ok=True
+[11:40:25] CLICKED chatgpt-vs-claude-for-writing (btn=CLICKED)
+[11:40:30]   wait chatgpt-vs-claude-for-writing: READY
+[11:41:00]   wait chatgpt-vs-claude-for-writing: READY
+[11:41:05] DONE chatgpt-vs-claude-for-writing
+[11:41:25]   poll best-ai-chatbots-2026: READY panel_ok=True
+[11:41:25] CLICKED best-ai-chatbots-2026 (btn=CLICKED)
+[11:41:30]   wait best-ai-chatbots-2026: READY
+[11:41:55] DONE best-ai-chatbots-2026
+[11:42:15]   poll best-ai-writing-tools-2026: READY panel_ok=True
+[11:42:15] CLICKED best-ai-writing-tools-2026 (btn=CLICKED)
+[11:42:20]   wait best-ai-writing-tools-2026: READY
+[11:42:51]   wait best-ai-writing-tools-2026: READY
+[11:43:06] DONE best-ai-writing-tools-2026
+[11:43:27]   poll kling-vs-hailuo-vs-vidu: READY panel_ok=True
+[11:43:27] CLICKED kling-vs-hailuo-vs-vidu (btn=CLICKED)
+[11:43:32]   wait kling-vs-hailuo-vs-vidu: READY
+[11:44:02]   wait kling-vs-hailuo-vs-vidu: DONE
+[11:44:02] DONE kling-vs-hailuo-vs-vidu
+[11:44:23]   poll claude-code-vs-cursor: READY panel_ok=True
+[11:44:23] CLICKED claude-code-vs-cursor (btn=CLICKED)
+[11:44:28]   wait claude-code-vs-cursor: READY
+[11:44:58]   wait claude-code-vs-cursor: DONE
+[11:44:58] DONE claude-code-vs-cursor
+[11:45:19]   poll best-ai-coding-assistant-free-2026: READY panel_ok=True
+[11:45:19] CLICKED best-ai-coding-assistant-free-2026 (btn=CLICKED)
+[11:45:24]   wait best-ai-coding-assistant-free-2026: READY
+[11:45:44] DONE best-ai-coding-assistant-free-2026
+[11:46:04]   poll grok-vs-chatgpt: READY panel_ok=True
+[11:46:04] CLICKED grok-vs-chatgpt (btn=CLICKED)
+[11:46:09]   wait grok-vs-chatgpt: READY
+[11:46:29] DONE grok-vs-chatgpt
+[11:46:49]   poll deepseek-vs-chatgpt: READY panel_ok=True
+[11:46:49] CLICKED deepseek-vs-chatgpt (btn=CLICKED)
+[11:46:54]   wait deepseek-vs-chatgpt: READY
+[11:47:24]   wait deepseek-vs-chatgpt: DONE
+[11:47:25] DONE deepseek-vs-chatgpt
+[11:47:45]   poll chatgpt-vs-claude-vs-gemini: READY panel_ok=True
+[11:47:45] CLICKED chatgpt-vs-claude-vs-gemini (btn=CLICKED)
+[11:47:50]   wait chatgpt-vs-claude-vs-gemini: READY
+[11:48:05] DONE chatgpt-vs-claude-vs-gemini
+2026-09-23 {"https://ai-tools-compared.com/articles/deepseek-vs-claude.html": "DONE", "https://ai-tools-compared.com/articles/claude-vs-gemini.html": "DONE", "https://ai-tools-compared.com/articles/chatgpt-vs-claude-for-writing.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-chatbots-2026.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-writing-tools-2026.html": "DONE", "https://ai-tools-compared.com/articles/kling-vs-hailuo-vs-vidu.html": "DONE", "https://ai-tools-compared.com/articles/claude-code-vs-cursor.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-coding-assistant-free-2026.html": "DONE", "https://ai-tools-compared.com/articles/grok-vs-chatgpt.html": "DONE", "https://ai-tools-compared.com/articles/deepseek-vs-chatgpt.html": "DONE", "https://ai-tools-compared.com/articles/chatgpt-vs-claude-vs-gemini.html": "DONE"}
