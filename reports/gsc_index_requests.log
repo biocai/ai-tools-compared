@@ -89,3 +89,25 @@
 [11:47:50]   wait chatgpt-vs-claude-vs-gemini: READY
 [11:48:05] DONE chatgpt-vs-claude-vs-gemini
 2026-09-23 {"https://ai-tools-compared.com/articles/deepseek-vs-claude.html": "DONE", "https://ai-tools-compared.com/articles/claude-vs-gemini.html": "DONE", "https://ai-tools-compared.com/articles/chatgpt-vs-claude-for-writing.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-chatbots-2026.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-writing-tools-2026.html": "DONE", "https://ai-tools-compared.com/articles/kling-vs-hailuo-vs-vidu.html": "DONE", "https://ai-tools-compared.com/articles/claude-code-vs-cursor.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-coding-assistant-free-2026.html": "DONE", "https://ai-tools-compared.com/articles/grok-vs-chatgpt.html": "DONE", "https://ai-tools-compared.com/articles/deepseek-vs-chatgpt.html": "DONE", "https://ai-tools-compared.com/articles/chatgpt-vs-claude-vs-gemini.html": "DONE"}
+[10:20:00]   poll deepseek-vs-claude: READY panel_ok=True
+[10:20:00] CLICKED deepseek-vs-claude (btn=CLICKED)
+[10:20:05]   wait deepseek-vs-claude: READY
+[10:20:35]   wait deepseek-vs-claude: READY
+[10:20:40] DONE deepseek-vs-claude
+[10:21:01]   poll claude-vs-gemini: READY panel_ok=True
+[10:21:01] CLICKED claude-vs-gemini (btn=CLICKED)
+[10:21:06]   wait claude-vs-gemini: READY
+[10:21:31] DONE claude-vs-gemini
+[10:21:51]   poll chatgpt-vs-claude-vs-gemini: READY panel_ok=True
+[10:21:51] CLICKED chatgpt-vs-claude-vs-gemini (btn=CLICKED)
+[10:21:56]   wait chatgpt-vs-claude-vs-gemini: READY
+[10:22:16] DONE chatgpt-vs-claude-vs-gemini
+2026-09-25 {"https://ai-tools-compared.com/articles/deepseek-vs-claude.html": "DONE", "https://ai-tools-compared.com/articles/claude-vs-gemini.html": "DONE", "https://ai-tools-compared.com/articles/chatgpt-vs-claude-vs-gemini.html": "DONE"}
+[10:27:58]   poll chatgpt-vs-claude-vs-gemini: ON_GOOGLE panel_ok=True
+[10:27:58] SKIP chatgpt-vs-claude-vs-gemini (已收录)
+[10:28:18]   poll deepseek-vs-claude: READY panel_ok=True
+[10:28:18] CLICKED deepseek-vs-claude (btn=CLICKED)
+[10:28:23]   wait deepseek-vs-claude: READY
+[10:28:53]   wait deepseek-vs-claude: READY
+[10:29:18] DONE deepseek-vs-claude
+2026-09-25 {"https://ai-tools-compared.com/articles/chatgpt-vs-claude-vs-gemini.html": "already-indexed", "https://ai-tools-compared.com/articles/deepseek-vs-claude.html": "DONE"}
