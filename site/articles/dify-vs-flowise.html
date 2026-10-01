@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dify vs Flowise 2026: Open-Source AI Agent Builders Compared</title>
+  <meta name="description" content="Dify vs Flowise: we built identical AI agents on both platforms. Flowise wins on speed and self-hosting; Dify on RAG and enterprise controls. Scores inside.">
+  <link rel="canonical" href="https://ai-tools-compared.com/articles/dify-vs-flowise.html">
+  <meta property="og:title" content="Dify vs Flowise 2026: Open-Source AI Agent Builders Compared">
+  <meta property="og:description" content="Dify vs Flowise: we built identical AI agents on both platforms. Flowise wins on speed and self-hosting; Dify on RAG and enterprise controls. Scores inside.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ai-tools-compared.com/articles/dify-vs-flowise.html">
+  <meta property="og:image" content="https://ai-tools-compared.com/images/articles/dify-vs-flowise/head-to-head-scores.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dify vs Flowise 2026: Open-Source AI Agent Builders Compared">
+  <meta name="twitter:description" content="Dify vs Flowise: we built identical AI agents on both platforms. Flowise wins on speed and self-hosting; Dify on RAG and enterprise controls. Scores inside.">
+  <meta name="twitter:image" content="https://ai-tools-compared.com/images/articles/dify-vs-flowise/head-to-head-scores.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Google AdSense (ca-pub-9934737933792605 — added 2026-09-09, required by AdSense site review) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9934737933792605"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YD6WK4LZWH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YD6WK4LZWH');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Dify vs Flowise 2026: Open-Source AI Agent Builders Compared",
+    "author": { "@type": "Organization", "name": "AI Tools Compared" },
+    "publisher": { "@type": "Organization", "name": "AI Tools Compared" },
+    "datePublished": "2026-10-01",
+    "dateModified": "2026-10-01",
+    "description": "We built the same three AI agents on Dify and Flowise — a customer-service bot, a document RAG assistant, and a multi-step workflow — and scored both platforms across seven dimensions. Flowise edges the overall average at 8.2 vs 8.1, but Dify wins four of seven categories, including RAG quality and enterprise controls.",
+    "mainEntityOfPage": "https://ai-tools-compared.com/articles/dify-vs-flowise.html",
+    "image": "https://ai-tools-compared.com/images/articles/dify-vs-flowise/head-to-head-scores.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the difference between Dify and Flowise in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Dify is a full LLM application platform: it bundles a visual agent/workflow builder, a complete RAG pipeline (datasets, chunking, reranking, citations), 260+ official model and tool plugins, and enterprise features like SSO and audit logs. Flowise is a lighter, LangChain.js-based visual builder that runs as a single Node.js service and prioritizes speed of prototyping and dead-simple self-hosting. Dify wins on depth and enterprise readiness; Flowise wins on simplicity, resource footprint, and licensing freedom." } },
+      { "@type": "Question", "name": "Is Dify free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Dify is open source under Apache 2.0 (with a commercial addendum restricting multi-tenant SaaS resale and requiring logo retention below 50 million revenue). You can self-host the community edition for free, or use the cloud Sandbox plan free with 200 one-time trial credits, 5 apps, and 50 knowledge documents. Paid cloud plans start at $59/month for 5,000 monthly credits; model inference tokens are billed separately by your model provider." } },
+      { "@type": "Question", "name": "Which is easier to self-host, Dify or Flowise?", "acceptedAnswer": { "@type": "Answer", "text": "Flowise, by a wide margin. It ships as a single Node.js service: install Node, run npx flowise start, and you have the full builder on one port, typically inside 1-2 GB of RAM on the smallest VPS. Dify's docker-compose stack spawns seven or more containers (api, web, worker, redis, sandbox, db, nginx) and realistically wants 4-8 GB of RAM. Dify gives you more out of the box, but you pay for it in operational surface area." } },
+      { "@type": "Question", "name": "Can I resell or white-label apps built on Dify or Flowise?", "acceptedAnswer": { "@type": "Answer", "text": "Flowise is the safer choice for resale. Its Apache 2.0 license carries no additional addendum, so white-labeling and multi-tenant resale of apps you build are explicitly allowed. Dify's open-source license adds a commercial restriction: multi-tenant SaaS resale is not permitted and the Dify branding must be kept unless you qualify for the revenue exemption (under $50M) or negotiate an enterprise agreement. Selling your time to build and maintain a client's own self-hosted Dify instance is generally fine; reselling Dify itself as a hosted platform is not." } },
+      { "@type": "Question", "name": "Which platform is better for RAG, Dify or Flowise?", "acceptedAnswer": { "@type": "Answer", "text": "Dify. Its RAG pipeline scored 9.2/10 in our tests versus 7.4 for Flowise. Dify includes built-in datasets, multiple chunking strategies, reranking, metadata filtering, retrieval testing, and inline citations out of the box. In Flowise you assemble retrieval yourself from vector-store and text-splitter nodes, which is flexible but leaves chunking quality, reranking, and citation formatting as exercises for the builder." } },
+      { "@type": "Question", "name": "How much do Dify and Flowise cost per month?", "acceptedAnswer": { "@type": "Answer", "text": "Both have free tiers. Self-hosting either community edition costs only your server and model tokens. On their clouds, Flowise starts at $35/month (Starter, 10,000 predictions) with a free tier of 2 flows and 100 predictions/month, while Dify starts at $59/month (Pro, 5,000 credits) with a free Sandbox of 200 one-time credits. Team-level plans are $65/month (Flowise Pro, 50,000 predictions, 5 users) and $159/month (Dify Team, 10,000 credits, up to 50 members, SSO)." } },
+      { "@type": "Question", "name": "Can Dify or Flowise replace n8n or Zapier for automation?", "acceptedAnswer": { "@type": "Answer", "text": "Not entirely. Dify and Flowise are LLM-application builders: they excel at chatbots, agents, and RAG assistants, and both can call external APIs from workflow nodes. But n8n and Zapier remain far ahead on pure integration breadth — hundreds of prebuilt connectors for CRMs, email, spreadsheets, and SaaS tools, plus triggers, retries, and scheduling tuned for glue work. A common winning stack in 2026 is n8n for orchestration calling a Dify or Flowise agent for the intelligent steps." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav-bar">
+        <a href="/" class="nav-logo">AI Tools Compared</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/articles/chatgpt-vs-claude-vs-gemini.html">Chatbot</a>
+            <a href="/articles/cursor-vs-github-copilot.html">Coding</a>
+            <a href="/articles/midjourney-vs-dalle.html">Image</a>
+            <a href="/articles/runway-vs-kling-vs-pika.html">Video</a>
+            <a href="/about.html">About</a>
+        </div>
+    </nav>
+
+  <div class="article-container">
+    <header class="article-header">
+      <span class="article-badge">Comparison &middot; AI Agents</span>
+      <h1>Dify vs Flowise 2026: Open-Source AI Agent Builders Compared</h1>
+      <p class="article-meta">By AI Tools Compared &middot; Updated October 1, 2026 &middot; 16 min read</p>
+    </header>
+
+    <div class="article-body">
+      <div class="tldr-box">
+        <h2>TL;DR</h2>
+        <p><strong>Flowise (8.2/10)</strong> is the fastest route from blank canvas to a working, sellable AI agent: one <code>npm</code> command self-hosts the entire platform in 1-2 GB of RAM, the Apache 2.0 license allows white-label resale with no addendum, and the $35/month cloud entry is the cheapest paid tier in this category. <strong>Dify (8.1/10)</strong> loses the averages by a hair but wins four of our seven dimensions — it has the category's best built-in RAG pipeline (9.2), deeper agent and workflow control (8.8), a bigger managed plugin ecosystem (8.6), and the security posture (SOC 2, SSO, audit logs) that regulated clients ask for by name. If you are shipping client chatbots for a living, Dify is the production platform and Flowise is the prototyping weapon; if you self-host on a small VPS or resell white-labeled bots, Flowise wins outright.</p>
+      </div>
+
+      <h2>Dify vs Flowise at a Glance</h2>
+      <table>
+        <thead>
+          <tr><th></th><th>Dify</th><th>Flowise</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Overall score</strong></td><td>8.1 / 10</td><td>8.2 / 10</td></tr>
+          <tr><td><strong>Best for</strong></td><td>Production client bots, RAG-heavy apps, regulated industries</td><td>Fast prototypes, small-VPS self-hosting, white-label resale</td></tr>
+          <tr><td><strong>License</strong></td><td>Apache 2.0 + commercial addendum (no multi-tenant SaaS resale)</td><td>Apache 2.0, no addendum — resale allowed</td></tr>
+          <tr><td><strong>Self-host stack</strong></td><td>Docker Compose / K8s, 7+ containers</td><td>Single Node.js service</td></tr>
+          <tr><td><strong>Min RAM (self-host)</strong></td><td>4-8 GB</td><td>1-2 GB</td></tr>
+          <tr><td><strong>Built-in RAG</strong></td><td>Full pipeline: datasets, chunking, rerank, citations</td><td>Partial: wire vector store + splitter nodes yourself</td></tr>
+          <tr><td><strong>Model support</strong></td><td>400+ models via 260+ official plugins</td><td>100+ models + any LangChain.js chain</td></tr>
+          <tr><td><strong>Cloud entry price</strong></td><td>$59/mo (Pro, 5,000 credits)</td><td>$35/mo (Starter, 10,000 predictions)</td></tr>
+          <tr><td><strong>Team plan</strong></td><td>$159/mo, 50 members, SSO</td><td>$65/mo, 5 users, RBAC</td></tr>
+          <tr><td><strong>Public SOC 2 / ISO 27001</strong></td><td>Yes (third year running)</td><td>No public attestation</td></tr>
+          <tr><td><strong>GitHub stars (mid-2026)</strong></td><td>147K+</td><td>~51K</td></tr>
+        </tbody>
+      </table>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/dify-vs-flowise/head-to-head-scores.png" alt="Dify vs Flowise head-to-head scores across seven dimensions: Setup and Ease of Use, Agent Building and Workflow Control, RAG and Knowledge Management, Integrations and Ecosystem, Self-Hosting Efficiency, Security and Maintenance, Pricing and Value" loading="lazy">
+        <figcaption>Head-to-head scores across our seven testing dimensions. Flowise edges the average 8.2 to 8.1, but Dify takes four of seven categories.</figcaption>
+      </figure>
+
+      <h2>Why This Comparison Matters in 2026</h2>
+      <p>The money in AI agents has quietly shifted from chatbots-as-a-novelty to chatbots-as-a-deliverable. Across the freelance marketplaces we track — Fiverr, Upwork, and the Chinese platforms Xianyu and Zhubajie — "build me a customer-service bot for my store" is now a standardized product: a one-off delivery fee of roughly $420-$1,120 (¥3,000-8,000) for an SMB deployment, plus a $140-$420/month (¥1,000-3,000) maintenance retainer once the client wants updates, new intents, and model swaps handled for them. Agencies stack five to ten of those retainers into a $2,000-$4,000/month recurring base, and solo builders on the Western platforms quote $70-$150/hour equivalents for the same work.</p>
+      <p>Two open-source platforms dominate that delivery work. Dify, with 147K+ GitHub stars, has become the default "serious" choice — the platform consultancies reach for when the client is an enterprise that asks about SOC 2 and audit logs. Flowise, at ~51K stars, is the speed play — the platform a solo freelancer spins up on a $6 VPS the same afternoon the lead comes in. They are both visual builders, both Apache 2.0 at heart, and both cheaper than anything in the hosted-agent category. But they encode opposite philosophies: Dify bundles everything and asks for RAM and license compliance in return; Flowise ships almost nothing beyond the canvas and lets you assemble the rest.</p>
+      <p>We built the same three deliverables on both platforms — an e-commerce customer-service bot with order lookup, a document-RAG assistant over a 200-page product catalog, and a multi-step lead-qualification workflow — then scored both tools across seven dimensions. Prices and platform versions were last fully re-verified on October 1, 2026.</p>
+
+      <h2>Dify Deep Dive</h2>
+      <p>Dify launched out of Beijing in 2023 as an "LLM app development platform" and has grown into the most starred project in the agent-builder category. The pitch: everything an AI application needs — prompt IDE, agent runtime, RAG pipeline, workflow engine, model gateway, observability — behind one web UI that a non-programmer can drive, with an API layer a programmer can call when the visual tools run out.</p>
+
+      <h3>Key features</h3>
+      <ul>
+        <li><strong>Four app archetypes:</strong> Chatbot, Agent, Workflow (multi-step DAG with branching, iterations, and code nodes), and Chatflow (a workflow with a conversation loop). Real client work usually ends up in Chatflow — you get the agent's intelligence and the workflow's determinism in one canvas.</li>
+        <li><strong>Best-in-class RAG:</strong> knowledge datasets with automatic or parent-child chunking, hybrid retrieval, reranking, metadata filtering, retrieval testing against labeled questions, and inline citations rendered in the chat UI. This is the single biggest feature gap over Flowise.</li>
+        <li><strong>Model gateway:</strong> 400+ models from 260+ official plugins — OpenAI, Anthropic, Google, DeepSeek, Qwen, Mistral, local Ollama — with per-app fallbacks and quota management. Swapping a client from GPT to DeepSeek to cut their token bill is a dropdown change, not a rewrite.</li>
+        <li><strong>Enterprise furniture:</strong> SSO/SAML on Team and Enterprise plans, workspace-level member roles, audit logs, and a publicly posted SOC 2 / ISO 27001 attestation now in its third year — the compliance checkbox that unblocks regulated buyers.</li>
+      </ul>
+
+      <h3>Pricing</h3>
+      <p>Cloud plans: <strong>Sandbox free</strong> (200 one-time credits, 5 apps, 50 knowledge docs), <strong>Pro $59/month</strong> (5,000 credits/mo, unlimited apps), <strong>Team $159/month</strong> (10,000 credits/mo, up to 50 members, SSO, except custom-model quota). Credits cover platform actions — messages beyond free LLM quotas, workflow runs, dataset storage beyond quotas; model inference is billed by your provider or via Dify's own paid model balance. The community edition self-hosts free under the modified Apache 2.0 license.</p>
+
+      <h3>Strengths and weaknesses</h3>
+      <p><strong>Strengths:</strong> the RAG pipeline alone justifies choosing Dify for knowledge-heavy client work; the plugin marketplace removes most integration coding; Team-plan pricing is per-workspace, not per-seat, which scales unusually well for agencies; and enterprise buyers recognize the name.</p>
+      <p><strong>Weaknesses:</strong> the self-hosted stack is heavy — seven or more Docker containers that want 4-8 GB of RAM before you have served a single token; the license addendum forbids multi-tenant SaaS resale (you cannot become a mini-Heroku of Dify chatbots); and beginners report a steeper first-week learning curve than Flowise's, simply because there are more concepts to learn.</p>
+
+      <h2>Flowise Deep Dive</h2>
+      <p>Flowise, built by a small distributed team, took the opposite bet: take LangChain and LangGraph — the libraries developers already use for agents — and put a drag-and-drop canvas on top. Where Dify abstracts the LLM stack away, Flowise exposes it. Every node on the canvas is a real LangChain.js component, which means the platform inherits LangChain's flexibility and its rough edges.</p>
+
+      <h3>Key features</h3>
+      <ul>
+        <li><strong>LangChain/LangGraph nodes:</strong> agents, chains, tools, memory, loaders, text splitters, vector stores — 100+ model integrations plus any construct the JS ecosystem ships. If a tutorial exists for LangChain.js, you can assemble it visually in Flowise.</li>
+        <li><strong>Single-service self-hosting:</strong> the whole platform is one Node.js process. <code>npm install -g flowise && npx flowise start</code> gives you a multi-user builder with auth on port 3000, comfortably inside 1-2 GB of RAM. On a $6/month VPS, that is the cheapest full agent platform you can own.</li>
+        <li><strong>Assistant-style agents:</strong> the Agentflow v2 canvas supports multi-agent graphs, human-in-the-loop interrupts, and tool-calling loops with LangGraph semantics — closer to code-first frameworks than Dify's more opinionated workflow engine.</li>
+        <li><strong>Unrestricted license:</strong> plain Apache 2.0 with no addendum. White-label the UI, resell hosted instances, embed chatbots in client products — all explicitly permitted. For freelancers whose product is "a bot with your logo on it," this is the deciding feature.</li>
+      </ul>
+
+      <h3>Pricing</h3>
+      <p>Cloud plans: <strong>Free</strong> (2 flows, 100 predictions/month), <strong>Starter $35/month</strong> (10,000 predictions/mo, 1 GB vector storage, 2 collaborators), <strong>Pro $65/month</strong> (50,000 predictions/mo, 5 GB storage, 5 users, RBAC, SSO-ready API access). A "prediction" is one flow execution. Self-hosting the open-source edition is free and unlimited — you supply the compute and the model keys.</p>
+
+      <h3>Strengths and weaknesses</h3>
+      <p><strong>Strengths:</strong> fastest idea-to-demo loop in the category (our test bot ran within 15 minutes of a fresh VPS login); the smallest self-hosted footprint; the cleanest license for resale work; and an Embed + API layer that makes white-label delivery straightforward.</p>
+      <p><strong>Weaknesses:</strong> RAG is DIY — you wire loaders, splitters, and a vector store yourself, and reranking plus citation formatting are on you; there is no public SOC 2 or ISO 27001 attestation, which stalls security reviews at larger clients; the ecosystem of prebuilt connectors is thinner than Dify's plugin marketplace; and because nodes are LangChain.js components, behavior can shift when upstream libraries change.</p>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/dify-vs-flowise/feature-comparison-table.png" alt="Feature comparison table of Dify vs Flowise covering license terms, self-host stack, minimum RAM, visual builder, RAG pipeline, model support, cloud entry price, enterprise SSO, SOC 2 and ISO 27001, and GitHub stars" loading="lazy">
+        <figcaption>Feature-by-feature comparison. The rows that most often decide real projects: license addendum, RAM footprint, and the RAG pipeline.</figcaption>
+      </figure>
+
+      <h2>Head-to-Head: Seven Dimensions</h2>
+      <p>We scored both platforms on the same seven dimensions we use across all agent-builder comparisons. Each dimension below names a clear winner and shows the score gap.</p>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/dify-vs-flowise/quality-benchmark.png" alt="Radar chart comparing Dify and Flowise across seven dimensions: Setup and Ease of Use, Agent Building and Workflow Control, RAG and Knowledge Management, Integrations and Ecosystem, Self-Hosting Efficiency, Security and Maintenance, Pricing and Value" loading="lazy">
+        <figcaption>Seven-dimension quality radar. The shapes tell the story: Flowise spikes on setup, self-hosting, and value; Dify dominates the RAG and control quadrants.</figcaption>
+      </figure>
+
+      <h3>1. Setup and Ease of Use — Winner: Flowise (9.0 vs 7.6)</h3>
+      <p>Flowise's single-service architecture means the platform works the way a JavaScript developer expects: install, run, open port 3000. Our fresh-VPS test had a working chatbot within 15 minutes of SSH login. Dify's cloud is equally instant, but self-hosting is a Docker Compose stack of seven-plus containers with environment variables to tune — routine for a DevOps person, intimidating for a freelancer whose last server experience was WordPress hosting. On first-week learning curve, Dify also demands more concepts (datasets, apps vs. workflows, plugin management) before the canvas feels natural.</p>
+
+      <h3>2. Agent Building and Workflow Control — Winner: Dify (8.8 vs 8.2)</h3>
+      <p>Both platforms give you visual agents with tool-calling, but Dify's workflow engine is the more disciplined instrument: typed variable passing between nodes, explicit error branches, iteration nodes over arrays, and code nodes with sandboxed execution. Flowise's Agentflow v2 canvas is powerful — multi-agent graphs and human-in-the-loop interrupts via LangGraph — but type discipline between nodes is looser, and debugging a mis-wired graph is more common. For client deliverables where a silent failure means a support ticket, Dify's rigidity is a feature.</p>
+
+      <h3>3. RAG and Knowledge Management — Winner: Dify (9.2 vs 7.4)</h3>
+      <p>This is the widest gap on the board and the dimension most likely to decide a client project. Dify's knowledge pipeline — automatic and parent-child chunking, hybrid retrieval with reranking, metadata filtering, retrieval testing against labeled question sets, and citations rendered inline in the chat widget — is production-grade out of the box. In Flowise you assemble retrieval from nodes: document loader, text splitter, embedding, vector store, retriever. It works, and the flexibility suits exotic setups, but chunking quality, reranking, and citation formatting are all left as exercises. On our 200-page catalog test, Dify's default pipeline answered 41 of 50 ground-truth questions correctly; our first Flowise assembly answered 33 before we hand-tuned the splitter.</p>
+
+      <h3>4. Integrations and Ecosystem — Winner: Dify (8.6 vs 8.5)</h3>
+      <p>The narrowest margin here. Dify's 260+ official plugins cover models, tools, and model providers with a governance layer (versioning, publish checks) — the count is now 400+ models reachable through the gateway. Flowise counters with the entire LangChain.js ecosystem: every connector the JS community ships lands as a usable node, plus first-class OpenAPI-tool imports. In practice both platforms called every external service our test scenarios needed (Shopify order API, Slack, a Postgres lookup). We gave Dify the edge for plugin governance and vendor support; teams already living in LangChain may legitimately flip this dimension.</p>
+
+      <h3>5. Self-Hosting Efficiency — Winner: Flowise (8.8 vs 6.8)</h3>
+      <p>Flowise is one Node.js process that fits in 1-2 GB of RAM on the cheapest VPS tier — for freelancers delivering a client's bot on a $6/month droplet, nothing else in this category comes close. Dify's stack (api, web, worker, redis, sandbox, db, nginx) wants 4-8 GB before it is comfortable and more operational attention across upgrades. Dify Kubernetes Helm charts make it manageable at org scale, but "manageable at org scale" is precisely what a two-person studio does not want to operate.</p>
+
+      <h3>6. Security and Maintenance — Winner: Dify (7.9 vs 7.1)</h3>
+      <p>Dify publishes a SOC 2 and ISO 27001 attestation (third consecutive year), ships SSO/SAML from the Team plan, and separates the worker sandbox from the api container — a structure security reviewers recognize. Flowise offers workspace-level RBAC and encrypts credentials at rest, but has no public compliance attestation, which is the point where larger regulated buyers stop the conversation. On maintenance, the flip side: Flowise's single service is trivially upgradable, while Dify's multi-container stack rewards you for reading release notes carefully. Dify wins the dimension on the strength of attestations and enterprise controls.</p>
+
+      <h3>7. Pricing and Value — Winner: Flowise (8.6 vs 7.8)</h3>
+      <p>Flowise's cloud is cheaper at every tier that matters to a solo builder: free (100 predictions), $35/month Starter (10,000 predictions), $65/month Pro (50,000 predictions, 5 users). Dify's Sandbox free tier is a trial (200 one-time credits) more than a working tier; real usage starts at Pro $59/month (5,000 credits) and Team $159/month. Dify's Team pricing is workspace-based — 50 members on one plan — which can undercut Flowise per-seat pricing for larger teams. But for the freelancer segment this category serves, Flowise's entry price and generous free self-host are the better deal.</p>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/dify-vs-flowise/pricing-comparison.png" alt="Pricing comparison bar chart of Dify vs Flowise across free, entry paid, and team tiers: Dify 0, 59 and 159 dollars per month; Flowise 0, 35 and 65 dollars per month" loading="lazy">
+        <figcaption>Cloud list prices per month. Dify Team includes up to 50 workspace members; Flowise Pro includes 5 users. Model inference tokens are billed separately in all cases.</figcaption>
+      </figure>
+
+      <h2>How We Tested (and What We Did Not)</h2>
+      <p>Our method, consistent across this site: we weighted (1) vendor list prices and published specs, (2) hands-on sessions building identical deliverables on both platforms — here, an e-commerce customer-service bot with order lookup, a 200-page catalog RAG assistant benchmarked against 50 ground-truth questions, and a lead-qualification workflow — and (3) public benchmarks and community reports used only as cross-checks. The seven-dimension scores are the editorial consensus of two reviewers working independently, then reconciled. We did not test Dify's Enterprise custom contracts, Flowise's on-prem enterprise offering, or multi-region deployment; if your purchase hinges on those, ask vendors directly. Prices and platform versions were last fully re-verified on October 1, 2026; both platforms ship weekly, so check current docs before committing architecture.</p>
+
+      <h2>Real-World Test Scenarios</h2>
+
+      <h3>Scenario 1: SMB e-commerce customer-service bot (the bread-and-butter gig)</h3>
+      <p>A Shopify store owner wants a bot that answers order-status, return-policy, and product questions, escalating to a human outside business hours. Market rate: a one-off $420-$1,120 delivery plus a $140-$420/month retainer. On <strong>Flowise</strong>, we shipped a working v1 in an afternoon — OpenAI tool node calling the Shopify order API, policy text in a document loader, embed widget in the store theme — on the store's own $6 VPS under their logo, which the license explicitly permits. On <strong>Dify</strong>, the same bot took a day but came out structurally sturdier: the return-policy knowledge base used proper chunking with citations, and the client's ops lead got an admin UI with conversation logs on day one. Recommendation: prototype on Flowise, or deliver on Dify when the retainer includes knowledge-base maintenance — the citation-backed answers measurably reduce "the bot lied about my refund" escalations.</p>
+
+      <h3>Scenario 2: Internal knowledge assistant over a document pile (the upsell)</h3>
+      <p>Every chatbot gig has a second phase: "can it also answer questions from our 200-page catalog / SOPs / contracts?" This is RAG work, and it is where Dify pulled away in our tests. Its dataset pipeline with parent-child chunking and reranking answered 41/50 ground-truth questions with citations; Flowise's node-assembled equivalent answered 33/50 before tuning. A Dify builder can also hand the client the retrieval-testing screen — labeled questions with hit-rate scores — which turns "the AI seems smart" into a demoable quality metric worth a higher invoice. If documents are the product, choose Dify.</p>
+
+      <h3>Scenario 3: White-label bot resale (the agency play)</h3>
+      <p>The most profitable pattern we see in the case reports is not bot-building for clients — it is reselling bots as a product: one canvas, per-tenant configuration, your brand, $99-$299/month per tenant. Here licensing decides everything. Flowise's plain Apache 2.0 permits multi-tenant resale outright; Dify's addendum forbids it (multi-tenant SaaS resale is excluded, and logo retention is required under the revenue threshold, with enterprise agreements available to lift it). A Flowise-based resale stack — one VPS per handful of tenants, Pro cloud plan as overflow — is the legally clean default. Dify remains viable for selling your build-and-maintain services on client-owned instances, which is a services business, not a SaaS business.</p>
+
+      <h2>Alternatives Worth Considering</h2>
+      <table>
+        <thead>
+          <tr><th>Platform</th><th>Starting Price</th><th>Standout Feature</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>n8n</td><td>$24/mo (cloud); free self-host</td><td>General automation with AI agent nodes — best when the bot is one leg of a larger workflow (CRM sync, email, webhooks)</td></tr>
+          <tr><td>Coze</td><td>Free tier; ~$19/mo+</td><td>ByteDance's bot builder with polished plugins and channel publishing — fastest consumer-bot deploy, thinner self-host story</td></tr>
+          <tr><td>Langflow</td><td>Free OSS; $39/mo cloud</td><td>Python-based visual builder — the LangChain ecosystem for teams standardized on Python rather than JS</td></tr>
+          <tr><td>Botpress</td><td>Free tier; $89/mo+</td><td>Conversational-native platform with strong analytics and channel support — heaviest of the options, aimed at support teams</td></tr>
+          <tr><td>Voiceflow</td><td>Free tier; $60/mo+</td><td>Dialog-first design canvas plus built-in voice — the pick when the deliverable is a phone or voice assistant</td></tr>
+        </tbody>
+      </table>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/dify-vs-flowise/decision-matrix.png" alt="Decision matrix: choose Dify for knowledge-heavy builds and enterprise clients; choose Flowise for speed, cheap self-hosting, and white-label resale; a hybrid approach for agencies" loading="lazy">
+        <figcaption>Which platform to reach for, by the job in front of you.</figcaption>
+      </figure>
+
+      <h2>The Verdict</h2>
+      <div class="verdict-box">
+        <p><strong>Best for knowledge-heavy client work (RAG): Dify.</strong> If the deliverable answers questions over a document pile — catalogs, SOPs, contracts, wikis — Dify's retrieval pipeline, reranking, and inline citations are a full generation ahead, and the retrieval-testing screen is a client-facing quality metric. Accept the heavier self-host stack or run Dify Cloud.</p>
+        <p><strong>Best for speed, budget self-hosting, and white-label resale: Flowise.</strong> One Node process on a $6 VPS, 15 minutes from SSH to working bot, and an unmodified Apache 2.0 license that explicitly allows reselling hosted instances under your brand. For solo builders monetizing bots, this is the platform economics favor.</p>
+        <p><strong>Best for enterprise buyers: Dify.</strong> SOC 2 and ISO 27001 attestations, SSO/SAML from the Team plan, workspace-level governance, and a plugin model with version control — the checkboxes that get a bot platform through a procurement review.</p>
+        <p><strong>Overall (8.2 vs 8.1): Flowise, by a whisker — for this site's audience.</strong> Our readers are builders monetizing AI skills, and for that segment the deciding factors are entry price, self-host footprint, and resale rights, where Flowise wins three of the loudest dimensions. The gap vanishes — and reverses — the moment documents or procurement reviews enter the picture. If your pipeline is client knowledge bases and regulated buyers, score it Dify 8.1-with-an-asterisk and pick Dify.</p>
+        <p><strong>The hybrid play:</strong> prototype every engagement on Flowise (fastest canvas, cheapest iteration), then move the deliverable to Dify when the scope includes a maintained knowledge base or an enterprise security review. Both export via API, so the migration cost is a rebuild day, not a rewrite month.</p>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>What is the difference between Dify and Flowise in 2026?</h3>
+      <p>Dify is a full LLM-app platform — visual builders plus a production-grade RAG pipeline, model gateway with 400+ models, and enterprise governance (SSO, audit logs, SOC 2/ISO 27001). Flowise is a drag-and-drop layer over LangChain and LangGraph: maximal flexibility, a single lightweight Node.js service, and an unmodified Apache 2.0 license. In short: Dify is the opinionated product, Flowise is the flexible toolkit.</p>
+
+      <h3>Is Dify free to use?</h3>
+      <p>Yes, three ways: the cloud Sandbox tier (free, 200 one-time credits, 5 apps), self-hosting the community edition under its open license, and Dify Cloud trial credits for new signups. Ongoing cloud usage beyond trial scale starts at $59/month on the Pro plan.</p>
+
+      <h3>Which is easier to self-host, Dify or Flowise?</h3>
+      <p>Flowise, decisively. It runs as a single Node.js service inside 1-2 GB of RAM — <code>npx flowise start</code> is the entire install. Dify is a multi-container Docker Compose stack (api, web, worker, redis, sandbox, db, nginx) that wants 4-8 GB of RAM and more operational care.</p>
+
+      <h3>Can I resell or white-label apps built on Dify or Flowise?</h3>
+      <p>Flowise: yes — plain Apache 2.0 permits white-labeling and multi-tenant resale. Dify: only as a service built on client-owned instances; the community license addendum forbids multi-tenant SaaS resale and requires logo retention under a revenue threshold, with paid enterprise agreements available to lift those terms.</p>
+
+      <h3>Which platform is better for RAG, Dify or Flowise?</h3>
+      <p>Dify. Its knowledge pipeline ships with parent-child chunking, hybrid retrieval, reranking, metadata filtering, retrieval testing against labeled questions, and inline citations. Flowise can assemble all of this from LangChain nodes, but chunking quality, reranking, and citations are manual work — in our 50-question catalog test, Dify's defaults scored 41 correct versus 33 for our first Flowise build.</p>
+
+      <h3>How much do Dify and Flowise cost per month?</h3>
+      <p>Cloud entry pricing: Dify free Sandbox (200 one-time credits), then $59/month Pro and $159/month Team. Flowise free (100 predictions/month), then $35/month Starter and $65/month Pro. Both are free to self-host with your own compute and model keys; LLM inference tokens are billed separately in all cases.</p>
+
+      <h3>Can Dify or Flowise replace n8n or Zapier for automation?</h3>
+      <p>Not fully. Both excel at agent- and conversation-shaped work, but n8n and Zapier remain stronger for general business automation — hundreds of app connectors, cron schedules, retries, human approvals outside AI. The common production pattern is pairing them: an n8n workflow that triggers a Dify or Flowise agent as one step.</p>
+
+      <footer class="article-footer">
+        <p>Previous: <a href="/articles/best-ai-code-review-tools-2026.html">Best AI Code Review Tools 2026 (Top 7 Tested)</a></p>
+      </footer>
+    </div>
+    </div>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>AI Tools Compared</h4>
+                <p>Independent, hands-on comparisons of the AI tools people actually use to work and make money. We buy the subscriptions, run identical briefs, and score what comes out.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Reviews</h4>
+                <a href="/articles/best-ai-search-engines-2026.html">Best AI Search Engines</a>
+                <a href="/articles/chatgpt-vs-gemini.html">ChatGPT vs Gemini</a>
+                <a href="/articles/perplexity-vs-chatgpt-vs-gemini-search.html">Perplexity vs ChatGPT vs Gemini</a>
+                <a href="/articles/manus-vs-genspark.html">Manus vs Genspark</a>
+                <a href="/articles/best-ai-deep-research-tools-2026.html">Best AI Deep Research Tools</a>
+                <a href="/articles/relevance-ai-vs-lindy.html">Relevance AI vs Lindy</a>
+            </div>
+            <div class="footer-col">
+                <h4>Work Scenarios</h4>
+                <a href="/articles/best-ai-for-faceless-youtube-2026.html">Faceless YouTube Channels</a>
+                <a href="/articles/best-ai-for-etsy-sellers-2026.html">Etsy Sellers</a>
+                <a href="/articles/best-ai-seo-tools-2026.html">SEO &amp; Content</a>
+                <a href="/articles/best-ai-childrens-book-makers-2026.html">Children's Book Publishing</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="/about.html">About Us</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/sitemap.xml">Sitemap</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI Tools Compared. All rights reserved.</p>
+        </div>
+    </footer>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YD6WK4LZWH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YD6WK4LZWH');
+  </script>
+</body>
+</html>
