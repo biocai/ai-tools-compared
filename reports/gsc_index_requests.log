@@ -166,3 +166,45 @@
 [21:25:38]   eval异常#1: WebSocketTimeoutException
 [21:25:50] FILL_FAIL best-ai-chatbots-2026 (NO_INPUT)
 2026-10-03 {"https://ai-tools-compared.com/articles/best-ai-chatbots-2026.html": "fail:fill"}
+[09:01:51]   poll deepseek-vs-claude: ON_GOOGLE panel_ok=False
+[09:01:51] SKIP deepseek-vs-claude (已收录)
+2026-10-04 {"https://ai-tools-compared.com/articles/deepseek-vs-claude.html": "already-indexed"}
+[09:05:20]   poll deepseek-vs-claude: ON_GOOGLE panel_ok=False
+[09:05:20] SKIP deepseek-vs-claude (已收录)
+2026-10-04 {"https://ai-tools-compared.com/articles/deepseek-vs-claude.html": "already-indexed"}
+[09:07:11]   poll claude-vs-gemini: ON_GOOGLE panel_ok=True
+[09:07:11] SKIP claude-vs-gemini (已收录)
+2026-10-04 {"https://ai-tools-compared.com/articles/claude-vs-gemini.html": "already-indexed"}
+[09:07:33]   poll chatgpt-vs-claude-for-writing: ON_GOOGLE panel_ok=False
+[09:07:33] SKIP chatgpt-vs-claude-for-writing (已收录)
+2026-10-04 {"https://ai-tools-compared.com/articles/chatgpt-vs-claude-for-writing.html": "already-indexed"}
+[09:07:54]   poll best-ai-chatbots-2026: ON_GOOGLE panel_ok=False
+[09:07:54] SKIP best-ai-chatbots-2026 (已收录)
+2026-10-04 {"https://ai-tools-compared.com/articles/best-ai-chatbots-2026.html": "already-indexed"}
+[09:08:15]   poll best-ai-writing-tools-2026: READY panel_ok=True
+[09:08:15] CLICKED best-ai-writing-tools-2026 (btn=CLICKED)
+[09:08:20]   wait best-ai-writing-tools-2026: READY
+[09:08:51]   wait best-ai-writing-tools-2026: READY
+[09:09:22]   wait best-ai-writing-tools-2026: READY
+[09:09:54]   wait best-ai-writing-tools-2026: READY
+[09:10:24]   wait best-ai-writing-tools-2026: READY
+[09:10:54]   wait best-ai-writing-tools-2026: READY
+[09:11:24]   wait best-ai-writing-tools-2026: READY
+[09:11:54]   wait best-ai-writing-tools-2026: READY
+[09:12:25]   wait best-ai-writing-tools-2026: READY
+[09:12:55]   wait best-ai-writing-tools-2026: READY
+[09:13:25]   wait best-ai-writing-tools-2026: READY
+[09:13:50] READY best-ai-writing-tools-2026
+2026-10-04 {"https://ai-tools-compared.com/articles/best-ai-writing-tools-2026.html": "READY"}
+[09:14:12]   poll kling-vs-hailuo-vs-vidu: ON_GOOGLE panel_ok=True
+[09:14:12] SKIP kling-vs-hailuo-vs-vidu (已收录)
+2026-10-04 {"https://ai-tools-compared.com/articles/kling-vs-hailuo-vs-vidu.html": "already-indexed"}
+[09:14:33]   poll best-ai-coding-assistant-free-2026: READY panel_ok=True
+[09:14:33] CLICKED best-ai-coding-assistant-free-2026 (btn=CLICKED)
+[09:14:38]   wait best-ai-coding-assistant-free-2026: READY
+[09:15:08]   wait best-ai-coding-assistant-free-2026: READY
+[09:15:19] DONE best-ai-coding-assistant-free-2026
+2026-10-04 {"https://ai-tools-compared.com/articles/best-ai-coding-assistant-free-2026.html": "DONE"}
+[09:15:40]   poll deepseek-vs-chatgpt: ON_GOOGLE panel_ok=True
+[09:15:40] SKIP deepseek-vs-chatgpt (已收录)
+2026-10-04 {"https://ai-tools-compared.com/articles/deepseek-vs-chatgpt.html": "already-indexed"}

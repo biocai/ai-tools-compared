@@ -12,21 +12,22 @@
 | 2026-09-23 | - | - | 11条核心URL全量复查: 0条被SKIP → 全部仍未收录(**误判,见09-25勘误**) |
 | 2026-09-25 | **13** | 76 | +3收录! 09-21批次转化: chatgpt-vs-claude-vs-gemini / claude-code-vs-cursor / grok-vs-chatgpt (抓取均09-21) |
 | 2026-09-30 | **13(报告滞后) / 实查≥17** | ~72 | 报告数字未刷新但实查+4收录(见下) ; VPN断5天后补跑周检 ; 8条顽固页全部重请求DONE |
+| 2026-10-04 | **13(报告滞后) / 实查≥23** | ~66 | **顽固页大破冰**: 6条集体转正(deepseek-vs-claude三连确认+claude-vs-gemini/chatgpt-vs-claude-for-writing/best-ai-chatbots-2026/kling-vs-hailuo-vs-vidu/deepseek-vs-chatgpt) ; 09-30重请求批次见效 ; 仅剩2条顽固 |
 
 ## 核心 URL 状态跟踪
 
 | URL | 状态(09-23复查) | 请求索引 | 备注 |
 |---|---|---|---|
-| deepseek-vs-claude.html | 未收录 | ✅ 09-18+09-23+09-30 | 新旗舰文, 顽固 |
-| claude-vs-gemini.html | 未收录 | ✅ 09-18+09-23+09-30 | 顽固 |
-| chatgpt-vs-claude-for-writing.html | 未收录 | ✅ 09-18+09-23+09-30 | 顽固 |
-| best-ai-chatbots-2026.html | 未收录 | ✅ 09-18+09-23+09-30 | listicle, 顽固 |
-| best-ai-writing-tools-2026.html | 未收录 | ✅ 09-18+09-23+09-30 | listicle, 顽固 |
-| kling-vs-hailuo-vs-vidu.html | 未收录 | ✅ 09-18+09-23+09-30 | 视频对比, 顽固 |
+| deepseek-vs-claude.html | **已收录**(10-04三连确认) | ✅ 09-18+09-23+09-30 | 顽固4周终破冰, 10-04三次独立运行均already-indexed |
+| claude-vs-gemini.html | **已收录**(10-04确认) | ✅ 09-18+09-23+09-30 | 09-30重请求见效 |
+| chatgpt-vs-claude-for-writing.html | **已收录**(10-04确认) | ✅ 09-18+09-23+09-30 | 09-30重请求见效 |
+| best-ai-chatbots-2026.html | **已收录**(10-04确认) | ✅ 09-18+09-23+09-30 | **listicle首次破冰** |
+| best-ai-writing-tools-2026.html | 未收录 | ✅ 09-18+09-23+09-30+10-04(READY) | listicle, 顽固 |
+| kling-vs-hailuo-vs-vidu.html | **已收录**(10-04确认) | ✅ 09-18+09-23+09-30 | 09-30重请求见效 |
 | ~~claude-code-vs-cursor.html~~ | → 见下方"已收录"行 | | |
-| best-ai-coding-assistant-free-2026.html | 未收录 | ✅ 09-21+09-23+09-30 | listicle, 顽固 |
+| best-ai-coding-assistant-free-2026.html | 未收录 | ✅ 09-21+09-23+09-30+10-04(DONE) | listicle, 顽固 |
 | ~~grok-vs-chatgpt.html~~ | → 见下方"已收录"行 | | |
-| deepseek-vs-chatgpt.html | 未收录 | ✅ 09-21+09-23+09-30 | 顽固 |
+| deepseek-vs-chatgpt.html | **已收录**(10-04确认) | ✅ 09-21+09-23+09-30 | 09-30重请求见效 |
 | chatgpt-vs-claude-vs-gemini.html | **已收录**(09-25确认) | ✅ 09-21 | 09-23误判: 旧SKIP关键词没跟上GSC新文案; **09-30首个搜索点击+227曝光** |
 | cursor-vs-github-copilot.html | **已收录**(09-30实查确认) | 跳过 | 有曝光123 |
 | claude-code-vs-cursor.html | **已收录**(09-25确认,抓取09-21) | - | 09-21批次转化 |

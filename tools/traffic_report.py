@@ -8,6 +8,19 @@ SITE = '/Volumes/work/AI工具测评'
 PID = 'prj_Km5jWVjJlvAFqHnBqkDimZrW81Vs'
 SLUG = 'biocai'
 
+def vercel_cmd():
+    # cron 环境的 PATH 常不含 /opt/homebrew/bin，subprocess 找不到 vercel 会抛
+    # FileNotFoundError 且被上层 except 吞掉 → 自动刷新静默失效（2026-10-04 实测）。
+    # 故解析绝对路径：先 which，回退常见 homebrew 路径。
+    import shutil
+    exe = shutil.which('vercel')
+    if exe:
+        return [exe]
+    for cand in ('/opt/homebrew/bin/vercel', '/usr/local/bin/vercel'):
+        if os.path.exists(cand):
+            return [cand]
+    return ['vercel']
+
 def get_token():
     # 优先环境变量，其次 vercel CLI 会话文件
     if os.environ.get('VERCEL_TOKEN'):
@@ -17,7 +30,7 @@ def get_token():
     # 自愈1: auth.json 不存在 → 跑一次 vercel whoami 用残留 refresh token 重建(2026-09-05实测有效)
     if not os.path.exists(p):
         try:
-            subprocess.run(['vercel', 'whoami'], capture_output=True, timeout=30)
+            subprocess.run(vercel_cmd() + ['whoami'], capture_output=True, timeout=30)
         except Exception:
             pass
     try:
@@ -31,7 +44,7 @@ def get_token():
     exp = d.get('expiresAt')
     if not exp or exp - time.time() < 120:
         try:
-            subprocess.run(['vercel', 'whoami'], capture_output=True, timeout=30)
+            subprocess.run(vercel_cmd() + ['whoami'], capture_output=True, timeout=30)
             d = json.load(open(p))
         except Exception:
             pass
@@ -40,7 +53,7 @@ def get_token():
 def force_refresh():
     import subprocess
     try:
-        subprocess.run(['vercel', 'whoami'], capture_output=True, timeout=30)
+        subprocess.run(vercel_cmd() + ['whoami'], capture_output=True, timeout=30)
     except Exception:
         pass
 

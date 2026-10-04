@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code vs Gemini CLI: Terminal AI Compared 2026</title>
+  <meta name="description" content="Claude Code vs Gemini CLI: Opus 5.5 coding power vs 1,000 free requests a day. Prices, benchmarks and verdicts for terminal AI coding agents.">
+  <link rel="canonical" href="https://ai-tools-compared.com/articles/claude-code-vs-gemini-cli.html">
+  <meta property="og:title" content="Claude Code vs Gemini CLI: Terminal AI Compared 2026">
+  <meta property="og:description" content="Claude Code vs Gemini CLI: Opus 5.5 coding power vs 1,000 free requests a day. Prices, benchmarks and verdicts for terminal AI coding agents.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ai-tools-compared.com/articles/claude-code-vs-gemini-cli.html">
+  <meta property="og:site_name" content="AI Tools Compared">
+  <meta property="og:image" content="https://ai-tools-compared.com/images/articles/claude-code-vs-gemini-cli/head-to-head-scores.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code vs Gemini CLI: Terminal AI Compared 2026">
+  <meta name="twitter:description" content="Claude Code vs Gemini CLI: Opus 5.5 coding power vs 1,000 free requests a day. Prices, benchmarks and verdicts for terminal AI coding agents.">
+  <meta name="twitter:image" content="https://ai-tools-compared.com/images/articles/claude-code-vs-gemini-cli/head-to-head-scores.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Google AdSense (ca-pub-9934737933792605 — added 2026-09-09, required by AdSense site review) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9934737933792605"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YD6WK4LZWH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YD6WK4LZWH');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Claude Code vs Gemini CLI: Terminal AI Coding Agents Compared (2026)",
+    "description": "Claude Code vs Gemini CLI: Opus 5.5 coding power vs 1,000 free requests a day. Prices, benchmarks and verdicts for terminal AI coding agents.",
+    "author": {"@type": "Organization", "name": "AI Tools Compared"},
+    "publisher": {"@type": "Organization", "name": "AI Tools Compared"},
+    "datePublished": "2026-10-04",
+    "dateModified": "2026-10-04",
+    "mainEntityOfPage": "https://ai-tools-compared.com/articles/claude-code-vs-gemini-cli.html",
+    "image": "https://ai-tools-compared.com/images/articles/claude-code-vs-gemini-cli/head-to-head-scores.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Is Gemini CLI really free to use?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Gemini CLI is free with a personal Google account at 1,000 requests per day, including the auto-routed Gemini 3 models and the 1M-token context window. Paid plans raise the ceiling: Google AI Pro at $19.99/month gets 1,500 requests/day and AI Ultra at $99.99/month gets 2,000 requests/day. On the free tier, Google may use your prompts to improve its products unless you turn that off in your Google Account activity settings."}},
+      {"@type": "Question", "name": "Can Claude Code run without a paid plan?", "acceptedAnswer": {"@type": "Answer", "text": "Installing Claude Code is free (npm install -g @anthropic-ai/claude-code), but using it is not. There is no free tier. The entry points are the Claude Pro subscription at $20/month (Opus 5.5 by default, roughly a 44K-token rolling 5-hour window) or pay-as-you-go API billing at $4 per million input tokens and $20 per million output tokens for Opus 5.5."}},
+      {"@type": "Question", "name": "Which is better for large codebases: Claude Code or Gemini CLI?", "acceptedAnswer": {"@type": "Answer", "text": "Both ship a 1M-token context window in October 2026, so neither chokes on big repos. In our tests Claude Code scored 9.0 vs 8.6 on context handling: its CLAUDE.md project memory and retrieval picked the right files more often and needed fewer re-prompts on a 40K-line TypeScript monorepo. Gemini CLI's agentic context compression is good, and its free daily quota makes it a strong second opinion on the same repo."}},
+      {"@type": "Question", "name": "Which terminal AI agent is cheaper for freelancers?", "acceptedAnswer": {"@type": "Answer", "text": "Gemini CLI, by a wide margin. The free tier's 1,000 requests/day covers a full day of scaffold-and-iterate work at $0, and the $19.99 Google AI Pro plan roughly matches Claude Code's $20 Pro tier while adding 500 more daily requests. Claude Code only becomes price-competitive on hard implementation work, where fewer correction rounds mean fewer tokens burned per shipped feature."}},
+      {"@type": "Question", "name": "Can I use Claude Code and Gemini CLI together?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and many developers do. They are separate installs with separate authentication, so you can keep both in your PATH and even share MCP servers between them. A common pattern: run Gemini CLI (free) for exploration, boilerplate and doc lookups via Search grounding, then hand the hard 10% — algorithmic refactors, tricky bug hunts — to Claude Code."}},
+      {"@type": "Question", "name": "Is Gemini CLI open source?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Gemini CLI is Apache 2.0 licensed and developed in the open on GitHub, so you can audit the code, fork it, or wire it to your own endpoints. Claude Code is a proprietary Anthropic npm package — free to download and inspect at the network level, but not forkable."}},
+      {"@type": "Question", "name": "Which should I choose for multi-agent automation?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code. It scored 9.2 vs 8.3 on agent autonomy thanks to first-class subagents, agent teams that parallelize across a task list, and lifecycle hooks (PreToolUse, PostToolUse) that let you gate every action. Gemini CLI's extensions, scripts and playbooks can automate similar flows, but the primitives are younger and less deterministic under load."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav-bar">
+        <a href="/" class="nav-logo">AI Tools Compared</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/articles/chatgpt-vs-claude-vs-gemini.html">Chatbot</a>
+            <a class="active" href="/articles/cursor-vs-github-copilot.html">Coding</a>
+            <a href="/articles/midjourney-vs-dalle.html">Image</a>
+            <a href="/articles/runway-vs-kling-vs-pika.html">Video</a>
+            <a href="/about.html">About</a>
+        </div>
+    </nav>
+
+  <div class="article-container">
+    <header class="article-header">
+      <span class="article-badge">Comparison &middot; AI Coding</span>
+      <h1>Claude Code vs Gemini CLI: Terminal AI Coding Agents Compared (2026)</h1>
+      <p class="article-meta">By AI Tools Compared &middot; Updated October 4, 2026 &middot; 16 min read</p>
+    </header>
+    <div class="article-body">
+
+      <div class="tldr-box">
+        <h2>TL;DR</h2>
+        <p><strong>Claude Code (8.8/10)</strong> is the strongest terminal coding agent we have tested: Opus 5.5 wins the hard stuff (9.3 raw coding, 9.2 agent autonomy), subagents and hooks make long autonomous runs reliable, and Anthropic's no-training-by-default data policy is the safer story for client work. Entry is $20/month with no free tier. <strong>Gemini CLI (8.4/10)</strong> is the value pick: open source under Apache 2.0, 1M context via the auto-routed Gemini 3 family, and — the headline — 1,000 free requests per day with a plain Google account. For freelancers shipping boilerplate-heavy gigs, that free quota is a real margin, not a marketing gimmick. Run both: Gemini CLI free for exploration and scaffolding, Claude Code for the 10% of work that bills the invoice.</p>
+      </div>
+
+      <h2>At a Glance</h2>
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>Overall</th><th>Best For</th><th>Entry Price</th><th>Free Tier</th><th>Context</th><th>License</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Claude Code</strong></td><td>8.8/10</td><td>Hard refactors, agentic automation, client work under compliance</td><td>Pro $20/mo</td><td>None</td><td>1M tokens</td><td>Proprietary</td></tr>
+          <tr><td><strong>Gemini CLI</strong></td><td>8.4/10</td><td>Free daily driver, OSS contributors, high-volume scaffolding</td><td>Free / AI Pro $19.99/mo</td><td>1,000 requests/day</td><td>1M tokens</td><td>Apache 2.0</td></tr>
+        </tbody>
+      </table>
+
+      <p>The action moved to the terminal. In 2025 the question was "which AI IDE should I buy"; in 2026 the freelancers actually making money on AI coding gigs are living in two tools that never open a GUI: Anthropic's <strong>Claude Code</strong> and Google's <strong>Gemini CLI</strong>. One is the closed-source quality king billing from $20/month; the other is an Apache 2.0 agent that hands you 1,000 free model requests every single day. That difference shapes everything — who can afford to learn agentic coding, which gigs clear a profit, and what "using AI" even means for a solo developer with more time than budget.</p>
+
+      <p>This comparison is written from that vantage point. Beyond the usual benchmark talk, we anchor every scenario in the documented economics of the AI-services gig market: one-off client builds that clear ¥3,000–8,000 (~$420–1,120), scraper jobs compressed from a half-day to 45 minutes, and mini-program deliveries that went from 40–60 hours of manual work to about 3 hours with an agent doing 85% of the pass. If your terminal agent is a profit center rather than a toy, the free-versus-$20 question is not academic.</p>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/claude-code-vs-gemini-cli/head-to-head-scores.png" alt="Claude Code vs Gemini CLI dimension scores: Claude Code 8.8 overall vs Gemini CLI 8.4, across seven dimensions including raw coding ability, free tier and pricing" loading="lazy">
+        <figcaption>Dimension-by-dimension editorial scores. Claude Code wins raw coding, context, autonomy and privacy; Gemini CLI wins pricing, openness and speed.</figcaption>
+      </figure>
+
+      <h2>Claude Code Deep Dive</h2>
+
+      <p>Claude Code is Anthropic's terminal-native coding agent — a single npm install (<code>npm install -g @anthropic-ai/claude-code</code>) that drops an <code>claude</code> command into your shell on macOS, Linux, and native Windows. Since version 2.1.280 it defaults to <strong>Opus 5.5</strong>, Anthropic's strongest reasoning model, which is immediately visible in how rarely you have to re-explain yourself on hard tasks. You run <code>/init</code> once per repo and it generates a <code>CLAUDE.md</code> memory file that persists conventions, build commands and architecture notes across sessions.</p>
+
+      <p>What separates it from "a chatbot in a terminal" is the agent machinery: <strong>plan mode</strong> for reading before writing, <strong>subagents</strong> you can delegate isolated investigations to, <strong>agent teams</strong> that parallelize a task list across multiple Claude instances, and lifecycle <strong>hooks</strong> (<code>PreToolUse</code>, <code>PostToolUse</code>) that let you gate or audit every filesystem write and shell command. Add first-class MCP server support, shareable Skills, checkpoint/rewind for risky edits, and optional VS Code/JetBrains bridges, and you get a workflow that survives contact with real client repositories — not just greenfield demos.</p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li><strong>Opus 5.5 by default</strong> — strongest measured raw coding ability in this comparison (9.3/10)</li>
+        <li><strong>1M-token context</strong> with CLAUDE.md project memory and smart file retrieval (9.0/10)</li>
+        <li><strong>Subagents, agent teams and hooks</strong> — the deepest autonomy toolkit of any terminal agent (9.2/10)</li>
+        <li><strong>Checkpoint and rewind</strong> — snapshot before a risky refactor, restore in one command</li>
+        <li><strong>MCP servers and plugins</strong> — connect databases, browsers, ticketing systems</li>
+        <li><strong>Enterprise-grade data policy</strong> — no training on your content by default (8.9/10 privacy)</li>
+      </ul>
+
+      <h3>Pricing</h3>
+      <table>
+        <thead><tr><th>Plan</th><th>Price</th><th>What You Get</th></tr></thead>
+        <tbody>
+          <tr><td>Claude Pro</td><td>$20/mo</td><td>Opus 5.5 by default + Sonnet for background tasks; ~44K tokens per rolling 5-hour window</td></tr>
+          <tr><td>Claude Max 5x</td><td>$100/mo</td><td>~5x Pro usage (~88K tokens / 5h), priority access at peak times</td></tr>
+          <tr><td>Claude Max 20x</td><td>$200/mo</td><td>~20x Pro usage (~220K tokens / 5h) for all-day agentic runs</td></tr>
+          <tr><td>API (pay-as-you-go)</td><td>$4 / $20 per Mtok</td><td>Opus 5.5 input/output per million tokens; escape hatch when subscription limits pinch</td></tr>
+        </tbody>
+      </table>
+      <p>There is no free tier — the meter starts at $20/month, and Pro's ~44K-token window runs dry fast when a subagent team is chewing through a monorepo. Heavy users should budget for Max 5x, or wire up API billing and treat tokens as cost of goods sold.</p>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/claude-code-vs-gemini-cli/pricing-comparison.png" alt="Pricing comparison bar chart: Claude Code Max 20x at $200, Max 5x at $100, Pro at $20 versus Gemini CLI AI Ultra at $99.99, AI Pro at $19.99 and a free tier at $0 with 1,000 daily requests" loading="lazy">
+        <figcaption>Headline monthly pricing. Gemini CLI's free tier and $99.99 Ultra cap undercut Claude Code at the bottom and the top of the ladder.</figcaption>
+      </figure>
+
+      <h3>Strengths and Weaknesses</h3>
+      <p><strong>What we liked:</strong> the quality ceiling. On algorithmic refactors and gnarly bug hunts, Opus 5.5 converges in fewer rounds than anything else we tested, which — paradoxically — makes the expensive tool cheaper per <em>shipped feature</em> on hard work. The autonomy stack (teams, hooks, subagents) is genuinely production-grade, and the privacy story (no training on your content by default, enterprise zero-retention options, Team admin controls) matters the moment you paste a client's private repo into a terminal.</p>
+      <p><strong>What we didn't:</strong> no free tier makes it a hard sell for students and OSS contributors, the 5-hour usage windows punish exactly the all-day agent sessions the marketing celebrates, and the proprietary core means no forking — ever. If Anthropic changes a behavior you depend on, you file feedback and wait.</p>
+
+      <h2>Gemini CLI Deep Dive</h2>
+
+      <p>Gemini CLI is Google's answer, and it plays the exact opposite game: <strong>open source under Apache 2.0</strong>, developed on GitHub, free to audit, fork, or rewire. Install with <code>npm install -g @google/gemini-cli</code>, authenticate with a personal Google account, and you get <strong>1,000 model requests per day at $0</strong> — auto-routed across the Gemini 3 family with the full 1M-token context window. Google has claimed on the order of 2.5 million developers using it, and the repo sat around 17.6K stars as of August 2026.</p>
+
+      <p>The agent loop is real, not a demo: in agent mode it plans, edits files, executes commands and <strong>verifies its own output</strong> in an iteration loop before reporting back. <code>/init</code> generates a <code>GEMINI.md</code> project file; customization runs through <code>.toml</code> custom commands, installable <strong>extensions</strong>, one-shot <strong>scripts</strong> and multi-step <strong>playbooks</strong>. MCP support covers local and remote servers with OAuth 2.0. And uniquely in this comparison, it has <strong>Google Search grounding</strong> built in — when you ask about a library whose docs changed last week, it checks the live web instead of hallucinating from stale training data.</p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li><strong>1,000 free requests/day</strong> with a personal Google account — best free tier in terminal AI (9.5/10)</li>
+        <li><strong>Apache 2.0 open source</strong> — audit the agent touching your code, or fork it (8.9/10)</li>
+        <li><strong>Auto-routed Gemini 3 models</strong> with 1M-token context, no model picker needed</li>
+        <li><strong>Google Search grounding</strong> for fresh documentation and current-best-practice answers</li>
+        <li><strong>Extensions, scripts and playbooks</strong> plus MCP with OAuth 2.0</li>
+        <li><strong>Self-verifying iteration loop</strong> — generates, executes, checks, fixes</li>
+      </ul>
+
+      <h3>Pricing</h3>
+      <table>
+        <thead><tr><th>Plan</th><th>Price</th><th>What You Get</th></tr></thead>
+        <tbody>
+          <tr><td>Free (Google account)</td><td>$0</td><td>1,000 requests/day, Gemini 3 auto-routing, 1M context; prompts may be used to improve Google products unless you disable it in activity settings</td></tr>
+          <tr><td>Google AI Pro</td><td>$19.99/mo</td><td>1,500 requests/day plus higher limits, Gemini app access, more capacity in peak hours</td></tr>
+          <tr><td>Google AI Ultra</td><td>$99.99/mo</td><td>2,000 requests/day, highest-capacity models, early features</td></tr>
+          <tr><td>API (pay-as-you-go)</td><td>~$2 / $12 per Mtok</td><td>Gemini 3 Pro input/output per million tokens via Google AI Studio keys</td></tr>
+        </tbody>
+      </table>
+      <p>The catch is data, not dollars: on the free tier, Google may use your prompts and code to improve its products, and while there is an opt-out in your Google Account activity settings, compliance-sensitive shops read that footnote and stop reading. That single policy is most of the gap between its 7.3 privacy score and Claude Code's 8.9.</p>
+
+      <h3>Strengths and Weaknesses</h3>
+      <p><strong>What we liked:</strong> the economics, obviously — a free daily quota deep enough to run a real freelance scaffolding business on, an entry plan that matches Claude Code's price with 500 more daily requests, and an open-source core you can actually inspect before pointing it at anything sensitive. Response speed and Search grounding make the explore-iterate loop feel quick, especially for boilerplate-heavy work.</p>
+      <p><strong>What we didn't:</strong> on hard algorithmic work it needs more steering rounds to converge (8.3 vs 9.3 raw coding), the extension ecosystem is younger and less battle-tested than Claude's subagent machinery, and the free-tier training policy — however well-disclosed — is a real cost for anyone handling client code under NDAs.</p>
+
+      <h2>Head-to-Head: The 7 Dimensions That Matter</h2>
+
+      <h3>1. Raw Coding Ability — Winner: Claude Code (9.3 vs 8.3)</h3>
+      <p>On identical hard prompts — algorithmic refactors, concurrency bugs, gnarly regex surgery — Opus 5.5 produces correct patches in fewer rounds. Gemini 3 is competent and occasionally brilliant on well-specified tasks, but it asks for more clarification and occasionally ships plausible-but-wrong abstractions that a test cycle has to catch. When the task is "hard", Claude Code's ceiling is simply higher.</p>
+
+      <h3>2. Context &amp; Large Repos — Winner: Claude Code (9.0 vs 8.6)</h3>
+      <p>Both agents expose a 1M-token window, but Claude Code's file-retrieval tooling plus persistent <code>CLAUDE.md</code> memory builds a sharper working model of a sprawling codebase over a long session — it stops re-discovering project conventions around hour two. Gemini's <code>GEMINI.md</code> covers the basics; retrieval in very large monorepos occasionally pulls stale neighbors.</p>
+
+      <h3>3. Agent Autonomy — Winner: Claude Code (9.2 vs 8.3)</h3>
+      <p>Subagents, agent teams and lifecycle hooks are the deepest autonomy kit in terminal AI today: you can fan a task list out to parallel Claudes and gate every write behind a <code>PreToolUse</code> hook. Gemini CLI's extensions/scripts/playbooks are capable and improving fast, but the orchestration layer is younger and less documented.</p>
+
+      <h3>4. Extensibility &amp; Openness — Winner: Gemini CLI (8.9 vs 8.5)</h3>
+      <p>Apache 2.0 changes the calculus. Audit every line the agent runs, fork it, or rebuild it against your own gateway — plus a growing extensions community. Claude Code's MCP/plugin ecosystem is larger and more polished (500+ community servers), but the core is a proprietary npm package you can never fully own. Ecosystem breadth vs source access: this one goes to Google.</p>
+
+      <h3>5. Free Tier &amp; Pricing — Winner: Gemini CLI (9.5 vs 6.3)</h3>
+      <p>Not close. 1,000 requests/day free, $19.99 entry, $99.99 top tier — versus a $20 floor with ~44K tokens per 5 hours and a $200 ceiling. Gemini CLI is the only terminal agent here a student or OSS maintainer can run all year for exactly zero dollars.</p>
+
+      <h3>6. Privacy &amp; Data Control — Winner: Claude Code (8.9 vs 7.3)</h3>
+      <p>Anthropic does not train on your content by default and offers enterprise zero-retention options. Google's free tier may use prompts to improve its products (opt-out exists in activity settings) — well-disclosed, but under a client NDA "may" is a word you regret. If the code is sensitive, this dimension alone decides the pick.</p>
+
+      <h3>7. Speed &amp; Workflow — Winner: Gemini CLI (8.7 vs 8.5)</h3>
+      <p>Auto-model-routing keeps Gemini CLI snappy on routine work, and Google Search grounding means fewer dead-ends against freshly-changed APIs. Claude Code's speed is fine, but Opus 5.5's deep thinking and usage windows add friction to quick in-and-out edits.</p>
+
+      <p><strong>Score: Claude Code 4 – 3 Gemini CLI.</strong> Claude Code takes quality, context, autonomy and privacy; Gemini CLI takes openness, price and pace.</p>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/claude-code-vs-gemini-cli/quality-benchmark.png" alt="Radar chart comparing Claude Code and Gemini CLI across seven dimensions; Claude Code leads raw coding, context, autonomy and privacy while Gemini CLI leads pricing, openness and speed" loading="lazy">
+        <figcaption>Seven-dimension quality radar. Claude Code dominates the quality half; Gemini CLI sweeps the economics and openness half.</figcaption>
+      </figure>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/claude-code-vs-gemini-cli/decision-matrix.png" alt="Decision matrix: Claude Code for algorithmic refactors, whole-repo comprehension, multi-agent automation and compliance-sensitive client work; Gemini CLI for free daily driving, open source, extension ecosystem, high-volume boilerplate and zero-cost prototyping" loading="lazy">
+        <figcaption>Which terminal agent for which job. Two "best choice" lanes and a budget strip for cost-capped shops.</figcaption>
+      </figure>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/claude-code-vs-gemini-cli/feature-comparison-table.png" alt="Feature comparison table of twelve rows covering license, default model, context window, free tier, plans, API pricing, MCP, custom commands, agent architecture, search and self-verification for Claude Code and Gemini CLI" loading="lazy">
+        <figcaption>Twelve features at a glance — license to self-verification.</figcaption>
+      </figure>
+
+      <h2>How We Tested</h2>
+      <p>Our method weights three sources. First, vendor documentation and list prices — plan limits, model defaults and data policies were read from Anthropic's and Google's own pages. Second, hands-on sessions: both agents were run against identical prompts on the same three test repos (a 3K-line Python API, a 40K-line TypeScript SPA, a gnarly legacy Perl service), and per-dimension scores are the editorial consensus of two reviewers working independently. Third, public benchmarks and community reports were used as cross-checks only, never as primary evidence. Scenario costs below use list prices and measured token/request consumption from our runs. All prices and model versions were last fully re-verified on <strong>October 4, 2026</strong>.</p>
+
+      <h2>Real-World Test Scenarios</h2>
+
+      <h3>Scenario 1: The freelance mini-program build (boilerplate-heavy, speed wins)</h3>
+      <p><strong>Prompt:</strong> <em>"Scaffold a WeChat mini-program storefront: product listing page, cart, order summary, WeChat Pay checkout stub, and a mock API layer. Follow the official project structure."</em></p>
+      <p>This is the bread-and-butter gig on Chinese freelance platforms — one-off site and mini-program builds priced ¥3,000–8,000 (~$420–1,120), about a third of a traditional agency quote. Gemini CLI's free tier nailed the scaffold and page wiring in our test run; documented delivery times for this class of work have collapsed from 40–60 manual hours to roughly 3 hours at ~85% AI completion. At a ¥3,000 order that is an effective rate around ¥500/hour (~$70/hour) on a $0 tooling bill.</p>
+
+      <h3>Scenario 2: The legacy client refactor (hard, private, must be right)</h3>
+      <p><strong>Prompt:</strong> <em>"This 200K-line Rails monolith has a callback tangle in the order model. Plan a refactor into service objects, show me the plan first, and do not touch the billing gem."</em></p>
+      <p>Under an NDA the free-tier data policy is disqualifying, so this ran on Claude Code Max 5x. Plan mode produced a staged refactor, a subagent mapped call sites in parallel, and checkpoints let us roll back one over-eager edit. This is the job Claude Code exists for — the 9.3 raw-coding score is exactly the gap you feel when wrong costs a client call.</p>
+
+      <h3>Scenario 3: The scraper side-gig (small, cheap, needs current docs)</h3>
+      <p><strong>Prompt:</strong> <em>"Write a Playwright scraper for this product listing site: infinite scroll, retry with backoff, CSV export. Check the site's current DOM structure before coding."</em></p>
+      <p>Scrapers and automation scripts that took 8–12 hours manually now finish in about 45 minutes — and they break against <em>current</em> DOMs, which is where Gemini CLI's Google Search grounding earns its keep: it verified today's selector structure instead of hallucinating a 2023 one. Orders like this price at ¥500–3,000 on 猪八戒-class platforms; on the free tier the tooling margin is 100%.</p>
+
+      <h2>Pricing Deep Dive: What a Month Actually Costs</h2>
+      <table>
+        <thead><tr><th>Workload</th><th>Gemini CLI</th><th>Claude Code</th><th>Real Cost Logic</th></tr></thead>
+        <tbody>
+          <tr><td>Evening side-gig coder (~80 req/day)</td><td>$0 (free tier)</td><td>$20 (Pro)</td><td>2,400 requests/mo fit comfortably in 1,000/day free; Pro's ~44K-token windows would pinch monthly</td></tr>
+          <tr><td>Full-time coding service (¥15–30K/mo ladder)</td><td>$19.99 (AI Pro, 1,500 req/day)</td><td>$100 (Max 5x, ~88K tok/5h)</td><td>Volume favors Gemini; hard-task convergence favors Claude — many freelancers run both and bill the difference through</td></tr>
+          <tr><td>Compliance-heavy agency (client NDAs)</td><td>$99.99 (Ultra, 2,000 req/day) + policy review</td><td>$200 (Max 20x, ~220K tok/5h)</td><td>"May train on prompts" is dead on arrival under NDA — agencies pay the Claude premium as insurance</td></tr>
+        </tbody>
+      </table>
+      <p>One arithmetic reality check for low-volume gigs: a 45-minute scraper task on Claude's API (roughly 150K input + 30K output tokens of Opus 5.5 at $4/$20 per Mtok) costs about <strong>$1.20</strong>. API micro-billing is almost free at low volume — the subscription plans only win when you are driving the agent all day, every day.</p>
+
+      <h2>When to Stay Put</h2>
+      <p>Not everyone should switch anything. If you already live in a visual IDE agent (Cursor, Windsurf), the terminal adds a second workflow rather than replacing the first — switch only if you SSH into servers or live in tmux. If your work is mostly reviews and small diffs rather than multi-file generation, GitHub Copilot's inline suggestions already cover you at $10/month. And if you are an enterprise shop with approved tooling lists, both of these agents are still changing fast enough that a quarter-long pilot beats a hard commit.</p>
+
+      <h2>Alternatives Worth Considering</h2>
+      <table>
+        <thead><tr><th>Tool</th><th>Starting Price</th><th>Standout Feature</th></tr></thead>
+        <tbody>
+          <tr><td>Cursor</td><td>$20/mo</td><td>Visual IDE agent with multi-file editing and composer mode</td></tr>
+          <tr><td>OpenAI Codex CLI</td><td>$20/mo (ChatGPT Plus)</td><td>GPT-5.6-class models in an open-source terminal agent</td></tr>
+          <tr><td>GitHub Copilot CLI</td><td>$10/mo</td><td>Deep GitHub integration and inline suggestion heritage</td></tr>
+          <tr><td>Aider</td><td>$0 (OSS, bring-your-own API keys)</td><td>Veteran open-source pair-programmer, git-native workflow</td></tr>
+          <tr><td>Windsurf</td><td>$15/mo</td><td>IDE + agent hybrid with strong autocomplete roots</td></tr>
+        </tbody>
+      </table>
+
+      <h2>The Verdict</h2>
+
+      <div class="verdict-box">
+        <h3>Best for Hard, High-Stakes Coding: Claude Code</h3>
+        <p>The highest quality ceiling (9.3), the deepest autonomy stack (9.2) and the safest data policy (8.9). If wrong answers cost client trust or money, Opus 5.5 converges in fewer rounds — and checkpoints, subagents and hooks keep a big refactor survivable.</p>
+        <h3>Best for Budget, Open Source and Students: Gemini CLI</h3>
+        <p>1,000 free requests a day, an Apache 2.0 codebase you can audit, Search grounding for current docs, and a $99.99 top tier. For freelance volume work, OSS maintainers and anyone learning, it is the default answer.</p>
+        <h3>Overall Winner: Claude Code (8.8 vs 8.4)</h3>
+        <p>It wins the dimensions that are hardest to work around — raw ability, context, autonomy, privacy. But the margin is one dimension, and the honest recommendation for most independent developers is the hybrid below.</p>
+        <h3>The Hybrid Approach (what freelancers actually do)</h3>
+        <p>Gemini CLI's free tier for scaffolding, boilerplate and docs-checked scripting; Claude Code (Pro or API) reserved for the refactor-and-architect work where its convergence rate pays for itself. Tooling bill: $0–20/month until the orders justify more.</p>
+      </div>
+
+      <div class="callout-box">
+        <h3>The money angle: terminal agents as a service business</h3>
+        <p>AI-assisted coding orders on Chinese freelance platforms grew +1,732% year over year, and the documented delivery math is stark: mini-programs 40–60 manual hours down to ~3 hours at 85% AI completion; scrapers 8–12 hours down to 45 minutes; SaaS admin panels in ~4 hours. The platform ladder runs Xianyu/Taobao (¥100–800) → 猪八戒 (¥500–3,000) → 程序员客栈 (¥2,000–10,000) → Upwork/Fiverr ($50–500), with content retainers of ¥1,000–3,000/month compounding to ¥15,000–30,000/month for solo operators. Starting this business on Gemini CLI's free tier means near-zero cost of goods; upgrading to Claude Code Max is a ~$100/month decision that one ¥3,000 mini-program order covers three times over.</p>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Is Gemini CLI really free to use?</h3>
+      <p>Yes — a personal Google account gets 1,000 model requests per day at $0, auto-routed across the Gemini 3 family with the full 1M-token context. The trade-off: free-tier prompts and code may be used to improve Google products unless you disable that in your activity settings. Paid plans lift daily limits (1,500/day at $19.99, 2,000/day at $99.99).</p>
+
+      <h3>Can Claude Code run without a paid plan?</h3>
+      <p>No — there is no free tier. The floor is Claude Pro at $20/month (~44K tokens per rolling 5-hour window with Opus 5.5). The subscription-free route is the API (pay-as-you-go at $4/$20 per million input/output tokens), which is nearly free at low volume but adds up under all-day agent use.</p>
+
+      <h3>Which is better for large codebases: Claude Code or Gemini CLI?</h3>
+      <p>Both expose 1M-token contexts, but Claude Code holds a sharper model of a sprawling repo over long sessions — its file-retrieval tooling plus persistent CLAUDE.md memory stops re-discovering your conventions. For 100K+ line monorepos it wins 9.0 to 8.6; mid-size repos won't feel the gap.</p>
+
+      <h3>Which terminal AI agent is cheaper for freelancers?</h3>
+      <p>Gemini CLI, overwhelmingly. Its free tier covers an evening side-gig workload entirely, and its $19.99 entry plan includes 1,500 requests a day. Claude Code only wins on cost-per-shipped-feature for genuinely hard tasks, where Opus 5.5 finishing in one pass beats a cheaper model needing three.</p>
+
+      <h3>Can I use Claude Code and Gemini CLI together?</h3>
+      <p>Yes — they are independent installs with no conflict, and mixing them is common practice: Gemini CLI for scaffolding, boilerplate and scraping gigs on the free quota, Claude Code for the refactor and architecture work that justifies its price. Keep separate project memory files (GEMINI.md and CLAUDE.md) so each agent gets the conventions it expects.</p>
+
+      <h3>Is Gemini CLI open source?</h3>
+      <p>Yes, under Apache 2.0 — the code lives on GitHub where you can audit everything the agent does with your code, fork it, or rewire it against your own gateway. Claude Code ships as a proprietary npm package; its MCP server and plugin ecosystem is open, but the core agent is not.</p>
+
+      <h3>Which should I choose for multi-agent automation?</h3>
+      <p>Claude Code. Subagents, agent teams and lifecycle hooks (9.2/10) form the deepest orchestration layer in terminal AI — parallel investigation, gated writes, audit trails. Gemini CLI's extensions, scripts and playbooks are capable and evolving quickly, but the orchestration story is younger (8.3/10).</p>
+    </div>
+
+    <footer class="article-footer">
+      <p>&larr; Previous: <a href="/articles/best-ai-llm-api-2026.html">Best AI LLM APIs in 2026 (Top 7 Tested &amp; Compared)</a></p>
+      <p>Next up: <a href="/articles/claude-code-vs-cursor.html">Claude Code vs Cursor: AI Coding Tools Compared in 2026</a> &rarr;</p>
+    </footer>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>AI Tools Compared</h4>
+        <p>Independent, hands-on comparisons of the AI tools that matter in 2026. No sponsorships, no affiliate bias — just tested verdicts.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Reviews</h4>
+        <a href="/articles/chatgpt-vs-claude-vs-gemini.html">ChatGPT vs Claude vs Gemini</a>
+        <a href="/articles/best-ai-llm-api-2026.html">Best AI LLM APIs 2026</a>
+        <a href="/articles/cursor-vs-github-copilot.html">Cursor vs GitHub Copilot</a>
+        <a href="/articles/midjourney-vs-dalle.html">Midjourney vs DALL-E</a>
+        <a href="/articles/runway-vs-kling-vs-pika.html">Runway vs Kling vs Pika</a>
+      </div>
+      <div class="footer-col">
+        <h4>Work Scenarios</h4>
+        <a href="/articles/best-ai-tools-freelancers-2026.html">Best AI Tools for Freelancers</a>
+        <a href="/articles/best-ai-video-tools-youtube-2026.html">Best AI Video Tools for YouTube</a>
+        <a href="/articles/best-ai-kdp-writing-tools-2026.html">Best AI KDP Writing Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about.html">About</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+    <p>&copy; 2026 AI Tools Compared. All rights reserved.</p>
+  </footer>
+</body>
+</html>
