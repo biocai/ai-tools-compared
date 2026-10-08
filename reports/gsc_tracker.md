@@ -65,3 +65,23 @@
 ## 工具链
 - 驱动脚本: /Users/mxh/.hermes/scripts/gsc_request_indexing.py (v2, 日志落盘 reports/gsc_index_requests.log)
 - 依赖: 本地Chrome CDP :9222 (启动: gsc_cdp 同款命令, profile=~/.hermes-gsc-profile) + ZoogVPN 连通Google
+
+## 2026-10-08 — 工程优化日（AdSense拒审后首轮冲刺）
+
+**GSC 3个月数据**: 1点击 / 1860曝光 / CTR 0.1% / 平均排名 #62.8
+
+**排名最好页面（CTR优化目标，已完成title/desc重写并部署）**:
+| 页面 | 曝光 | 排名 | 动作 |
+|---|---|---|---|
+| photoroom-vs-flair-vs-pebblely | 65 (www+非www) | #6.4/#17.9 | title加品牌词（原title无任何品牌名！） |
+| claude-code-vs-cursor | 19 | #31.6 | "30-Day Test, One Clear Winner" |
+| suno-vs-udio | 157 | #35.5 | "50-Track Test Shows a Clear Winner" |
+| cursor-vs-github-copilot | 132 | #41.8 | "200-Hour Test, Clear Winner" |
+
+**外链合规**: 12个官方站外链补 rel="noopener nofollow"（3文件），全站裸外链清零，已上线。
+
+**内容审计**: 109篇全站扫描 — 最薄2320词/中位3498词，0薄内容，0模板化结构。内容质量非拒因，印证"低价值内容=热度不足"判断。
+
+**www重复收录**: www 301→非www已生效，GSC双版本数据为历史残留，等Google合并信号即可。
+
+**下一步**: 外链建设引流（backlink skill）→ UV≥10/日稳定后重交AdSense。
