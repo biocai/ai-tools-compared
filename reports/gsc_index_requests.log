@@ -225,3 +225,63 @@
 [09:37:01]   poll coze-vs-botpress: ON_GOOGLE panel_ok=True
 [09:37:01] SKIP coze-vs-botpress (已收录)
 2026-10-06 {"https://ai-tools-compared.com/articles/coze-vs-botpress.html": "already-indexed"}
+[08:29:15]   poll aragon-vs-headshotpro-vs-photoai: READY panel_ok=True
+[08:29:15] CLICKED aragon-vs-headshotpro-vs-photoai (btn=CLICKED)
+[08:29:20]   wait aragon-vs-headshotpro-vs-photoai: READY
+[08:29:40] DONE aragon-vs-headshotpro-vs-photoai
+[08:30:00]   poll best-ai-agents-ecommerce-2026: READY panel_ok=True
+[08:30:00] CLICKED best-ai-agents-ecommerce-2026 (btn=CLICKED)
+[08:30:05]   wait best-ai-agents-ecommerce-2026: READY
+[08:30:15] DONE best-ai-agents-ecommerce-2026
+[08:30:36]   poll best-ai-agents-self-publishing-2026: READY panel_ok=True
+[08:30:36] CLICKED best-ai-agents-self-publishing-2026 (btn=CLICKED)
+[08:30:41]   wait best-ai-agents-self-publishing-2026: READY
+[08:31:11]   wait best-ai-agents-self-publishing-2026: DONE
+[08:31:11] DONE best-ai-agents-self-publishing-2026
+[08:31:23] FILL_FAIL best-ai-coding-tools-chrome-extensions-2026 (NO_INPUT)
+[08:31:44]   poll best-ai-photo-animation-tools-2026: READY panel_ok=True
+[08:31:44] CLICKED best-ai-photo-animation-tools-2026 (btn=CLICKED)
+[08:31:49]   wait best-ai-photo-animation-tools-2026: READY
+[08:32:04] DONE best-ai-photo-animation-tools-2026
+[08:32:16] FILL_FAIL best-ai-script-writing-2026 (NO_INPUT)
+[08:32:37]   poll best-ai-website-builders-2026: READY panel_ok=True
+[08:32:37] CLICKED best-ai-website-builders-2026 (btn=CLICKED)
+[08:32:42]   wait best-ai-website-builders-2026: READY
+[08:33:07] DONE best-ai-website-builders-2026
+[08:33:27]   poll best-image-to-video-ai-2026: READY panel_ok=True
+[08:33:27] CLICKED best-image-to-video-ai-2026 (btn=CLICKED)
+[08:33:32]   wait best-image-to-video-ai-2026: READY
+[08:33:57] DONE best-image-to-video-ai-2026
+[08:34:18]   poll chatgpt-vs-sudowrite: READY panel_ok=True
+[08:34:18] CLICKED chatgpt-vs-sudowrite (btn=CLICKED)
+[08:34:23]   wait chatgpt-vs-sudowrite: READY
+[08:34:43] DONE chatgpt-vs-sudowrite
+[08:34:59] FILL_FAIL cursor-vs-replit (NO_INPUT)
+[08:35:21]   poll deepseek-vs-grok: READY panel_ok=True
+[08:35:21] CLICKED deepseek-vs-grok (btn=CLICKED)
+[08:35:26]   wait deepseek-vs-grok: READY
+[08:35:46] DONE deepseek-vs-grok
+[08:35:58] FILL_FAIL ideogram-vs-flux (NO_INPUT)
+[08:36:19]   poll seedance-vs-veo: READY panel_ok=True
+[08:36:19] CLICKED seedance-vs-veo (btn=CLICKED)
+[08:36:24]   wait seedance-vs-veo: READY
+[08:36:39] DONE seedance-vs-veo
+[08:36:59]   poll surfer-vs-neuronwriter: READY panel_ok=True
+[08:36:59] CLICKED surfer-vs-neuronwriter (btn=CLICKED)
+[08:37:04]   wait surfer-vs-neuronwriter: READY
+[08:37:24] DONE surfer-vs-neuronwriter
+[08:37:45]   poll best-ai-coding-assistant-free-2026: READY panel_ok=True
+[08:37:45] CLICKED best-ai-coding-assistant-free-2026 (btn=CLICKED)
+[08:37:50]   wait best-ai-coding-assistant-free-2026: READY
+[08:38:15] DONE best-ai-coding-assistant-free-2026
+2026-10-13 {"https://ai-tools-compared.com/articles/aragon-vs-headshotpro-vs-photoai.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-agents-ecommerce-2026.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-agents-self-publishing-2026.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-coding-tools-chrome-extensions-2026.html": "fail:fill", "https://ai-tools-compared.com/articles/best-ai-photo-animation-tools-2026.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-script-writing-2026.html": "fail:fill", "https://ai-tools-compared.com/articles/best-ai-website-builders-2026.html": "DONE", "https://ai-tools-compared.com/articles/best-image-to-video-ai-2026.html": "DONE", "https://ai-tools-compared.com/articles/chatgpt-vs-sudowrite.html": "DONE", "https://ai-tools-compared.com/articles/cursor-vs-replit.html": "fail:fill", "https://ai-tools-compared.com/articles/deepseek-vs-grok.html": "DONE", "https://ai-tools-compared.com/articles/ideogram-vs-flux.html": "fail:fill", "https://ai-tools-compared.com/articles/seedance-vs-veo.html": "DONE", "https://ai-tools-compared.com/articles/surfer-vs-neuronwriter.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-coding-assistant-free-2026.html": "DONE"}
+[08:41:05]   poll best-ai-coding-tools-chrome-extensions-2026: READY panel_ok=True
+[08:41:05] CLICKED best-ai-coding-tools-chrome-extensions-2026 (btn=CLICKED)
+[08:41:10]   wait best-ai-coding-tools-chrome-extensions-2026: READY
+[08:41:30] DONE best-ai-coding-tools-chrome-extensions-2026
+[08:41:51]   poll best-ai-script-writing-2026: READY panel_ok=True
+[08:41:51] CLICKED best-ai-script-writing-2026 (btn=CLICKED)
+[08:41:56]   wait best-ai-script-writing-2026: READY
+[08:42:21] QUOTA best-ai-script-writing-2026
+[08:42:21] 配额耗尽，停止处理
+2026-10-13 {"https://ai-tools-compared.com/articles/best-ai-coding-tools-chrome-extensions-2026.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-script-writing-2026.html": "QUOTA"}

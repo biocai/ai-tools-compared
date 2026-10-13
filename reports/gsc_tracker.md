@@ -66,6 +66,35 @@
 - 驱动脚本: /Users/mxh/.hermes/scripts/gsc_request_indexing.py (v2, 日志落盘 reports/gsc_index_requests.log)
 - 依赖: 本地Chrome CDP :9222 (启动: gsc_cdp 同款命令, profile=~/.hermes-gsc-profile) + ZoogVPN 连通Google
 
+## 2026-10-13 周检（119篇时代，14新文全未收录→已请求）
+
+**GSC概览(滞后口径)**: 11已编入/107未编入（此数字滞后≥11天，10-06时13/76实查25+，仅作趋势记录）
+**效果报告(近3月)**: 点击1（chatgpt-vs-claude-vs-gemini 唯一点击，256展示） | 网页维度前10行合计1951+展示（对比10-08全站1860 → 创新高）
+**Top网页**: 首页566 / midjourney-vs-dalle 504+20(www) / chatgpt-vs-claude-vs-gemini 256(唯一点击) / chatgpt-vs-jasper-vs-copyai 223 / suno-vs-udio 158 / cursor-vs-github-copilot 139 / photoroom 42(www)+23 / claude-code-vs-cursor 20 — 与10-06排名基本一致，10-08改title的两篇曝光未见跳变（正常，title生效需重新抓取）
+**sitemap**: 线上120 URL vs GSC发现118，滞后2条，10-06刚重提交过，本次不重复提交
+
+**收录实查（14新文+顽固页）**:
+| URL | 状态 | 请求 |
+|---|---|---|
+| aragon-vs-headshotpro-vs-photoai | 未收录 | ✅ 10-13 DONE |
+| best-ai-agents-ecommerce-2026 | 未收录 | ✅ 10-13 DONE |
+| best-ai-agents-self-publishing-2026 | 未收录 | ✅ 10-13 DONE |
+| best-ai-coding-tools-chrome-extensions-2026 | 未收录 | ✅ 10-13 DONE(首轮fail:fill重跑成功) |
+| best-ai-photo-animation-tools-2026 | 未收录 | ✅ 10-13 DONE |
+| best-ai-script-writing-2026 | 未收录 | ⏳ QUOTA，15:00后补 |
+| best-ai-website-builders-2026 | 未收录 | ✅ 10-13 DONE |
+| best-image-to-video-ai-2026 | 未收录 | ✅ 10-13 DONE |
+| chatgpt-vs-sudowrite | 未收录 | ✅ 10-13 DONE |
+| cursor-vs-replit | 未收录 | ⏳ 配额STOP，15:00后补 |
+| deepseek-vs-grok | 未收录 | ✅ 10-13 DONE |
+| ideogram-vs-flux | 未收录 | ⏳ 配额STOP，15:00后补 |
+| seedance-vs-veo | 未收录 | ✅ 10-13 DONE |
+| surfer-vs-neuronwriter | 未收录 | ✅ 10-13 DONE |
+| best-ai-coding-assistant-free-2026 | 未收录 | ✅ 10-13 第5轮重请求 |
+
+**规律修正**: "新文3天免请求收录"不成立——本批10-06后新文（最老5-7天）实查全部READY未收录，且8条为best-of listicle（历来收录慢）。对比文（aragon/chatgpt-vs-sudowrite/deepseek-vs-grok/seedance/surfer/cursor-vs-replit）也未自动收录 → 新文仍需主动请求
+**配额**: 今日12条DONE后触顶（QUOTA弹窗确认），15:00太平洋零点重置。剩余队列: script-writing / cursor-vs-replit / ideogram-vs-flux
+
 ## 2026-10-08 — 工程优化日（AdSense拒审后首轮冲刺）
 
 **GSC 3个月数据**: 1点击 / 1860曝光 / CTR 0.1% / 平均排名 #62.8
