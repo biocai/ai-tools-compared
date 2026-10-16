@@ -66,6 +66,16 @@
 - 驱动脚本: /Users/mxh/.hermes/scripts/gsc_request_indexing.py (v2, 日志落盘 reports/gsc_index_requests.log)
 - 依赖: 本地Chrome CDP :9222 (启动: gsc_cdp 同款命令, profile=~/.hermes-gsc-profile) + ZoogVPN 连通Google
 
+## 2026-10-16 VPN恢复补跑 + 10-13批中期验证（3天）
+
+**欠账清零**: script-writing / cursor-vs-replit / ideogram-vs-flux 三条10-13 QUOTA欠账全部 DONE（今晨配额重置后）。CDP无tab坑18复现，/json/new恢复
+
+**10-13批12条验证（发布+请求后3天，规律窗口4-7天）**:
+- **已收录 5条(42%)**: aragon-vs-headshotpro-vs-photoai / best-ai-agents-ecommerce / best-ai-website-builders / deepseek-vs-grok / surfer-vs-neuronwriter
+- 仍未收录 7条，今日已重请求: best-ai-agents-self-publishing / coding-tools-chrome-extensions / photo-animation / image-to-video / seedance-vs-veo / chatgpt-vs-sudowrite / coding-assistant(第6轮)
+- 累计收录估 30+（10-06基线25 + 本批5）
+- fail:fill 间歇出现（本轮4条），同URL重跑即好——疑似GSC面板加载竞态，无需修脚本
+
 ## 2026-10-13 周检（119篇时代，14新文全未收录→已请求）
 
 **GSC概览(滞后口径)**: 11已编入/107未编入（此数字滞后≥11天，10-06时13/76实查25+，仅作趋势记录）
