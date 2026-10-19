@@ -124,3 +124,13 @@
 **www重复收录**: www 301→非www已生效，GSC双版本数据为历史残留，等Google合并信号即可。
 
 **下一步**: 外链建设引流（backlink skill）→ UV≥10/日稳定后重交AdSense。
+
+## 2026-10-19 周一补检（VPN恢复，用户手连）
+- 发布cron停3天根因: glm-5.3周配额429(10-17 00:00起5连挂)，09:34重置后手动触发，127篇10:22上线复活
+- 批跑9条全DONE(配额9/12): 10-13批7条老账重请求第7轮(self-publishing/chrome-extensions/photo-animation/image-to-video/sudowrite/seedance/coding-assistant) + 新文2篇(web-scrapers#125/antigravity-vs-cursor#126)
+- ⚠️ 7条老账今晨实查全READY未收录 — 10-16重请求后3天转化0/7，历史规律窗口4-7天，验收期10-20~10-23，coding-assistant已第7轮顽固
+- photo-animation首轮fail:fill重跑即DONE(第3次验证此坑无需修)
+- 效果报告: 总曝光2160(10-13时1951,+209) 总点击仍1 平均排名63.1
+- 发现: perplexity-vs-chatgpt-vs-gemini-search流量登顶(连续2日5UV)但不在GSC曝光Top表 → 流量来自AI助手引荐非Google搜索，GEO路线起效
+- AdSense: 维持"需要注意(低价值内容)" ads.txt在线(未找到=假警报) — 策略不变，UV稳定10-20+/日再重交
+- git push欠账d2055ff已清，origin/main同步
