@@ -134,3 +134,10 @@
 - 发现: perplexity-vs-chatgpt-vs-gemini-search流量登顶(连续2日5UV)但不在GSC曝光Top表 → 流量来自AI助手引荐非Google搜索，GEO路线起效
 - AdSense: 维持"需要注意(低价值内容)" ads.txt在线(未找到=假警报) — 策略不变，UV稳定10-20+/日再重交
 - git push欠账d2055ff已清，origin/main同步
+
+## 2026-10-20 周二（10:01周检cron因429空转，10:50手动补跑）
+- **周检cron首次"429空转"新形态**: glm-5.3五小时配额耗尽(HTTP 429, 重置13:56), VPN预检GOOGLE_OK但agent零动作。已把cron切到volcengine/glm-5-2-260617(对齐发布cron)
+- 请求索引9条新文全DONE(配额9/12): semrush-vs-ahrefs(10-13,最老7天) / mascot-design-tools / activepieces-vs-n8n / 3d-model-generators / qwen-vs-deepseek / virtual-influencer / originality-ai-vs-gptzero / best-local-llm-chatbots(10-20) / grammarly-vs-chatgpt(#130)。全READY=确认未收录, panel_ok全True
+- 效果报告: 总曝光2260(10-19时2160,+100) 总点击仍1 平均排名63.5(微降)
+- Top网页: / 628 / midjourney-vs-dalle 517 / chatgpt-vs-claude-vs-gemini 264(唯一点击) / **best-ai-agents-ecommerce-2026 161新面孔** / jasper-vs-copyai 223
+- 待验收: 本批9条+10-19批7条老账(coding-assistant第7轮顽固), 验收窗口10-23~10-27

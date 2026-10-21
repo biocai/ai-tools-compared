@@ -388,3 +388,40 @@
 [10:20:36]   wait best-ai-photo-animation-tools-2026: READY
 [10:20:56] DONE best-ai-photo-animation-tools-2026
 2026-10-19 {"https://ai-tools-compared.com/articles/best-ai-photo-animation-tools-2026.html": "DONE"}
+[06:45:51]   poll semrush-vs-ahrefs: READY panel_ok=True
+[06:45:51] CLICKED semrush-vs-ahrefs (btn=CLICKED)
+[06:45:56]   wait semrush-vs-ahrefs: READY
+[06:46:11] DONE semrush-vs-ahrefs
+[06:46:31]   poll best-ai-mascot-design-tools-2026: READY panel_ok=True
+[06:46:31] CLICKED best-ai-mascot-design-tools-2026 (btn=CLICKED)
+[06:46:36]   wait best-ai-mascot-design-tools-2026: READY
+[06:46:51] DONE best-ai-mascot-design-tools-2026
+[06:47:11]   poll activepieces-vs-n8n: READY panel_ok=True
+[06:47:11] CLICKED activepieces-vs-n8n (btn=CLICKED)
+[06:47:16]   wait activepieces-vs-n8n: READY
+[06:47:31] DONE activepieces-vs-n8n
+[06:47:51]   poll best-ai-3d-model-generators-2026: READY panel_ok=True
+[06:47:51] CLICKED best-ai-3d-model-generators-2026 (btn=CLICKED)
+[06:47:56]   wait best-ai-3d-model-generators-2026: READY
+[06:48:07] DONE best-ai-3d-model-generators-2026
+[06:48:27]   poll qwen-vs-deepseek: READY panel_ok=True
+[06:48:27] CLICKED qwen-vs-deepseek (btn=CLICKED)
+[06:48:32]   wait qwen-vs-deepseek: READY
+[06:48:42] DONE qwen-vs-deepseek
+[06:49:02]   poll best-ai-virtual-influencer-generators-2026: READY panel_ok=True
+[06:49:02] CLICKED best-ai-virtual-influencer-generators-2026 (btn=CLICKED)
+[06:49:07]   wait best-ai-virtual-influencer-generators-2026: READY
+[06:49:22] DONE best-ai-virtual-influencer-generators-2026
+[06:49:42]   poll originality-ai-vs-gptzero: READY panel_ok=True
+[06:49:42] CLICKED originality-ai-vs-gptzero (btn=CLICKED)
+[06:49:47]   wait originality-ai-vs-gptzero: READY
+[06:49:57] DONE originality-ai-vs-gptzero
+[06:50:17]   poll best-local-llm-chatbots-2026: READY panel_ok=True
+[06:50:17] CLICKED best-local-llm-chatbots-2026 (btn=CLICKED)
+[06:50:22]   wait best-local-llm-chatbots-2026: READY
+[06:50:37] DONE best-local-llm-chatbots-2026
+[06:50:57]   poll grammarly-vs-chatgpt: READY panel_ok=True
+[06:50:57] CLICKED grammarly-vs-chatgpt (btn=CLICKED)
+[06:51:02]   wait grammarly-vs-chatgpt: READY
+[06:51:22] DONE grammarly-vs-chatgpt
+2026-10-21 {"https://ai-tools-compared.com/articles/semrush-vs-ahrefs.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-mascot-design-tools-2026.html": "DONE", "https://ai-tools-compared.com/articles/activepieces-vs-n8n.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-3d-model-generators-2026.html": "DONE", "https://ai-tools-compared.com/articles/qwen-vs-deepseek.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-virtual-influencer-generators-2026.html": "DONE", "https://ai-tools-compared.com/articles/originality-ai-vs-gptzero.html": "DONE", "https://ai-tools-compared.com/articles/best-local-llm-chatbots-2026.html": "DONE", "https://ai-tools-compared.com/articles/grammarly-vs-chatgpt.html": "DONE"}

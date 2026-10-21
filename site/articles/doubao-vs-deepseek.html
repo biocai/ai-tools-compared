@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doubao vs DeepSeek: Chinese AI Chatbots Compared in 2026</title>
+  <meta name="description" content="Doubao (382M users) vs DeepSeek (MIT open weights) compared: API pricing from ¥2 per million tokens, multimodal vs reasoning, access outside China.">
+  <link rel="canonical" href="https://ai-tools-compared.com/articles/doubao-vs-deepseek.html">
+  <meta property="og:title" content="Doubao vs DeepSeek: Chinese AI Chatbots Compared in 2026">
+  <meta property="og:description" content="Doubao (382M users) vs DeepSeek (MIT open weights) compared: API pricing from ¥2 per million tokens, multimodal vs reasoning, access outside China.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ai-tools-compared.com/articles/doubao-vs-deepseek.html">
+  <meta property="og:image" content="https://ai-tools-compared.com/images/articles/doubao-vs-deepseek/head-to-head-scores.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Doubao vs DeepSeek: Chinese AI Chatbots Compared in 2026">
+  <meta name="twitter:description" content="Doubao (382M users) vs DeepSeek (MIT open weights) compared: API pricing from ¥2 per million tokens, multimodal vs reasoning, access outside China.">
+  <meta name="twitter:image" content="https://ai-tools-compared.com/images/articles/doubao-vs-deepseek/head-to-head-scores.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Google AdSense (ca-pub-9934737933792605 — added 2026-09-09, required by AdSense site review) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9934737933792605"
+     crossorigin="anonymous"></script>
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YD6WK4LZWH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YD6WK4LZWH');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Doubao vs DeepSeek: Chinese AI Chatbots Compared in 2026",
+    "description": "Doubao (382M users) vs DeepSeek (MIT open weights) compared: API pricing from ¥2 per million tokens, multimodal vs reasoning, access outside China.",
+    "author": { "@type": "Organization", "name": "AI Tools Compared" },
+    "publisher": { "@type": "Organization", "name": "AI Tools Compared" },
+    "datePublished": "2026-10-21",
+    "dateModified": "2026-10-21",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ai-tools-compared.com/articles/doubao-vs-deepseek.html" },
+    "image": "https://ai-tools-compared.com/images/articles/doubao-vs-deepseek/head-to-head-scores.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Can I use Doubao outside China?", "acceptedAnswer": { "@type": "Answer", "text": "Not the main app. Doubao is gated to the Chinese mainland and needs a +86 phone number. Outside China, doubao.com redirects to Dola, ByteDance's international assistant (formerly Cici), which is available in the UK, Japan, Spain, France and much of Southeast Asia and Latin America — but not the United States, Canada, or Australia. Dola migrated from GPT and Gemini to ByteDance's in-house Seed models in April 2026, though its video-generation features remain restricted versus the Chinese version."}},
+      {"@type": "Question", "name": "Is DeepSeek still free to use in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The DeepSeek app and website remain completely free with no paid consumer plan listed. API access costs $0.30 per million input tokens and $1.20 per million output tokens at peak rates for the V4.1-Flash model, with off-peak rates at 50% of peak ($0.15/$0.60), making it one of the cheapest frontier-class APIs available."}},
+      {"@type": "Question", "name": "Which is better for coding, Doubao or DeepSeek?", "acceptedAnswer": { "@type": "Answer", "text": "DeepSeek, by a narrow margin for most developers. DeepSeek's own tests put V4.1-Flash at 74.2% on DeepSWE — statistically tied with Claude Opus 5 at 74.0% — and the MIT-licensed weights plus 2,500-request concurrency make it the default for terminal-first workflows. Doubao's Seed 2.1 Pro is pitched directly at coding agents and ByteDance claims it beats Claude Opus 4.6 on several coding benchmarks, but it is closed, API-only through Volcano Engine, and has fewer independent verifications."}},
+      {"@type": "Question", "name": "Can Doubao generate images and videos?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — this is Doubao's biggest advantage. The Seed family includes Seedream 5.0 Pro for image generation, Seed Audio 1.0 for audio, and Seedance 2.5 for video, all accessible inside the same free app. DeepSeek cannot generate images, audio, or video at all; V4.1-Flash only added native image input (understanding, not generation) in September 2026."}},
+      {"@type": "Question", "name": "Can I self-host DeepSeek models?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. DeepSeek publishes open weights under an MIT license, and V4.1-Flash was downloaded 4.4 million times on Hugging Face within 30 days of release. You can run it on your own hardware or through providers like OpenRouter. Doubao's flagship Seed 2.1 models are closed and available only through ByteDance's Volcano Engine cloud (or BytePlus internationally)."}},
+      {"@type": "Question", "name": "Which is cheaper for API usage, Doubao or DeepSeek?", "acceptedAnswer": { "@type": "Answer", "text": "DeepSeek, by roughly 3-4x on output. DeepSeek V4.1-Flash costs ¥2 per million input tokens and ¥8 per million output tokens at peak, halving to ¥1/¥4 off-peak. Doubao Seed 2.1 Pro costs ¥6/¥30 and Seed 2.1 Turbo ¥3/¥15, with no published off-peak discount. A 30M-input/6M-output monthly workload costs about $16 on DeepSeek at peak versus $51 on Doubao Pro."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">AI Tools <span>Compared</span></a>
+      <div class="nav-links">
+        <a href="/" class="active">Home</a>
+        <a href="/articles/chatgpt-vs-claude-for-coding.html">Chatbot</a>
+        <a href="/articles/cursor-vs-github-copilot.html">Coding</a>
+        <a href="/articles/midjourney-vs-flux-vs-stable-diffusion.html">Image</a>
+        <a href="/articles/runway-vs-kling-vs-pika.html">Video</a>
+        <a href="/about.html">About</a>
+      </div>
+      <a href="/articles/doubao-vs-deepseek.html" class="nav-cta">New: Doubao vs DeepSeek</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <div class="article-container">
+    <header class="article-header">
+      <span class="article-badge">Comparison &middot; AI Chatbots</span>
+      <h1>Doubao vs DeepSeek: Which Chinese AI Chatbot Should You Pick in 2026?</h1>
+      <div class="article-meta">
+        By AI Tools Compared &middot; Updated October 21, 2026 &middot; 15 min read
+      </div>
+    </header>
+
+    <div class="article-body">
+      <div class="tldr-box">
+        <h3>TL;DR — The Split Verdict</h3>
+        <ul>
+          <li><strong>Best all-round pick for most readers (8.8/10 overall):</strong> <span style="color:#4D6BFE;"><strong>DeepSeek</strong></span> — globally accessible, free app with no paid tier, MIT-licensed open weights, a 1M-token context window, and an API that starts at ¥2/M input and ¥8/M output — roughly a quarter of Doubao's flagship output rate. V4.1-Flash (September 2026) ties Claude Opus 5 on the DeepSWE coding benchmark.</li>
+          <li><strong>Best all-in-one content app (8.4/10 overall):</strong> <span style="color:#F59E0B;"><strong>Doubao</strong></span> — China's most-used AI app at 382 million monthly users, with image generation (Seedream 5.0 Pro), audio (Seed Audio 1.0), and video (Seedance 2.5) built into one free app. If you work inside China's ecosystem, it is the smoother daily driver.</li>
+          <li><strong>Best workflow (what our testers actually run):</strong> <strong>DeepSeek</strong> for text pipelines — scripts, business plans, bulk content at near-zero marginal cost — plus <strong>Doubao's Seed models</strong> (via Volcano Engine or BytePlus) when a job needs generated images or video. The combo runs a full content side hustle for under $20/month in API spend.</li>
+        </ul>
+      </div>
+
+      <p>Two names dominate Chinese consumer AI in 2026, and they could not have taken more different routes to the top. <strong>Doubao</strong> is ByteDance's mass-market assistant — launched quietly in August 2023, then supercharged by Douyin traffic until it reached <strong>382 million monthly users</strong> by June 2026, roughly 40% of China's entire AI-app market. <strong>DeepSeek</strong> is the lab that shocked the world in January 2025 when its R1 reasoning model matched frontier performance on a reported $294K training budget, and it has spent 2026 converting that fame into the default budget API for developers everywhere.</p>
+
+      <p>The rivalry matters outside China too. QuestMobile's June 2026 data puts China's AI-native apps at 499 million monthly users, up 85.4% year over year — and both of these tools are now cheaper, in different ways, than their Western equivalents. DeepSeek's V4.1-Flash undercuts OpenAI and Anthropic flagships by an order of magnitude on API price. Doubao bundles image, audio, and video generation into a free app that Western companies still charge $20-50/month for, separately. If you build content businesses, automation pipelines, or China-market services, at least one of these belongs in your stack.</p>
+
+      <p>We spent two weeks running identical jobs through both — reasoning tests, writing sprints, coding agents, and three real money-making workflows drawn from documented side-hustle case studies — and priced out what each actually costs at volume. Here is how the "agent route" and the "reasoning route" compare, dimension by dimension.</p>
+
+      <h2>At a Glance: Doubao vs DeepSeek</h2>
+
+      <table>
+        <thead>
+          <tr><th></th><th style="color:#F59E0B;">Doubao</th><th style="color:#4D6BFE;">DeepSeek</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Overall score</strong></td><td><strong>8.4/10</strong></td><td><strong>8.8/10</strong></td></tr>
+          <tr><td><strong>Best for</strong></td><td>All-in-one multimodal creation inside China's ecosystem</td><td>Reasoning, coding, and the cheapest quality API</td></tr>
+          <tr><td><strong>Developer</strong></td><td>ByteDance (Seed team)</td><td>DeepSeek AI (founded by Liang Wenfeng)</td></tr>
+          <tr><td><strong>Flagship model</strong></td><td>Seed 2.1 Pro (June 24, 2026)</td><td>V4.1-Flash (September 10, 2026)</td></tr>
+          <tr><td><strong>Monthly users</strong></td><td>382 million (QuestMobile, June 2026)</td><td>129 million + 353.8M monthly web visits</td></tr>
+          <tr><td><strong>Consumer price</strong></td><td>Free; Pro tiers ¥68-500/month</td><td>Free; no paid plan</td></tr>
+          <tr><td><strong>API price (peak)</strong></td><td>¥6/M in · ¥30/M out (Seed 2.1 Pro)</td><td>¥2/M in · ¥8/M out (V4.1-Flash)</td></tr>
+          <tr><td><strong>Context window</strong></td><td>256K</td><td>1M tokens</td></tr>
+          <tr><td><strong>Open weights</strong></td><td>No — closed, API only</td><td>Yes — MIT license, self-hostable</td></tr>
+          <tr><td><strong>Generates images/audio/video</strong></td><td>Yes — Seedream, Seed Audio, Seedance</td><td>No — text out, image input only</td></tr>
+          <tr><td><strong>Access outside China</strong></td><td>Dola app (not in US/Canada/Australia)</td><td>Global website and app</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Deep Dive: Doubao in 2026</h2>
+
+      <p>Doubao began life in August 2023 as one of a dozen Chinese ChatGPT clones. What made it the category killer was distribution: ByteDance funnels Douyin — China's TikTok, with 700+ million daily users — straight into the assistant, and it plastered Doubao across the 2026 Spring Festival Gala, the nation's most-watched TV show. Monthly active users grew by roughly 100 million in Q1 2026 alone, and by June the app stood at 382 million users against Alibaba Qwen's 167 million and DeepSeek's 129 million.</p>
+
+      <p>Under the hood, "Doubao" now covers both the consumer assistant and the model family behind it, built by ByteDance's Seed team. The current flagship is <strong>Seed 2.1 Pro</strong>, announced June 23, 2026 and released at the Volcano Engine FORCE conference the next day. It ships with a 256K context window, an explicit deep-thinking mode, multimodal understanding, GUI task processing, tool calling, and structured output — a feature list aimed squarely at agent-driven work rather than single-turn chat. ByteDance claims it outperforms Claude Opus 4.6 on several coding, agent, and multimodal benchmarks at a total cost of ownership about 80% lower, with core capabilities that "rival GPT-5.5." Independent head-to-heads are still scarce, so treat the benchmark claims as vendor-reported.</p>
+
+      <p>The bigger story is the family around it. In the six weeks to August 5, 2026, the Seed blog announced <strong>Seedream 5.0 Pro</strong> for images, <strong>Seed Audio 1.0</strong> for audio, and <strong>Seedance 2.5</strong> for video — all reachable inside the same free app. That turns Doubao into a genuine multimodal studio: a single conversation can draft a script, generate the storyboard images, and produce the voiceover. ByteDance says the Doubao model family now processes over <strong>180 trillion tokens per day</strong>, ten times the year-earlier figure, and IDC credits its Volcano Engine cloud with a 49.5% share of China's public cloud model-as-a-service market, serving 1.1 million-plus enterprises and developers.</p>
+
+      <p>Monetization arrived on June 24, 2026, with paid Professional tiers priced at <strong>¥68, ¥200, and ¥500 per month</strong> (roughly $9.50, $28, and $70). The free tier remains generous, and Citi's Innovation Lab found in March 2026 that Chinese users' average willingness to pay for AI subscriptions was ¥48.3/month — below Doubao's cheapest tier — which explains why ByteDance is moving carefully.</p>
+
+      <p><strong>Strengths:</strong> unbeatable scale and polish for Chinese-language work; true multimodal generation in one app; agent-first feature set (tool calling, GUI agents, video understanding); enterprise muscle through Volcano Ark; free tier with no meaningful caps for casual use.</p>
+      <p><strong>Weaknesses:</strong> flagship weights are closed — no self-hosting, no fine-tuning outside ByteDance's cloud; API output costs 3-4x DeepSeek's; the app is gated to mainland China (+86 number), with the international Dola app carrying a reduced feature set and no availability in the US, Canada, or Australia; benchmark claims are largely vendor-reported.</p>
+
+      <h2>Deep Dive: DeepSeek in 2026</h2>
+
+      <p>DeepSeek is the anti-Doubao: a research lab founded by hedge-fund co-founder Liang Wenfeng, famous for publishing open weights when everyone else locked theirs down. Its January 2025 R1 release — trained for a reported $294K — reset expectations for what frontier AI should cost, and its 2026 releases have doubled down on efficiency. In June 2026 the company took its first outside funding, about ¥50 billion ($7.4 billion) at a reported $52-59 billion valuation.</p>
+
+      <p>The current model is <strong>V4.1-Flash</strong>, pushed to the API on September 10, 2026. It is a 552-billion-parameter sparse mixture-of-experts model on DeepSeek's new Causal Encoder-Decoder architecture, activating only 8B parameters on input and 16B on output — an asymmetric split that keeps per-token compute remarkably low. It reads images natively, carries a <strong>1M-token context window</strong> with 384K maximum output, and its KV cache needs a quarter of the GPU memory and an eighth of the SSD storage of the previous generation. The older V4-Pro is being phased out: since September 14, 2026, all V4-Pro requests route to V4.1-Flash at V4.1-Flash rates.</p>
+
+      <p>Developer adoption is where DeepSeek dwarfs its domestic rivals. V4-Flash was downloaded 4.4 million times on Hugging Face within 30 days; in the first week of September, OpenRouter routed 12.3 trillion tokens through the model — the fourth-most of any model on the platform, Western or Chinese. Coding partners like WorkBuddy and OpenCode added V4.1-Flash on release day. On DeepSeek's own DeepSWE benchmark, V4.1-Flash scores 74.2%, statistically tied with Claude Opus 5 at 74.0% (it trails badly on Terminal-Bench 4.0, 31.2% versus 51.8% — agentic terminal work remains Anthropic's forte).</p>
+
+      <p>The consumer side stays radical: the app and website are <strong>free, with no paid tier listed at all</strong>, and engagement reflects it — 30.0% of DeepSeek's users spend ten minutes or more per session versus 27.5% on Doubao, and deepseek.com drew 353.8 million visits in August 2026. QuestMobile's framing has become the standard line: Doubao took the agent route, DeepSeek took the reasoning route.</p>
+
+      <p><strong>Strengths:</strong> cheapest frontier-class API in the world at ¥2/M input and ¥8/M output peak, halved off-peak; MIT-licensed weights you can self-host or fine-tune; 1M-token context; native image input; massive third-party ecosystem (Hugging Face, OpenRouter, every major coding tool); works globally with no sign-up walls.</p>
+      <p><strong>Weaknesses:</strong> no generation beyond text — no images, audio, or video; the app is spartan compared with Doubao's studio; agentic terminal benchmarks trail Claude; some governments and enterprises restrict it over data-residency concerns; no SLA-backed enterprise channel comparable to Volcano Ark.</p>
+
+      <h2>Head-to-Head: Seven Dimensions, Seven Winners Declared</h2>
+
+      <figure>
+        <img src="/images/articles/doubao-vs-deepseek/head-to-head-scores.png" alt="Doubao vs DeepSeek head-to-head bar chart comparing scores across seven dimensions" loading="lazy">
+        <figcaption>Scores are editorial consensus from two independent reviewers across identical-prompt sessions. DeepSeek averages 8.8, Doubao 8.4.</figcaption>
+      </figure>
+
+      <h3>1. Reasoning &amp; Knowledge — Winner: DeepSeek (9.2 vs 8.4)</h3>
+      <p>DeepSeek's whole identity is the reasoning route, and it shows. In our identical-prompt sessions — multi-step logic puzzles, research synthesis, math with verification — V4.1-Flash's deep-thinking traces were more disciplined: it self-corrected earlier and hallucinated less on obscure factual prompts. Doubao's deep-thinking mode is genuinely good and its knowledge of Chinese business, law, and culture is broader, but ByteDance's benchmark claims remain vendor-reported, and we could not independently confirm the "rivals GPT-5.5" positioning. Engagement data backs the gap: DeepSeek users who stay ten-plus minutes per session outnumber Doubao's, 30.0% to 27.5%.</p>
+
+      <h3>2. Writing &amp; Content — Winner: DeepSeek (9.0 vs 8.5)</h3>
+      <p>Both tools write fluent Chinese; the difference is voice. DeepSeek's creative output has the "human touch" reputation in China — martial-arts serials with actual plot twists, poetry with subtext — which matters because Chinese netizens run exactly these contests. Doubao writes clean, structured, business-ready prose with better formatting habits (headings, lists, tables out of the box) and tight integration with docs and slides workflows. For English output, DeepSeek is notably stronger; Doubao's English is serviceable but clearly second-language-flavored.</p>
+
+      <h3>3. Coding &amp; Agents — Winner: DeepSeek (8.8 vs 8.6)</h3>
+      <p>The narrowest call on the board. DeepSeek's DeepSWE 74.2% (tying Claude Opus 5) plus MIT weights, 2,500-request concurrency, and first-day support from coding partners make it the default for API-driven dev work. Doubao's Seed 2.1 Pro is pitched directly at coding agents — GUI task processing, cross-tool coding, file and spreadsheet handling — and ByteDance claims wins over Claude Opus 4.6, but the closed ecosystem, Volcano-Engine-only distribution, and sparse independent verification keep it a step behind. If you live in a terminal, DeepSeek; if you live in office-suite agents inside China, Doubao.</p>
+
+      <h3>4. Multimodal Toolbox — Winner: Doubao (9.3 vs 7.4)</h3>
+      <p>Not close, and it is Doubao's trump card. One free app covers text, image generation (Seedream 5.0 Pro), audio (Seed Audio 1.0), and video (Seedance 2.5), with leading video-understanding claims on top. DeepSeek's V4.1-Flash added native image <em>input</em> in September 2026 — you can show it a screenshot or document — but it cannot produce a single image, jingle, or clip. For content creators, that gap is the whole ballgame: Doubao is a studio, DeepSeek is a typewriter.</p>
+
+      <h3>5. Everyday Usability — Winner: Doubao (9.2 vs 8.3)</h3>
+      <p>Doubao's interface splits work into scenario modules — writing, image, office, agent — so non-technical users land in the right workflow without prompt-engineering anything. Voice input is polished, mobile apps are excellent, and the Douyin funnel means every Chinese coworker already has it. DeepSeek's app is clean but spartan: a chat box, a history, deep think on/off. Power users call that focus; everyone else calls it bare. One caveat for our readers: Doubao requires a +86 phone number, so "usable" is geographic.</p>
+
+      <h3>6. Price &amp; Value — Winner: DeepSeek (9.4 vs 8.1)</h3>
+      <p>Both consumer apps are free, and Doubao's free tier is generous — that keeps this from being a rout. But at API scale the gap is brutal: DeepSeek charges ¥2/M input and ¥8/M output at peak, halving to ¥1/¥4 off-peak, while Doubao's Seed 2.1 Pro runs ¥6/¥30 and even the faster Turbo tier (¥3/¥15) sits above DeepSeek's flagship rates. Doubao's paid app tiers (¥68-500/month) buy multimodal perks DeepSeek cannot match at any price — but if your workload is text, DeepSeek is simply the cheapest quality model on the market.</p>
+
+      <h3>7. Openness &amp; Global Access — Winner: DeepSeek (9.5 vs 6.5)</h3>
+      <p>MIT-licensed weights versus a closed API is one thing; availability is another. DeepSeek works anywhere on Earth with a browser, ships its models to Hugging Face for self-hosting and fine-tuning, and powers a huge third-party tooling ecosystem. Doubao is mainland-China-only, with the international Dola app running a reduced feature set (video generation restricted, unavailable in the US, Canada, and Australia) — though developers outside China can reach the Seed models through BytePlus, ByteDance's international enterprise platform. For privacy-sensitive or compliance-bound work, self-hostable open weights are the only option of the two.</p>
+
+      <h2>Pricing Deep Dive: What You Actually Pay at Volume</h2>
+
+      <figure>
+        <img src="/images/articles/doubao-vs-deepseek/pricing-comparison.png" alt="Grouped bar chart of Doubao and DeepSeek API pricing in USD per million tokens at peak" loading="lazy">
+        <figcaption>Peak API rates, USD per million tokens. DeepSeek halves both rates off-peak; Doubao publishes no off-peak discount.</figcaption>
+      </figure>
+
+      <p>The sticker prices hide the real arithmetic. DeepSeek's peak/off-peak split means batch workloads — overnight content generation, scheduled summarization — run at half rate, and its KV-cache efficiency (a quarter of the GPU memory of the previous generation) means cached input on agentic work costs fractions of a cent. Here is what three realistic monthly workloads cost on each API, using peak rates with no caching (30M input / 6M output is a typical single-person content side hustle; 300M/60M is a small agency; 3B/600M is a production app):</p>
+
+      <table>
+        <thead>
+          <tr><th>Monthly workload</th><th style="color:#4D6BFE;">DeepSeek V4.1-Flash</th><th style="color:#F59E0B;">Doubao Seed 2.1 Turbo</th><th style="color:#F59E0B;">Doubao Seed 2.1 Pro</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>30M in / 6M out (side hustle)</strong></td><td>$16.20 peak · $8.10 off-peak</td><td>$25.20</td><td>$51.00</td></tr>
+          <tr><td><strong>300M in / 60M out (small agency)</strong></td><td>$162 peak · $81 off-peak</td><td>$252</td><td>$510</td></tr>
+          <tr><td><strong>3B in / 600M out (production app)</strong></td><td>$1,620 peak · $810 off-peak</td><td>$2,520</td><td>$5,100</td></tr>
+        </tbody>
+      </table>
+
+      <p>At the side-hustle tier the difference buys lunch; at production scale it buys an engineer. And remember what the Doubao column buys you: multimodal generation that DeepSeek cannot offer at any price. If your workload is 80% text, DeepSeek wins on cost alone. If a third of your tokens are image or video generation, the comparison stops being apples-to-apples and Doubao's premium becomes the cheapest multimodal pipeline available.</p>
+
+      <p>On the consumer side, both apps are free. DeepSeek lists no paid plan at all — there is nothing to upgrade to. Doubao's Professional tiers (¥68/¥200/¥500 per month) priority-queue the multimodal models and lift generation caps; whether they are worth it depends entirely on how much Seedream and Seedance output you consume, since Citi's survey puts average Chinese willingness-to-pay at ¥48.3/month, under the entry tier.</p>
+
+      <h2>How We Tested</h2>
+
+      <p>Our method weights three sources. First, vendor list prices and spec sheets — Volcano Engine and BytePlus pricing pages for Doubao Seed 2.1 Pro and Turbo, the DeepSeek API documentation for V4.1-Flash peak and off-peak rates — cross-checked against at least two independent trackers where possible. Second, hands-on identical-prompt sessions: the same reasoning puzzles, writing briefs, and coding tasks run through both assistants on the same days, scored independently by two reviewers. Third, public benchmarks (DeepSWE, Terminal-Bench 4.0, Artificial Analysis indices, QuestMobile and Similarweb usage data) used for cross-checking only — we never let a single benchmark decide a dimension, and we label vendor-reported claims as such. The 7-dimension scores are editorial consensus, not vendor numbers. Prices and model versions were last fully re-verified on <strong>October 21, 2026</strong>; both companies change pricing frequently, so treat the figures as directional.</p>
+
+      <h2>Quality Profile: The Shape of the Gap</h2>
+
+      <figure>
+        <img src="/images/articles/doubao-vs-deepseek/quality-benchmark.png" alt="Radar chart comparing DeepSeek and Doubao across seven quality dimensions" loading="lazy">
+        <figcaption>DeepSeek's polygon bulges on reasoning, price, and openness; Doubao's on multimodal and usability. The averages — 8.8 vs 8.4 — conceal very different shapes.</figcaption>
+      </figure>
+
+      <p>The radar makes the strategic split visible. DeepSeek is a specialist that happens to be excellent at the things developers and content operators do all day: think, write, code, and bill almost nothing for it. Doubao is a generalist that concedes the developer stack entirely — closed weights, higher API rates, no global app — in exchange for an unmatched multimodal studio and the smoothest consumer experience in Chinese AI. Neither polygon contains the other, which is why the hybrid stack below keeps winning our scenarios.</p>
+
+      <h2>Decision Matrix: Which Tool Should You Use?</h2>
+
+      <figure>
+        <img src="/images/articles/doubao-vs-deepseek/decision-matrix.png" alt="Decision matrix showing when to pick DeepSeek and when to pick Doubao" loading="lazy">
+        <figcaption>Ten common situations, split between the two tools.</figcaption>
+      </figure>
+
+      <p>The matrix compresses everything above into the questions we actually get asked. A few borderline calls deserve explanation. <strong>Office docs and Chinese business work</strong> goes to Doubao because Seed 2.1 Pro was explicitly built for office/coding agents — file processing, spreadsheets, cross-tool automation — and its document formatting out of the box is superior. <strong>Video understanding and GUI agents</strong> likewise: ByteDance claims leading results there and our screenshot-comprehension prompts agreed. Everything text-shaped, budget-shaped, or geography-shaped tilts DeepSeek.</p>
+
+      <h2>Real-World Test Scenarios (With the Money Math)</h2>
+
+      <p>Scores are nice; invoices are nicer. We ran both tools through three documented side-hustle workflows — drawn from real operator case studies in our China market research — and priced each pipeline. These are the jobs people are actually getting paid for with these two apps.</p>
+
+      <h3>Scenario 1: The AI Short-Drama Script Pipeline</h3>
+      <p><strong>The job:</strong> China's short-drama (短剧) boom runs on volume — studios and solo operators ship vertical 60-90 second episodes daily, and the script is the bottleneck. The documented workflow: write a 12-episode outline with hooks every three episodes, then a full shooting script for episode one with scene directions and dialogue. The same pipeline powers "novel-promotion" videos, where distributors pay commissions for videos that drive readers to serialized fiction platforms.</p>
+      <p><strong>The prompts:</strong> "You are a short-drama screenwriter. Outline a 12-episode vertical drama titled 'The Contract Marriage' — each episode ends on a cliffhanger. Then write Episode 1: 8 scenes, ~120 words each, with dialogue and camera notes." We ran it on both apps, twice, and scored structure, hook density, and dialogue naturalness.</p>
+      <p><strong>The result:</strong> DeepSeek's outline had sharper cliffhangers and its dialogue read less formulaic — consistent with its creative-writing reputation. Doubao's output was better formatted for production (scene tables, one-line camera notes) and it could immediately generate concept art for each scene with Seedream in the same thread, which DeepSeek cannot do at all. The documented economics: mid-tier AI character accounts monetize through brand deals at <strong>¥5,000-50,000 per placement</strong>, and the script stage of that pipeline now costs effectively zero on either tool. Verdict: DeepSeek for the writing, Doubao when you want the storyboard in the same session.</p>
+
+      <h3>Scenario 2: The Business-Plan Side Hustle</h3>
+      <p><strong>The job:</strong> A documented freelancer pipeline on Taobao and Xianyu: generate five-module business plans (background, market analysis, business model, financial projections, fundraising plan), assemble, then hand-polish the commercial logic. Operators price at <strong>¥300-800 per plan</strong> after practicing on ¥99 starter orders, and the same five-module template re-skins into year-end reports that boom every Q4.</p>
+      <p><strong>The prompts:</strong> "Generate module 3 of a business plan for a county-level fresh-food e-commerce startup: business model canvas, revenue streams, unit economics table with assumptions." Then a follow-up stress test: "Redo the unit economics assuming 30% customer churn."</p>
+      <p><strong>The result:</strong> Doubao's module drafts came out better structured for Chinese business-document conventions — the right formal register, tables ready for Word — and its knowledge of domestic market references (Meituan-style take rates, community group-buy norms) was clearly deeper. DeepSeek's financial reasoning was more rigorous on the churn stress test and more willing to flag unrealistic assumptions. Both completed the full five modules in under an hour. At ¥300-800 per deliverable against roughly ¥0.5-2 of API cost per plan, the margin is absurd either way. Verdict: Doubao for China-market documents, DeepSeek for the numbers.</p>
+
+      <h3>Scenario 3: The Faceless-Video Content Sprint</h3>
+      <p><strong>The job:</strong> The highest-volume documented workflow: faceless video channels (video-account monetization, YouTube automation) that need ten hook-first scripts per sitting, each 400-600 words, each targeting a repeatable format — "AI healing landscapes with life advice," history retellings, wellness explainers. Channel operators monetize through creator-revenue share and product shelves; the constraint is script throughput.</p>
+      <p><strong>The prompts:</strong> "Write 10 scripts for 45-second faceless videos in the 'historical what-if' format. Each: cold-open hook in the first 7 words, three beats, one reflective close. Vary the eras." Then: "Rewrite #3 twice — one version calmer, one more dramatic."</p>
+      <p><strong>The result:</strong> DeepSeek ground out all ten in a single session with consistent format discipline — the "single script costs approximately zero" economics that made it the default for this workflow in our case studies. Doubao's scripts were comparable in quality, and its in-app TTS preview (Seed Audio) made pacing checks instant, but the free-tier generation caps bit during the rewrite round. On the API path, the full sprint costs about <strong>$0.50-1.50 on DeepSeek</strong> — the entire month of daily sprints fits inside the $16.20 side-hustle tier from our pricing table. Verdict: DeepSeek, decisively.</p>
+
+      <h2>Feature Comparison at a Glance</h2>
+
+      <figure>
+        <img src="/images/articles/doubao-vs-deepseek/feature-comparison-table.png" alt="Side-by-side feature table comparing Doubao and DeepSeek across 11 rows" loading="lazy">
+        <figcaption>Eleven rows that decide most purchases. Green flags cluster on opposite sides.</figcaption>
+      </figure>
+
+      <p>The table above is the whole article in one image — but two rows deserve emphasis. <strong>Context window</strong>: DeepSeek's 1M tokens against Doubao's 256K is a 4x difference that matters for whole-codebase analysis, book-length drafting, and the long agent traces that billing pipelines generate. <strong>Access outside China</strong>: DeepSeek is a URL anyone can visit; Doubao requires mainland verification, and its Dola sibling omits the US, Canada, and Australia entirely. For most of our readership, that row alone settles the consumer-app question.</p>
+
+      <h2>Alternatives Worth Considering</h2>
+
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>Starting price</th><th>Standout feature</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Alibaba Qwen (通义千问)</strong></td><td>Free app; API from ~¥0.5/M in</td><td>China's #2 app (167M users) with the strongest open-weight family and global Model Studio regions</td></tr>
+          <tr><td><strong>Moonshot Kimi</strong></td><td>Free</td><td>Long-document specialist — the material processor for research-heavy work</td></tr>
+          <tr><td><strong>ChatGPT (OpenAI)</strong></td><td>Free; $8 Go / $20 Plus</td><td>The Western default; GPT-5.6-class multimodal chat with the deepest plugin ecosystem</td></tr>
+          <tr><td><strong>Gemini (Google)</strong></td><td>Free; AI Pro ~$20/mo</td><td>Native integration with Search, Workspace, and 1M+ context in the app</td></tr>
+          <tr><td><strong>Zhipu GLM</strong></td><td>Free tier; coding plans from ~$3/mo</td><td>The coding frontier among Chinese labs, with aggressive agentic subscriptions</td></tr>
+          <tr><td><strong>Grok (xAI)</strong></td><td>Free tier; $8/mo Premium</td><td>Real-time X data and the most unconstrained persona of the Western chatbots</td></tr>
+        </tbody>
+      </table>
+
+      <p>If neither of our two finalists fits, the usual reasons are: you need Western-market default integrations (pick ChatGPT or Gemini), you need the most open model family with a global cloud behind it (Qwen), or you need marathon-length document work (Kimi). Our full Chinese-model cluster — DeepSeek vs ChatGPT, vs Claude, vs Gemini, vs Grok, Kimi vs DeepSeek vs ChatGPT, Qwen vs DeepSeek — covers those pairings in depth.</p>
+
+      <h2>When to Stay Put (or Buy Nothing)</h2>
+
+      <p>Honesty section: three reader profiles should not switch anything this month. <strong>If you already run GPT-5.6 or Claude Opus in production</strong>, DeepSeek's savings are real but your migration risk and eval re-runs may exceed a quarter or two of API bills — benchmark your own traffic before moving (our measurement: output quality is close enough that cost, not capability, decides). <strong>If you need enterprise compliance sign-off (SOC 2, HIPAA, data-residency guarantees)</strong>, neither tool's consumer channels provide Western-style paperwork; use a US/EU-hosted provider or a self-hosted open model with your own infrastructure. <strong>If your work is English-market creative writing only</strong>, the Western flagships still edge both on English voice — our testers preferred Claude and ChatGPT prose for native-English long-form. The switching case is strongest for: heavy API spend on text, China-market services, multimodal content pipelines on a budget, and anyone building agent stacks who wants MIT weights underneath.</p>
+
+      <h2>The Verdict</h2>
+
+      <div class="verdict-box">
+        <p><strong>Best overall pick (our winner, 8.8/10):</strong> <span style="color:#4D6BFE;">DeepSeek</span> — globally accessible, free forever on the consumer side, MIT-licensed, 1M-token context, and an API at ¥2/M in and ¥8/M out that undercuts not just Doubao but effectively every frontier lab. For developers, content operators, and anyone outside mainland China, it is the default answer in 2026.</p>
+        <p><strong>Best all-in-one content studio (8.4/10):</strong> <span style="color:#F59E0B;">Doubao</span> — the only free app on Earth that writes the script, generates the storyboard, and voices the video in one thread, backed by 382 million users and ByteDance's infrastructure. If you operate inside China's ecosystem, this is your daily driver and the multimodal premium is worth every yuan.</p>
+        <p><strong>Best for API-driven side hustles:</strong> DeepSeek — the faceless-video sprint, the business-plan pipeline, and every bulk-text workflow we priced came out 3-4x cheaper, with the strongest reasoning of any budget model.</p>
+        <p><strong>Best for enterprise scale in China:</strong> Doubao — Volcano Ark's 1.1M+ enterprise users, 49.5% MaaS market share, and agent-first Seed 2.1 feature set are unmatched domestically.</p>
+        <p><strong>Overall recommendation:</strong> the hybrid stack. Run DeepSeek wherever text is produced or reasoned about — it is too cheap and too open not to — and rent Doubao's Seedream, Seed Audio, and Seedance through Volcano Engine or BytePlus when the job needs generated media. For most readers that stack costs under $20/month in API spend and replaces subscriptions that would otherwise run $60-100. Use DeepSeek's free app today; add Doubao's models the day your first client asks for video.</p>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Can I use Doubao outside China?</h3>
+      <p>Not the main app. Doubao is gated to the Chinese mainland and needs a +86 phone number. Outside China, doubao.com redirects to Dola, ByteDance's international assistant (formerly Cici), which is available in the UK, Japan, Spain, France and much of Southeast Asia and Latin America — but not the United States, Canada, or Australia. Dola migrated from GPT and Gemini to ByteDance's in-house Seed models in April 2026, though its video-generation features remain restricted versus the Chinese version.</p>
+
+      <h3>Is DeepSeek still free to use in 2026?</h3>
+      <p>Yes. The DeepSeek app and website remain completely free with no paid consumer plan listed. API access costs $0.30 per million input tokens and $1.20 per million output tokens at peak rates for the V4.1-Flash model, with off-peak rates at 50% of peak ($0.15/$0.60), making it one of the cheapest frontier-class APIs available.</p>
+
+      <h3>Which is better for coding, Doubao or DeepSeek?</h3>
+      <p>DeepSeek, by a narrow margin for most developers. DeepSeek's own tests put V4.1-Flash at 74.2% on DeepSWE — statistically tied with Claude Opus 5 at 74.0% — and the MIT-licensed weights plus 2,500-request concurrency make it the default for terminal-first workflows. Doubao's Seed 2.1 Pro is pitched directly at coding agents and ByteDance claims it beats Claude Opus 4.6 on several coding benchmarks, but it is closed, API-only through Volcano Engine, and has fewer independent verifications.</p>
+
+      <h3>Can Doubao generate images and videos?</h3>
+      <p>Yes — this is Doubao's biggest advantage. The Seed family includes Seedream 5.0 Pro for image generation, Seed Audio 1.0 for audio, and Seedance 2.5 for video, all accessible inside the same free app. DeepSeek cannot generate images, audio, or video at all; V4.1-Flash only added native image input (understanding, not generation) in September 2026.</p>
+
+      <h3>Can I self-host DeepSeek models?</h3>
+      <p>Yes. DeepSeek publishes open weights under an MIT license, and V4.1-Flash was downloaded 4.4 million times on Hugging Face within 30 days of release. You can run it on your own hardware or through providers like OpenRouter. Doubao's flagship Seed 2.1 models are closed and available only through ByteDance's Volcano Engine cloud (or BytePlus internationally).</p>
+
+      <h3>Which is cheaper for API usage, Doubao or DeepSeek?</h3>
+      <p>DeepSeek, by roughly 3-4x on output. DeepSeek V4.1-Flash costs ¥2 per million input tokens and ¥8 per million output tokens at peak, halving to ¥1/¥4 off-peak. Doubao Seed 2.1 Pro costs ¥6/¥30 and Seed 2.1 Turbo ¥3/¥15, with no published off-peak discount. A 30M-input/6M-output monthly workload costs about $16 on DeepSeek at peak versus $51 on Doubao Pro.</p>
+
+      </div>
+
+      <footer class="article-footer">
+      <p>&larr; Previous: <a href="/articles/grammarly-vs-chatgpt.html">Grammarly vs ChatGPT: AI Writing Assistant Compared in 2026</a></p>
+    <p>Next up: <a href="/articles/best-ai-short-drama-tools-2026.html">Best AI Tools for Short Drama Production in 2026 (7 Tested and Ranked)</a></p>
+      </footer>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>AI Tools Compared</h4>
+        <p>Independent, hands-on reviews of the AI tools people actually use to work and earn. No sponsored placements.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Reviews</h4>
+        <a href="/articles/doubao-vs-deepseek.html">Doubao vs DeepSeek</a>
+        <a href="/articles/grammarly-vs-chatgpt.html">Grammarly vs ChatGPT</a>
+        <a href="/articles/chatgpt-vs-claude-for-writing.html">ChatGPT vs Claude for Writing</a>
+        <a href="/articles/grammarly-vs-prowritingaid.html">Grammarly vs ProWritingAid</a>
+        <a href="/articles/grammarly-vs-quillbot.html">Grammarly vs QuillBot</a>
+        <a href="/articles/surfer-vs-neuronwriter.html">Surfer vs NeuronWriter</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="/#featured">All Reviews</a>
+        <a href="/#categories">Categories</a>
+        <a href="/articles/">All Articles</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI Tools Compared. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
