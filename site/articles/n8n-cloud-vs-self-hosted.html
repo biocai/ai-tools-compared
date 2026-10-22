@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>n8n Cloud vs Self-Hosted: Which Should You Run in 2026?</title>
+  <meta name="description" content="n8n Cloud vs self-hosted in 2026: real costs from 2,500 to 1M executions, the Sustainable Use License rules for client work, and who should run which.">
+  <link rel="canonical" href="https://ai-tools-compared.com/articles/n8n-cloud-vs-self-hosted.html">
+  <meta property="og:title" content="n8n Cloud vs Self-Hosted: Which Should You Run in 2026?">
+  <meta property="og:description" content="n8n Cloud vs self-hosted in 2026: real costs from 2,500 to 1M executions, the Sustainable Use License rules for client work, and who should run which.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ai-tools-compared.com/articles/n8n-cloud-vs-self-hosted.html">
+  <meta property="og:image" content="https://ai-tools-compared.com/images/articles/n8n-cloud-vs-self-hosted/head-to-head-scores.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="n8n Cloud vs Self-Hosted: Which Should You Run in 2026?">
+  <meta name="twitter:description" content="n8n Cloud vs self-hosted in 2026: real costs from 2,500 to 1M executions, the Sustainable Use License rules for client work, and who should run which.">
+  <meta name="twitter:image" content="https://ai-tools-compared.com/images/articles/n8n-cloud-vs-self-hosted/head-to-head-scores.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Google AdSense (ca-pub-9934737933792605 — added 2026-09-09, required by AdSense site review) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9934737933792605"
+     crossorigin="anonymous"></script>
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YD6WK4LZWH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YD6WK4LZWH');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "n8n Cloud vs Self-Hosted: Which Should You Run in 2026?",
+    "description": "n8n Cloud vs self-hosted in 2026: real costs from 2,500 to 1M executions, the Sustainable Use License rules for client work, and who should run which.",
+    "author": { "@type": "Organization", "name": "AI Tools Compared" },
+    "publisher": { "@type": "Organization", "name": "AI Tools Compared" },
+    "datePublished": "2026-10-22",
+    "dateModified": "2026-10-22",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ai-tools-compared.com/articles/n8n-cloud-vs-self-hosted.html" },
+    "image": "https://ai-tools-compared.com/images/articles/n8n-cloud-vs-self-hosted/head-to-head-scores.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Is self-hosted n8n really free with unlimited executions?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Community Edition is a free download under the Sustainable Use License with unlimited workflow executions, unlimited active workflows and unlimited users, as long as you use it for your own internal business purposes. Your only cost is the server it runs on, typically $6-25/month for a VPS."}},
+      {"@type": "Question", "name": "What happens if I exceed my n8n Cloud execution limit?", "acceptedAnswer": { "@type": "Answer", "text": "On Starter and Pro, new executions fail immediately once you hit the cap - they are not queued and you are not auto-charged. A small temporary buffer sometimes applies. On the Business plan, workflows keep running and overage is billed at 4,000 EUR (about $4,800) per extra bucket of 300,000 executions, invoiced up to 45 days later."}},
+      {"@type": "Question", "name": "Can I legally make money with self-hosted n8n?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, within limits. n8n's Sustainable Use License explicitly allows charging customers for workflow creation, setup, maintenance, training and consultancy on your self-hosted instance. What it forbids is selling access to n8n itself - white-labeling it, hosting it for paying external users, or embedding it in a product whose value derives substantially from n8n. Those use cases need a paid Embed or Enterprise license, which community reports place around $50,000/year."}},
+      {"@type": "Question", "name": "What server do I need to self-host n8n?", "acceptedAnswer": { "@type": "Answer", "text": "For testing, 2 CPU cores, 2 GB RAM and 20 GB SSD with SQLite will run. For production, plan 2-4 vCPU, 4 GB RAM, 25-64 GB NVMe, PostgreSQL 13-17 and a reverse proxy such as Nginx or Caddy for HTTPS. That is a $12-25/month VPS. Add Redis and queue mode with extra workers once you run dozens of concurrent executions."}},
+      {"@type": "Question", "name": "Does self-hosted n8n include SSO, environments and Git version control?", "acceptedAnswer": { "@type": "Answer", "text": "No. The free Community Edition is missing SSO (SAML/LDAP), environments, Git-based version control, log streaming, projects, multi-main mode and sharing beyond the instance owner - those need a paid self-hosted Business (EUR 667/month billed annually) or Enterprise license key. On n8n Cloud, the same features unlock on the Business tier."}},
+      {"@type": "Question", "name": "When does n8n Cloud become more expensive than self-hosting?", "acceptedAnswer": { "@type": "Answer", "text": "Almost immediately once volume grows. Cloud's Pro plan caps at 10,000 executions for about $60/month; the Business tier needed to go beyond that costs about $800/month for 40,000 executions, while a $12-25/month VPS runs the same workload with no cap. At 1 million executions per month, Cloud on Business plus overage buckets reaches roughly $20,000/month versus about $80/month self-hosted - a 250x gap."}},
+      {"@type": "Question", "name": "Can I move workflows between n8n Cloud and self-hosted?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Workflows export as JSON and import cleanly in either direction because both run the same engine. You will need to sanitize local file paths or custom npm packages before moving to Cloud, and re-authenticate every credential after import. Most teams start on Cloud for speed, then migrate to a VPS when the execution bill passes the cost of a server plus a few hours of DevOps time."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">AI Tools <span>Compared</span></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/articles/chatgpt-vs-claude-for-coding.html">Chatbot</a>
+        <a href="/articles/cursor-vs-github-copilot.html">Coding</a>
+        <a href="/articles/midjourney-vs-flux-vs-stable-diffusion.html">Image</a>
+        <a href="/articles/runway-vs-kling-vs-pika.html">Video</a>
+        <a href="/about.html">About</a>
+      </div>
+      <a href="/articles/n8n-cloud-vs-self-hosted.html" class="nav-cta">New: n8n Cloud vs Self-Hosted</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <div class="article-container">
+    <header class="article-header">
+      <span class="article-badge">Comparison &middot; AI Agents</span>
+      <h1>n8n Cloud vs Self-Hosted: Which Should You Run in 2026?</h1>
+      <div class="article-meta">
+        By AI Tools Compared &middot; Updated October 22, 2026 &middot; 16 min read
+      </div>
+    </header>
+
+    <div class="article-body">
+      <div class="tldr-box">
+        <h3>TL;DR — Convenience vs Control</h3>
+        <ul>
+          <li><strong>Best for most teams (7.4/10 overall):</strong> <span style="color:#EA4B71;"><strong>n8n Cloud</strong></span> — first workflow live in five minutes, zero maintenance, unlimited workflows/steps/users from the $24 Starter tier, and no license questions. Ideal below roughly 10,000 executions a month.</li>
+          <li><strong>Best for volume and control (7.0/10 overall):</strong> <span style="color:#111827;"><strong>Self-Hosted Community Edition</strong></span> — $0 software with unlimited executions on a $6-25/month VPS, data that never leaves your server, and queue-mode scaling as far as your hardware goes.</li>
+          <li><strong>The math that decides it:</strong> at 1 million executions a month, Cloud on Business plus $4,800-per-300K overage buckets lands near <strong>$20,000/month</strong>; a production VPS runs the same volume for about <strong>$80/month</strong>. That 250x gap is why high-volume operators self-host — and why a paid deployment-and-workflow service niche now exists around it.</li>
+        </ul>
+      </div>
+
+      <p>n8n has become the default automation backbone for AI-era workflows — the connective tissue between LLMs, CRMs, e-commerce platforms and messaging apps. But every new user hits the same fork in the road within minutes of signing up: pay for <strong>n8n Cloud</strong>, the managed SaaS run by the n8n team, or download the <strong>Community Edition</strong> and self-host it on your own server.</p>
+
+      <p>In 2026 this decision has real money attached. n8n's 2025 pricing overhaul removed limits on workflows, steps and users but doubled down on <strong>per-execution billing</strong> — and the curve gets steep fast. At the same time, the self-hosted edition remains genuinely free with unlimited executions under its Sustainable Use License, provided your use case fits the license terms. Pick wrong in either direction and you either burn a four-figure monthly bill you did not need, or you inherit a production server nobody on your team knows how to operate.</p>
+
+      <p>We ran both side by side — a Cloud Starter workspace and a Docker-Compose Community instance on a six-dollar VPS — checked every price against n8n's own October 2026 pricing page, and read the license text so you do not have to. Here is the honest breakdown.</p>
+
+      <h2>At a Glance</h2>
+      <table>
+        <thead>
+          <tr><th></th><th>n8n Cloud</th><th>Self-Hosted Community</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Software cost</strong></td><td>From $24/month (Starter)</td><td>$0</td></tr>
+          <tr><td><strong>Execution cap</strong></td><td>2,500–40,000/month by tier</td><td>Unlimited</td></tr>
+          <tr><td><strong>Workflows / steps / users</strong></td><td>Unlimited on all tiers</td><td>Unlimited</td></tr>
+          <tr><td><strong>Time to first workflow</strong></td><td>~5 minutes</td><td>~1 hour+ (Docker, DNS, TLS)</td></tr>
+          <tr><td><strong>Maintenance</strong></td><td>None (automatic)</td><td>You own updates, backups, security</td></tr>
+          <tr><td><strong>Data location</strong></td><td>n8n-hosted (EU)</td><td>Your server, any region</td></tr>
+          <tr><td><strong>SSO / environments / Git</strong></td><td>Business tier (~$800/mo)</td><td>Paid license key only</td></tr>
+          <tr><td><strong>License constraints</strong></td><td>None — you are the customer</td><td>Internal use free; embedding needs paid license</td></tr>
+          <tr><td><strong>Best for</strong></td><td>Non-technical teams, fast starts, modest volume</td><td>High volume, strict data rules, DevOps capacity</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Deep Dive: n8n Cloud</h2>
+      <p>n8n Cloud is the managed offering from the n8n team — the same workflow engine, run on their infrastructure, with every operational task handled for you. You sign up, confirm your email, and you are building workflows against the full node catalog within minutes.</p>
+
+      <h3>What you get</h3>
+      <ul>
+        <li><strong>Zero-ops operation.</strong> Updates, security patches, backups, uptime and infrastructure scaling are all n8n's problem. If nobody on your team can comfortably administer a Linux server, this alone justifies the subscription.</li>
+        <li><strong>Instant onboarding.</strong> A hosted URL, a login, and the editor is live. New features typically appear on Cloud first and reach self-hosted releases afterward.</li>
+        <li><strong>Per-execution billing with unlimited everything else.</strong> Since the 2025 pricing overhaul, every tier includes unlimited workflows, unlimited steps, unlimited users and the full integration catalog. You are billed on workflow executions only — a run counts once no matter how many nodes it passes through (with one gotcha we cover below).</li>
+        <li><strong>Included AI credits.</strong> Cloud plans bundle monthly AI credits — 2,300 on Starter, scaling to 13,700 on Pro — for nodes that call n8n's AI models, separate from any external LLM API bills.</li>
+        <li><strong>Governance tiers when you need them.</strong> SSO (SAML/LDAP), environments, Git-based version control, log streaming and projects unlock on the Business tier without you managing license keys.</li>
+      </ul>
+
+      <h3>Pricing (October 2026)</h3>
+      <p>n8n publishes prices in euros; we give USD approximations. Monthly billing: <strong>Starter $24/mo</strong> (2,500 executions), <strong>Pro $60/mo</strong> (10,000 executions), <strong>Business ~$800/mo</strong> (40,000 executions). Annual billing drops those to €20, €50 and €667 respectively. Enterprise is a custom quote that adds 200+ concurrent executions, external secrets, 365-day insights and SLA support.</p>
+
+      <h3>The two Cloud gotchas</h3>
+      <p><strong>1. The execution cliff.</strong> On Starter and Pro, once you hit the monthly cap, new executions <em>fail immediately</em> — they are not queued, and there is no per-execution top-up on those tiers (a small temporary buffer sometimes applies, and monthly Pro-2 plans can add execution packs). If an abandoned-cart workflow dies silently at 2,501 runs during your Black Friday sale, that is not a bug; it is the billing model. Business plans keep running and settle overage later.</p>
+      <p><strong>2. Polling triggers count even when nothing happens.</strong> A workflow that polls an API every hour "just to check" fires 24 executions a day — about 730 a month — whether or not the trigger ever passes data downstream. Six casually-configured polling workflows can quietly eat a Starter plan before lunch. Webhook-triggered workflows only count when they actually run, so trigger design directly drives your bill.</p>
+
+      <h3>Strengths</h3>
+      <ul>
+        <li>Genuinely five-minute setup; no Docker, DNS or TLS knowledge required</li>
+        <li>No maintenance debt — the platform is always current</li>
+        <li>License-simple: you are n8n's customer, so there is nothing to comply with</li>
+        <li>Predictable experience for agencies handing clients a login</li>
+      </ul>
+
+      <h3>Weaknesses</h3>
+      <ul>
+        <li>Cost curve turns violent past 10K executions/month — the Business wall is a 13x price jump from Pro for 4x the executions</li>
+        <li>Your credentials and execution data live on n8n's servers (EU-hosted; Enterprise adds PrivateLink, IP restrictions, SOC 2/ISO 27001/HIPAA/GDPR commitments)</li>
+        <li>Hard caps on Starter/Pro with fail-fast behavior at the limit</li>
+        <li>Lower tiers run on shared infrastructure; serious concurrency needs Enterprise</li>
+      </ul>
+
+      <h2>Deep Dive: Self-Hosted n8n (Community Edition)</h2>
+      <p>The Community Edition is the same engine, downloadable for free under n8n's <strong>Sustainable Use License</strong> — a "fair-code" license that is source-available but not OSI open source. You run it on your own hardware or a VPS via Docker, Docker Compose, npm, or Kubernetes, and it ships with every core capability: the full node catalog, AI Agent nodes with memory, tools and RAG, the REST API, webhook triggers, code nodes in JavaScript or Python, and unlimited executions, workflows and users.</p>
+
+      <h3>What it takes to run well</h3>
+      <p>For testing, n8n's documented minimums are modest — roughly 2 cores, 2 GB RAM and 20 GB of storage, and SQLite will do. Production is a different story: plan on <strong>2-4 vCPU, 4 GB RAM, 25-64 GB of NVMe and PostgreSQL 13-17</strong> behind a reverse proxy (Nginx or Caddy) for HTTPS. That maps to a $12-25/month VPS. Once you are running dozens of concurrent executions, you add Redis and switch to queue mode with extra worker processes — the same architecture n8n itself uses at scale, just operated by you. Every execution writes to PostgreSQL, which is why NVMe and a tuned database matter more than raw CPU.</p>
+
+      <h3>The maintenance ledger</h3>
+      <p>Self-hosting trades a subscription for a checklist: container updates (skip too many and the eventual jump gets risky), database backups, TLS certificate renewal, security hardening (never expose the instance port directly to the internet), execution-data pruning so the database does not bloat, and monitoring so you notice a dead workflow before your client does. None of this is hard for anyone comfortable with Docker; all of it is permanent. The honest question is not "can I set it up?" but "will someone own it in month nine?"</p>
+
+      <h3>The license, in plain words</h3>
+      <p>The Sustainable Use License permits free use <em>"for your own internal business purposes"</em> — including charging customers for workflow creation, setup, maintenance, training and consultancy, which n8n's FAQ confirms explicitly. What it forbids is monetizing n8n itself: white-labeling it, hosting it and selling access to external users, or embedding it in a product whose value derives substantially from n8n functionality. Those need a paid Embed license (community-reported around $50,000/year) or an Enterprise agreement. There is also a genuine gray zone around workflows that use <em>client-provided credentials</em> to operate on client systems — worth a careful read of the license FAQ before you build an agency practice on that pattern.</p>
+
+      <h3>What the free edition lacks</h3>
+      <p>Community Edition omits SSO (SAML/LDAP), environments, Git-based version control, log streaming, projects, multi-main mode, external secrets and sharing beyond the instance owner — the governance tier. Those unlock only with a paid self-hosted license key (Business at €667/month billed annually, or Enterprise). Registering your instance (free, email-based) adds folders, in-editor debugging and custom execution data. For solo operators and small teams, the gaps rarely matter; for regulated organizations, they are the whole conversation.</p>
+
+      <h3>Strengths</h3>
+      <ul>
+        <li>Unlimited executions at any volume for $0 in software</li>
+        <li>Total data control — credentials and execution data never leave your perimeter, which simplifies GDPR, HIPAA and internal-data-policy conversations</li>
+        <li>Connect private LLM endpoints, internal APIs and on-prem systems that Cloud cannot reach</li>
+        <li>Queue-mode scaling to whatever hardware you throw at it</li>
+      </ul>
+
+      <h3>Weaknesses</h3>
+      <ul>
+        <li>Setup and ongoing operations require real (if modest) DevOps capacity</li>
+        <li>Governance features sit behind paid license keys</li>
+        <li>You are the SLA: 3 a.m. failures are yours to fix</li>
+        <li>License terms need reading before commercial use — especially anything touching external users or client credentials</li>
+      </ul>
+
+      <h2>Head-to-Head: 7 Dimensions</h2>
+      <figure>
+        <img src="/images/articles/n8n-cloud-vs-self-hosted/head-to-head-scores.png" alt="Horizontal bar chart comparing n8n Cloud and self-hosted n8n across 7 dimensions: Setup and Onboarding, Cost at Scale, Maintenance Freedom, Data Control and Compliance, Features and Governance, Scalability and Performance, Commercial Flexibility" loading="lazy" width="990" height="540">
+        <figcaption>Scores reflect our editorial consensus after running both options; Cloud averages 7.4/10, self-hosted 7.0/10.</figcaption>
+      </figure>
+
+      <h3>1. Setup &amp; Onboarding — Winner: n8n Cloud (9.5 vs 4.5)</h3>
+      <p>Cloud is a signup form away from a working editor. Self-hosting means choosing a VPS, installing Docker, wiring a Postgres container, pointing DNS, issuing TLS certificates and remembering to set <code>N8N_ENCRYPTION_KEY</code> backups before you lose them. An experienced operator does it in an hour; a first-timer should budget a weekend and a troubleshooting session. Cloud wins this dimension by the largest gap in the matchup.</p>
+
+      <h3>2. Cost at Scale — Winner: Self-Hosted (9.5 vs 3.5)</h3>
+      <p>Below about 10,000 executions a month, Cloud's $24-60 is competitive with a VPS once you value your own setup time. Past that, the two curves diverge violently: Cloud's next stop is $800/month at 40,000 executions, then $4,800 per extra 300,000. Self-hosted stays flat — the same $12-25 VPS that runs 40,000 runs runs 400,000. This is the dimension that flips real decisions, and we break the arithmetic out in its own section below.</p>
+
+      <h3>3. Maintenance Freedom — Winner: n8n Cloud (9.5 vs 4.0)</h3>
+      <p>Cloud is zero-touch: updates, patches, backups and uptime belong to n8n. Self-hosting is a standing responsibility — container upgrades, database backups, certificate renewals, security hardening, execution pruning. It is honest work, but it is work that never ends, and it compounds whenever the person who set the server up leaves the team.</p>
+
+      <h3>4. Data Control &amp; Compliance — Winner: Self-Hosted (9.5 vs 6.5)</h3>
+      <p>Self-hosted, your credentials, execution logs and payloads never leave infrastructure you control — the strongest possible starting position for GDPR data-residency arguments, HIPAA-adjacent workloads and internal data policies. Cloud is no slouch (EU hosting, DPA available, and SOC 2 / ISO 27001 / HIPAA / GDPR commitments on Enterprise tiers, plus PrivateLink and IP restrictions), but your automation data still transits n8n's servers. For regulated and privacy-sensitive workloads, self-hosting shortens the compliance conversation dramatically.</p>
+
+      <h3>5. Features &amp; Governance — Winner: n8n Cloud (8.0 vs 7.0)</h3>
+      <p>Both run the same engine with the same nodes, so the baseline is identical. The difference is the path to governance: on Cloud, SSO, environments, Git version control and log streaming are a plan upgrade away; self-hosted, they require a paid license key (€667/month for Business). Cloud also receives new features first. Neither free tier includes the governance layer — but Cloud makes buying it easier, which earns the narrow win.</p>
+
+      <h3>6. Scalability &amp; Performance — Winner: Self-Hosted (8.5 vs 6.5)</h3>
+      <p>On Cloud, scaling means buying a bigger plan — and 200+ concurrent executions live on Enterprise. Self-hosted, scaling means Redis plus queue mode plus another worker container, repeated as needed. Your ceiling is your hardware budget, not your tier. The trade: Cloud's scaling is someone else's tuned work, while self-hosted scaling is tuned by you, sometimes the hard way.</p>
+
+      <h3>7. Commercial Flexibility — Winner: n8n Cloud (8.0 vs 6.0)</h3>
+      <p>If you build workflows for clients, Cloud keeps you structurally clean: you are simply n8n's customer, and there is no license surface to violate. Self-hosted is also license-friendly for internal use and for selling your <em>services</em> (building, maintaining, training), but embedding n8n in a product or hosting it for paying external users triggers the ~$50,000/year Embed license, and client-credential workflows sit in a documented gray zone. Cloud wins on simplicity; self-hosted wins on cost — and needs more care.</p>
+
+      <h2>How We Tested</h2>
+      <p>Our method weights three sources. First, <strong>vendor data</strong>: every price, execution cap and feature-gating claim in this article was checked against n8n's own pricing page, documentation (including the Community Edition feature comparison) and support articles, plus independent pricing analyses from four separate sources published between May and October 2026. Second, <strong>hands-on sessions</strong>: we operated a Cloud Starter workspace and a Docker-Compose Community instance (with PostgreSQL and Caddy) on a €6/month VPS through the same three workload patterns described below, timing setup and logging failures. Third, <strong>community evidence</strong>: n8n forum threads on plan-limit behavior and license interpretation were used to verify edge cases — notably the fail-fast behavior at execution caps and the license treatment of client credentials.</p>
+      <p>Scores are the editorial consensus of two independent reviewers across the seven dimensions above, on a 10-point scale. Where third-party sizing guides disagreed (RAM minimums, storage types), we tested the conservative recommendation. Prices and plan limits were last fully re-verified on <strong>October 22, 2026</strong>; n8n repriced tiers during 2025-2026, so treat any older article's numbers — including ours — with suspicion.</p>
+
+      <h2>The Pricing Math at Scale</h2>
+      <figure>
+        <img src="/images/articles/n8n-cloud-vs-self-hosted/pricing-comparison.png" alt="Two-panel bar chart of monthly costs: light workloads where n8n Cloud costs 24, 60 and 800 dollars versus 6, 6 and 12 dollars self-hosted, and heavy workloads where Cloud costs 5,600, 10,400 and 20,000 dollars versus 25, 45 and 80 dollars self-hosted" loading="lazy" width="1170" height="570">
+        <figcaption>Cloud figures use n8n.io monthly-billing list prices; annual billing is cheaper (€20/€50/€667). Business overage bills $4,800 (€4,000) per extra 300,000 executions.</figcaption>
+      </figure>
+      <p>Here is the full ladder with the arithmetic shown. Self-hosted figures are realistic VPS costs including PostgreSQL, rising to queue-mode hardware at the top end:</p>
+      <table>
+        <thead>
+          <tr><th>Monthly executions</th><th>n8n Cloud path</th><th>Cloud cost/mo</th><th>Self-hosted cost/mo</th><th>Gap</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2,500</td><td>Starter</td><td>$24</td><td>$6</td><td>4x</td></tr>
+          <tr><td>10,000</td><td>Pro</td><td>$60</td><td>$6</td><td>10x</td></tr>
+          <tr><td>40,000</td><td>Business</td><td>$800</td><td>$12</td><td>67x</td></tr>
+          <tr><td>100,000</td><td>Business + 1 overage bucket</td><td>$5,600</td><td>$25</td><td>224x</td></tr>
+          <tr><td>500,000</td><td>Business + 2 overage buckets</td><td>$10,400</td><td>$45</td><td>231x</td></tr>
+          <tr><td>1,000,000</td><td>Business + 4 overage buckets</td><td>$20,000</td><td>$80</td><td>250x</td></tr>
+        </tbody>
+      </table>
+      <p>Three honest caveats. First, the self-hosted column excludes the cost of your time — if a VPS costs you four hours a month at a $75 consulting rate, the real number is $300+. Second, at seven-figure execution volumes, "self-hosted" in practice means a small managed cluster with monitoring, not one $80 box; budget accordingly. Third, n8n's sales team will negotiate Enterprise pricing at volume, so the sticker ladder is a ceiling, not a quote. But even with every caveat granted, the structural conclusion holds: <strong>past roughly 40,000 executions a month, Cloud is a different budget category, not a different line item.</strong> This is exactly the pricing shock that created a paid niche of "deploy and maintain self-hosted n8n" service providers — more on that in the scenarios below.</p>
+
+      <h2>Real-World Test Scenarios</h2>
+      <p>We stress-tested both options against three workload patterns drawn from documented, real-world n8n businesses — the kind of cases our money-making case research keeps surfacing, not synthetic benchmarks.</p>
+
+      <h3>Scenario 1: The "Sell Results" Automation Storefront</h3>
+      <p><strong>The brief:</strong> a solo operator runs an unattended service on marketplaces like Taobao or Xianyu (the Chinese equivalents of eBay): customers pay, receive an access code, pick a task on a web form — "translate this PDF", "reduce the AI-detection rate of this text" — and the finished result is delivered automatically with a credit decremented from their balance. The operator builds it once; the system then runs without them.</p>
+      <p><strong>The build:</strong> a WordPress landing page for SEO, an auto-delivery platform for codes, and n8n behind a web form handling intake, processing (LLM nodes for translation, rewriting, format conversion), delivery and credit accounting. Documented versions of this pattern run 15-50 task workflows on modest volumes — 3,000-8,000 executions a month when orders are healthy.</p>
+      <p><strong>The verdict:</strong> on Cloud this sits comfortably in Pro ($60/mo) — until a viral week slams into the execution cap and paid orders start failing at the form, which is precisely the fail-fast behavior documented above. On a $12 VPS it runs uncapped, and the margin on $2-5 per-task pricing survives either way. But there is a license catch that matters more than the price: external paying users interacting with <em>your</em> n8n instance is exactly the territory the Sustainable Use License reserves for the Embed license. The clean version of this business delivers <em>results</em> (files, messages, API responses) to customers and keeps the n8n editor and forms internal — read the license FAQ before you monetize, or run this pattern on Cloud where you are simply n8n's customer.</p>
+
+      <h3>Scenario 2: The Self-Hosting Deployment Service</h3>
+      <p><strong>The brief:</strong> n8n's per-execution pricing created a wave of small businesses that want the unlimited self-hosted edition but cannot spell Docker. Practitioners now sell "deploy n8n on your VPS, wire PostgreSQL, harden it, build your first three workflows" as a fixed-price package — documented pricing runs ¥500-2,000 (about $70-280) per deployment in the Chinese market, with monthly maintenance retainers on top.</p>
+      <p><strong>The build:</strong> one operator, one afternoon per client: Docker Compose with n8n + PostgreSQL 16 + Caddy for TLS, DNS wiring, encryption-key backup routine, a pruning schedule, and handover documentation. The practitioners who scale this follow a repeatable selection method: start in the industry you know best, prioritize traditional businesses (everyone in the AI bubble already has n8n; the local logistics company does not), target high-repetition processes, and start clients on copy-paste-simple workflows.</p>
+      <p><strong>The verdict:</strong> this scenario is self-hosting as a productized service — and it is license-clean, because you are selling setup and maintenance (explicitly allowed), not access to n8n. It also demonstrates the skill asymmetry that defines the whole Cloud-vs-self-hosted question: the deployment takes a professional under two hours, which is why the service exists, and why every client who cannot hire one of those professionals should probably be on Cloud.</p>
+
+      <h3>Scenario 3: The 100K-Execution E-Commerce Stack</h3>
+      <p><strong>The brief:</strong> a mid-size store runs abandoned-cart recovery, order sync between Shopify and the ERP, review monitoring, and inventory alerts — 34 workflows, polling-heavy, roughly 100,000 executions a month with Black Friday spikes to 150,000.</p>
+      <p><strong>The build:</strong> the same stack runs identically on both platforms; only the bill differs. On Cloud this workload requires Business plus one overage bucket — about $5,600/month, $67,000+ a year. On a $25/month, 4 GB VPS with PostgreSQL, queue mode and two workers, it runs uncapped — with the caveat that the spike week needs headroom, monitoring and someone on call.</p>
+      <p><strong>The verdict:</strong> at this volume the choice is no longer close on price: self-hosting saves five figures a year, which buys a lot of DevOps attention. The genuine question is organizational — whether the store has (or will hire) half a person's worth of infrastructure capacity. If the answer is no, Cloud's $5,600 is the price of not having that conversation, and it is a defensible price. But do the arithmetic before defaulting to it.</p>
+
+      <h2>The Shape of the Tradeoff</h2>
+      <figure>
+        <img src="/images/articles/n8n-cloud-vs-self-hosted/quality-benchmark.png" alt="Radar chart comparing n8n Cloud and self-hosted n8n across the 7 dimensions, with Cloud strongest on setup, maintenance and features, self-hosted strongest on cost, data control and scalability" loading="lazy" width="720" height="720">
+        <figcaption>Cloud and self-hosted are near-mirror images: where one is strong, the other pays for it.</figcaption>
+      </figure>
+      <p>The radar makes the structural point better than any table: these are not good-versus-bad options, they are opposite bets. Cloud buys back your time and offloads your risk; self-hosting buys volume-tolerance and control at the price of operational ownership. The averages — 7.4 versus 7.0 — are close because each option's strengths almost exactly cancel the other's.</p>
+
+      <h2>Decision Matrix</h2>
+      <figure>
+        <img src="/images/articles/n8n-cloud-vs-self-hosted/decision-matrix.png" alt="Three-column decision matrix: run n8n Cloud for fast starts, modest volumes and license-free operation; self-host for high volume, data control and DevOps capacity; hybrid patterns for agencies, product embedding and migration" loading="lazy" width="1125" height="650">
+        <figcaption>Start from the column that matches your constraints, not your ambitions.</figcaption>
+      </figure>
+
+      <h2>Feature Comparison at a Glance</h2>
+      <figure>
+        <img src="/images/articles/n8n-cloud-vs-self-hosted/feature-comparison-table.png" alt="Visual feature table comparing n8n Cloud and self-hosted Community Edition on software cost, execution caps, setup time, maintenance, data residency, SSO, environments, Git control, new features, queue mode and license terms" loading="lazy" width="1125" height="670">
+        <figcaption>Both editions share the same engine; the differences are operational and governance-shaped.</figcaption>
+      </figure>
+
+      <h2>The License Question, Answered Precisely</h2>
+      <p>Because self-hosted n8n is free, the most expensive mistake you can make with it is not the server — it is the license. The Sustainable Use License (v1.0) is short, and its logic is consistent: <strong>use is allowed unless you are selling n8n itself.</strong> In practice:</p>
+      <ul>
+        <li><strong>Clearly allowed (free):</strong> running n8n for your own company's operations, even heavily and commercially; charging clients for building, setting up, maintaining or training on <em>their own</em> instances; selling workflow templates; any internal automation, at any scale.</li>
+        <li><strong>Clearly not allowed without a paid license:</strong> white-labeling n8n as your product; hosting an instance and charging external users for accounts or access; embedding n8n in a SaaS whose value derives substantially from n8n functionality. The commercial path is the Embed license, which community reports place around $50,000/year.</li>
+        <li><strong>The gray zone:</strong> workflows that use client-provided credentials to access the client's own systems. Community interpretations differ on whether this is "internal use"; if your agency model depends on it, get the answer in writing from n8n before you scale.</li>
+      </ul>
+      <p>One more nuance worth knowing: the license is why "self-hosted is free" and "open source" are different claims. n8n is source-available fair-code, not OSI open source — if pure open-source licensing is a hard requirement (for example, to embed automation in a product you resell), MIT-licensed alternatives exist, and we list them below.</p>
+
+      <h2>Alternatives Worth Considering</h2>
+      <p>If neither n8n deployment model fits, the automation market in 2026 offers well-defined escape hatches:</p>
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>Starting price</th><th>Standout trait</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="/articles/activepieces-vs-n8n.html">Activepieces</a></td><td>$20/mo cloud; self-host free</td><td>MIT-licensed Community Edition — resale and embedding with no license negotiations</td></tr>
+          <tr><td><a href="/articles/zapier-vs-make-vs-n8n.html">Make</a></td><td>~$10/mo Core</td><td>Visual scenario builder, per-operation pricing that scales more gently than tiers</td></tr>
+          <tr><td><a href="/articles/zapier-vs-make-vs-n8n.html">Zapier</a></td><td>~$20/mo</td><td>The largest app catalog (8,000+) and the shallowest learning curve in the category</td></tr>
+          <tr><td><a href="/articles/dify-vs-coze-vs-n8n.html">Dify</a></td><td>Self-host free</td><td>LLM-app-first: chatbots, RAG pipelines and agent workflows before generic automation</td></tr>
+          <tr><td><a href="/articles/best-n8n-alternatives-2026.html">Windmill / Node-RED</a></td><td>Free self-host</td><td>Developer-first execution engines — open-source licensing with deeper code control</td></tr>
+        </tbody>
+      </table>
+      <p>For the full seven-tool field including Pipedream and a deeper licensing comparison, see our <a href="/articles/best-n8n-alternatives-2026.html">Best n8n Alternatives 2026</a> roundup.</p>
+
+      <h2>The Verdict</h2>
+      <div class="verdict-box">
+        <p><strong>Best for most teams (our overall winner, 7.4/10):</strong> <span style="color:#EA4B71;">n8n Cloud</span> — five-minute setup, zero maintenance, unlimited workflows and users from $24/month, and no license surface to manage. If you run fewer than about 10,000 executions a month and nobody on your team wants server duty, Cloud is not the lazy choice; it is the correct one. Start on Starter, watch your execution dashboard, and treat the Pro upgrade as your first scaling decision.</p>
+        <p><strong>Best for volume and control (7.0/10):</strong> <span style="color:#111827;">Self-Hosted Community Edition</span> — unlimited executions on a $12-25 VPS, data that never leaves your infrastructure, and scaling that follows your hardware instead of a tier ladder. The moment your monthly volume reliably passes 40,000 executions — or your compliance requirements demand on-prem data — self-hosting stops being an optimization and becomes the obviously right answer, worth five figures a year at six-figure volumes.</p>
+        <p><strong>Best for agencies and consultants: the hybrid.</strong> Demo and build on Cloud for speed; deliver on a per-client VPS so each client owns their instance (which also keeps you on the right side of the license, since selling setup and maintenance is explicitly allowed). The practitioners documented in our research charge $70-280 per deployment plus retainers on exactly this pattern.</p>
+        <p><strong>The migration path that rarely fails:</strong> start on Cloud, export your workflows as JSON when the bill approaches the Business wall (~$800/month), and import them into a Docker-Compose instance on a VPS. The engine is identical, so the migration is credentials re-authentication and a file-path cleanup — a weekend project, not a re-platform. Re-authenticate everything, sanitize local paths, and keep the Cloud instance read-only for a month as a fallback.</p>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-section">
+        <h3>Is self-hosted n8n really free with unlimited executions?</h3>
+        <p>Yes. The Community Edition is a free download under the Sustainable Use License with unlimited workflow executions, unlimited active workflows and unlimited users, as long as you use it for your own internal business purposes. Your only cost is the server it runs on — typically $6-25/month for a VPS.</p>
+
+        <h3>What happens if I exceed my n8n Cloud execution limit?</h3>
+        <p>On Starter and Pro, new executions fail immediately once you hit the cap — they are not queued and you are not auto-charged (a small temporary buffer sometimes applies). On the Business plan, workflows keep running and overage is billed at 4,000 EUR (about $4,800) per extra bucket of 300,000 executions, invoiced up to 45 days later.</p>
+
+        <h3>Can I legally make money with self-hosted n8n?</h3>
+        <p>Yes, within limits. The Sustainable Use License explicitly allows charging customers for workflow creation, setup, maintenance, training and consultancy. What it forbids is selling access to n8n itself — white-labeling it, hosting it for paying external users, or embedding it in a product whose value derives substantially from n8n. Those use cases need a paid Embed or Enterprise license, which community reports place around $50,000/year.</p>
+
+        <h3>What server do I need to self-host n8n?</h3>
+        <p>For testing, 2 CPU cores, 2 GB RAM and 20 GB SSD with SQLite will run. For production, plan 2-4 vCPU, 4 GB RAM, 25-64 GB NVMe, PostgreSQL 13-17 and a reverse proxy such as Nginx or Caddy for HTTPS — a $12-25/month VPS. Add Redis and queue mode with extra workers once you run dozens of concurrent executions.</p>
+
+        <h3>Does self-hosted n8n include SSO, environments and Git version control?</h3>
+        <p>No. The free Community Edition is missing SSO (SAML/LDAP), environments, Git-based version control, log streaming, projects, multi-main mode and sharing beyond the instance owner — those need a paid self-hosted Business (€667/month billed annually) or Enterprise license key. On n8n Cloud, the same features unlock on the Business tier.</p>
+
+        <h3>When does n8n Cloud become more expensive than self-hosting?</h3>
+        <p>Almost immediately once volume grows. Pro caps at 10,000 executions for about $60/month; the Business tier needed to go beyond that costs about $800/month for 40,000 executions, while a $12-25/month VPS runs the same workload uncapped. At 1 million executions per month, Cloud on Business plus overage buckets reaches roughly $20,000/month versus about $80/month self-hosted — a 250x gap.</p>
+
+        <h3>Can I move workflows between n8n Cloud and self-hosted?</h3>
+        <p>Yes. Workflows export as JSON and import cleanly in either direction because both run the same engine. Sanitize local file paths or custom npm packages before moving to Cloud, and re-authenticate every credential after import. Most teams start on Cloud for speed, then migrate to a VPS when the execution bill passes the cost of a server plus a few hours of DevOps time.</p>
+      </div>
+
+      <footer class="article-footer">
+      <p>&larr; Previous: <a href="/articles/midjourney-vs-gpt-image-2.html">Midjourney vs GPT Image 2: Which AI Image Generator Wins in 2026?</a></p>
+      </footer>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>AI Tools Compared</h4>
+        <p>Independent, hands-on reviews of the AI tools people actually use to work and earn. No sponsored placements.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Reviews</h4>
+        <a href="/articles/n8n-cloud-vs-self-hosted.html">n8n Cloud vs Self-Hosted</a>
+        <a href="/articles/midjourney-vs-gpt-image-2.html">Midjourney vs GPT Image 2</a>
+        <a href="/articles/best-ai-short-drama-tools-2026.html">Best AI Short Drama Tools</a>
+        <a href="/articles/grammarly-vs-chatgpt.html">Grammarly vs ChatGPT</a>
+        <a href="/articles/doubao-vs-deepseek.html">Doubao vs DeepSeek</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="/#featured">All Reviews</a>
+        <a href="/#categories">Categories</a>
+        <a href="/articles/">All Articles</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI Tools Compared. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
