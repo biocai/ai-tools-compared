@@ -425,3 +425,61 @@
 [06:51:02]   wait grammarly-vs-chatgpt: READY
 [06:51:22] DONE grammarly-vs-chatgpt
 2026-10-21 {"https://ai-tools-compared.com/articles/semrush-vs-ahrefs.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-mascot-design-tools-2026.html": "DONE", "https://ai-tools-compared.com/articles/activepieces-vs-n8n.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-3d-model-generators-2026.html": "DONE", "https://ai-tools-compared.com/articles/qwen-vs-deepseek.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-virtual-influencer-generators-2026.html": "DONE", "https://ai-tools-compared.com/articles/originality-ai-vs-gptzero.html": "DONE", "https://ai-tools-compared.com/articles/best-local-llm-chatbots-2026.html": "DONE", "https://ai-tools-compared.com/articles/grammarly-vs-chatgpt.html": "DONE"}
+[09:06:57]   poll semrush-vs-ahrefs: ON_GOOGLE panel_ok=False
+[09:06:57] SKIP semrush-vs-ahrefs (已收录)
+[09:07:18]   poll best-ai-mascot-design-tools-2026: ON_GOOGLE panel_ok=True
+[09:07:18] SKIP best-ai-mascot-design-tools-2026 (已收录)
+[09:07:38]   poll activepieces-vs-n8n: READY panel_ok=True
+[09:07:38] CLICKED activepieces-vs-n8n (btn=CLICKED)
+[09:07:43]   wait activepieces-vs-n8n: READY
+[09:08:13]   wait activepieces-vs-n8n: DONE
+[09:08:13] DONE activepieces-vs-n8n
+[09:08:36]   poll best-ai-3d-model-generators-2026: READY panel_ok=True
+[09:08:36] CLICKED best-ai-3d-model-generators-2026 (btn=CLICKED)
+[09:08:41]   wait best-ai-3d-model-generators-2026: READY
+[09:09:01] DONE best-ai-3d-model-generators-2026
+[09:09:22]   poll qwen-vs-deepseek: READY panel_ok=True
+[09:09:22] CLICKED qwen-vs-deepseek (btn=CLICKED)
+[09:09:27]   wait qwen-vs-deepseek: READY
+[09:09:42] DONE qwen-vs-deepseek
+[09:10:02]   poll best-ai-virtual-influencer-generators-2026: READY panel_ok=True
+[09:10:02] CLICKED best-ai-virtual-influencer-generators-2026 (btn=CLICKED)
+[09:10:07]   wait best-ai-virtual-influencer-generators-2026: READY
+[09:10:22] DONE best-ai-virtual-influencer-generators-2026
+[09:10:42]   poll originality-ai-vs-gptzero: READY panel_ok=True
+[09:10:42] CLICKED originality-ai-vs-gptzero (btn=CLICKED)
+[09:10:47]   wait originality-ai-vs-gptzero: READY
+[09:11:12] DONE originality-ai-vs-gptzero
+[09:11:33]   poll best-local-llm-chatbots-2026: READY panel_ok=True
+[09:11:33] CLICKED best-local-llm-chatbots-2026 (btn=CLICKED)
+[09:11:38]   wait best-local-llm-chatbots-2026: READY
+[09:11:53] DONE best-local-llm-chatbots-2026
+[09:12:13]   poll grammarly-vs-chatgpt: ON_GOOGLE panel_ok=True
+[09:12:13] SKIP grammarly-vs-chatgpt (已收录)
+[09:12:34]   poll best-ai-agents-self-publishing-2026: READY panel_ok=True
+[09:12:34] CLICKED best-ai-agents-self-publishing-2026 (btn=CLICKED)
+[09:12:39]   wait best-ai-agents-self-publishing-2026: READY
+[09:13:09]   wait best-ai-agents-self-publishing-2026: DONE
+[09:13:09] DONE best-ai-agents-self-publishing-2026
+[09:13:29]   poll best-ai-coding-tools-chrome-extensions-2026: READY panel_ok=True
+[09:13:29] CLICKED best-ai-coding-tools-chrome-extensions-2026 (btn=CLICKED)
+[09:13:34]   wait best-ai-coding-tools-chrome-extensions-2026: READY
+[09:13:49] DONE best-ai-coding-tools-chrome-extensions-2026
+[09:14:09]   poll best-ai-photo-animation-tools-2026: READY panel_ok=True
+[09:14:10] CLICKED best-ai-photo-animation-tools-2026 (btn=CLICKED)
+[09:14:15]   wait best-ai-photo-animation-tools-2026: READY
+[09:14:25] DONE best-ai-photo-animation-tools-2026
+[09:14:45]   poll best-image-to-video-ai-2026: READY panel_ok=True
+[09:14:45] CLICKED best-image-to-video-ai-2026 (btn=CLICKED)
+[09:14:50]   wait best-image-to-video-ai-2026: READY
+[09:15:05] DONE best-image-to-video-ai-2026
+[09:15:25]   poll chatgpt-vs-sudowrite: READY panel_ok=True
+[09:15:25] CLICKED chatgpt-vs-sudowrite (btn=CLICKED)
+[09:15:30]   wait chatgpt-vs-sudowrite: READY
+[09:15:45] DONE chatgpt-vs-sudowrite
+[09:16:08]   poll seedance-vs-veo: READY panel_ok=True
+[09:16:08] CLICKED seedance-vs-veo (btn=CLICKED)
+[09:16:13]   wait seedance-vs-veo: READY
+[09:16:23] QUOTA seedance-vs-veo
+[09:16:23] 配额耗尽，停止处理
+2026-10-26 {"https://ai-tools-compared.com/articles/semrush-vs-ahrefs.html": "already-indexed", "https://ai-tools-compared.com/articles/best-ai-mascot-design-tools-2026.html": "already-indexed", "https://ai-tools-compared.com/articles/activepieces-vs-n8n.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-3d-model-generators-2026.html": "DONE", "https://ai-tools-compared.com/articles/qwen-vs-deepseek.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-virtual-influencer-generators-2026.html": "DONE", "https://ai-tools-compared.com/articles/originality-ai-vs-gptzero.html": "DONE", "https://ai-tools-compared.com/articles/best-local-llm-chatbots-2026.html": "DONE", "https://ai-tools-compared.com/articles/grammarly-vs-chatgpt.html": "already-indexed", "https://ai-tools-compared.com/articles/best-ai-agents-self-publishing-2026.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-coding-tools-chrome-extensions-2026.html": "DONE", "https://ai-tools-compared.com/articles/best-ai-photo-animation-tools-2026.html": "DONE", "https://ai-tools-compared.com/articles/best-image-to-video-ai-2026.html": "DONE", "https://ai-tools-compared.com/articles/chatgpt-vs-sudowrite.html": "DONE", "https://ai-tools-compared.com/articles/seedance-vs-veo.html": "QUOTA"}
