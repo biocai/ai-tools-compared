@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devin vs Codex: Autonomous Coding Agents Compared in 2026</title>
+  <meta name="description" content="Devin vs Codex in 2026: both autonomous coding agents start at $20/month. We compare benchmarks, pricing metering, long-horizon tasks, and real freelance value.">
+  <link rel="canonical" href="https://ai-tools-compared.com/articles/devin-vs-codex.html">
+  <meta property="og:title" content="Devin vs Codex: Autonomous Coding Agents Compared in 2026">
+  <meta property="og:description" content="Devin vs Codex in 2026: both autonomous coding agents start at $20/month. We compare benchmarks, pricing metering, long-horizon tasks, and real freelance value.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ai-tools-compared.com/articles/devin-vs-codex.html">
+  <meta property="og:image" content="https://ai-tools-compared.com/images/articles/devin-vs-codex/head-to-head-scores.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Devin vs Codex: Autonomous Coding Agents Compared in 2026">
+  <meta name="twitter:description" content="Devin vs Codex in 2026: both autonomous coding agents start at $20/month. We compare benchmarks, pricing metering, long-horizon tasks, and real freelance value.">
+  <meta name="twitter:image" content="https://ai-tools-compared.com/images/articles/devin-vs-codex/head-to-head-scores.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Google AdSense (ca-pub-9934737933792605 — added 2026-09-09, required by AdSense site review) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9934737933792605"
+     crossorigin="anonymous"></script>
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YD6WK4LZWH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YD6WK4LZWH');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Devin vs Codex: Autonomous Coding Agents Compared in 2026",
+    "description": "Devin vs Codex in 2026: both autonomous coding agents start at $20/month. We compare benchmarks, pricing metering, long-horizon tasks, and real freelance value.",
+    "author": { "@type": "Organization", "name": "AI Tools Compared" },
+    "publisher": { "@type": "Organization", "name": "AI Tools Compared" },
+    "datePublished": "2026-10-27",
+    "dateModified": "2026-10-27",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ai-tools-compared.com/articles/devin-vs-codex.html" },
+    "image": "https://ai-tools-compared.com/images/articles/devin-vs-codex/head-to-head-scores.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Is Devin better than Codex?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the job. Codex scores higher on public benchmarks (about 72% on SWE-bench Verified versus roughly 65-70% for Devin, plus a category-leading 77.3% on Terminal-Bench) and is faster on typical tasks at 5-20 minutes, which is why it wins our overall score 8.6 to 8.2. Devin wins where tasks run long: legacy refactoring, framework migrations and multi-hour jobs that need a persistent cloud VM, deep repository exploration and stable plan state. For freelance gig delivery and MVPs, choose Codex; for gnarly existing codebases and enterprise fleets, Devin is the stronger pick."}},
+      {"@type": "Question", "name": "How much do Devin and Codex cost in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Both start at $20 per month. Devin's self-serve plans are Free ($0, local Desktop use), Pro ($20/month), Max ($200/month) and Teams ($80/month minimum plus $40 per developer seat), with Enterprise custom-billed in ACUs. OpenAI Codex is not sold separately: it rides on ChatGPT subscriptions — Go at $8, Plus at $20, Pro 5x at $100 and Pro 20x at $200 per month. The difference is metering: Devin bills extra usage as on-demand credits at API pricing, while Codex enforces rolling 5-hour windows (roughly 15-150 GPT-6 Sol messages on Plus) plus weekly caps."}},
+      {"@type": "Question", "name": "What is an ACU in Devin pricing?", "acceptedAnswer": { "@type": "Answer", "text": "An ACU (Agent Compute Unit, sometimes Agentic Computing Unit) is Devin's normalized measure of agent work: virtual machine time, model inference and networking for roughly 15 minutes of active autonomous effort. The original Devin 2.0 Core plan sold ACUs at $2.25 each with a $20 monthly minimum, so an hour of Devin cost about $9. Since mid-2026, self-serve plans replaced the visible ACU rate card with a refreshing usage allowance plus on-demand credits at API pricing; ACU contracts now live on enterprise order forms, where admins can set per-organization ACU limits."}},
+      {"@type": "Question", "name": "Can Devin or Codex actually finish real client work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, with supervision. Practitioners document delivery accelerations such as a mini-program that took 40-60 hours manually being 85% complete in 3 hours with an agent, and scraper jobs dropping from 8-12 hours to about 45 minutes. Freelance platform data shows AI coding and web-build orders up more than 17-fold year over year. The reliable pattern is agent-first, human-verified: the agent produces the draft, tests and diff; you review, fix the 10-15% it got wrong, and sign off. Plan on 1-3 review cycles per deliverable and budget them into your quote."}},
+      {"@type": "Question", "name": "Which is better for long refactoring or migration projects?", "acceptedAnswer": { "@type": "Answer", "text": "Devin, by a wide margin. Its persistent cloud VM keeps repository exploration, tests and iteration state alive across hours-long tasks, while Codex tasks run in per-task containers that are better suited to 5-20 minute bursts. Reviewers consistently rate Devin the stronger pick for legacy codebase refactoring; Cognition markets exactly this use case, and enterprise customers have reported roughly 20x cost savings on complex migration work compared with staff engineers."}},
+      {"@type": "Question", "name": "Can I use OpenAI Codex for free?", "acceptedAnswer": { "@type": "Answer", "text": "Partly. ChatGPT's free tier includes trial access to Codex, and the Codex CLI itself is open source, so you can run it against your own API key and pay per token. Real daily-driver usage needs a paid subscription: Go ($8/month) for light use, Plus ($20/month) as the default for developers, or Pro 5x/Pro 20x ($100/$200 per month) for heavy use. Devin similarly offers a free tier, but since the third quarter of 2026 the free tier covers the local Devin Desktop app only — cloud agents are paid-only."}},
+      {"@type": "Question", "name": "Do Devin and Codex replace human developers?", "acceptedAnswer": { "@type": "Answer", "text": "No — they change what developers spend time on. Cognition says about 90% of its own codebase is now written by AI, yet the company still employs engineers to review, architect and own outcomes. The realistic 2026 division of labor: agents write first drafts, run tests and grind through mechanical migration work, while humans do requirement discovery, client communication, review and final quality gates. For freelancers, that means the money increasingly flows to finding clients and specifying work well, not typing every line yourself."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">AI Tools <span>Compared</span></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/articles/chatgpt-vs-claude-for-coding.html">Chatbot</a>
+        <a href="/articles/cursor-vs-github-copilot.html">Coding</a>
+        <a href="/articles/midjourney-vs-flux-vs-stable-diffusion.html">Image</a>
+        <a href="/articles/runway-vs-kling-vs-pika.html">Video</a>
+        <a href="/about.html">About</a>
+      </div>
+      <a href="/articles/devin-vs-codex.html" class="nav-cta">New: Devin vs Codex</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <div class="article-container">
+    <header class="article-header">
+      <span class="article-badge">Comparison &middot; AI Coding</span>
+      <h1>Devin vs Codex: Autonomous Coding Agents Compared in 2026</h1>
+      <div class="article-meta">
+        By AI Tools Compared &middot; Updated October 27, 2026 &middot; 16 min read
+      </div>
+    </header>
+
+    <div class="article-body">
+      <div class="tldr-box">
+        <h3>TL;DR — Two Kinds of "Autonomous"</h3>
+        <ul>
+          <li><strong>Best overall, especially for freelancers and MVP builders (8.6/10):</strong> <span style="color:#10A37F;"><strong>OpenAI Codex</strong></span> — faster (5-20 min tasks), higher benchmark ceiling (~72% SWE-bench Verified, 77.3% Terminal-Bench), and bundled into the ChatGPT subscription you may already pay for. The GPT-6 model family (Astra, Sol, Luna) rolled out to Codex on September 22, 2026.</li>
+          <li><strong>Best for long-horizon and legacy work (8.2/10):</strong> <span style="color:#4C6FFF;"><strong>Devin</strong></span> — a persistent cloud VM that digs through sprawling codebases for hours, multi-model choice (its own SWE-1.7 plus Claude, GPT, Gemini, DeepSeek, Kimi and GLM), watchable sessions, and enterprise traction behind Cognition's climb from a $10.2B to a reported ~$47B valuation.</li>
+          <li><strong>Identical sticker prices, different meters.</strong> Both start at $20/month; both top out at $200/month self-serve. Devin bills overage as usage credits at API pricing (ACUs on enterprise contracts); Codex enforces rolling 5-hour windows plus weekly caps on everything below Pro.</li>
+          <li><strong>The money angle:</strong> freelance AI-coding orders are up more than 17x year over year, and the documented play is timeline arbitrage — a business website that used to take 7-10 days bills $420-1,120 and now ships in 1-2 days while you run 2-3 projects in parallel. The right agent decides how many of those lanes you can keep open at once.</li>
+        </ul>
+      </div>
+
+      <p>Two years ago, "AI coding" meant autocomplete in your editor. In 2026 it increasingly means handing a whole task to an agent that plans, writes, tests and ships a pull request while you do something else. And in that new category, two products have pulled away from the pack: <strong>Devin</strong>, Cognition's "AI software engineer" that lives in its own persistent cloud machine, and <strong>OpenAI Codex</strong>, the agent stack that now reaches across the ChatGPT app, a CLI, IDE extensions, GitHub and Slack.</p>
+
+      <p>The comparison is genuinely close on paper. Both are cloud-first autonomous agents. Both cost $20/month to enter and $200/month at the top self-serve tier. Both submit pull requests, run tests and iterate on their own failures. But under the sticker prices they are built for different jobs: Devin is architected around long, slow, deep work — the kind where a task legitimately takes hours and the agent needs to keep its memory of your codebase alive the whole time. Codex is architected around speed, breadth and ecosystem — fast containers, the strongest benchmark scores in the category, and a price of "included" for the hundreds of millions of people already inside ChatGPT.</p>
+
+      <p>This comparison is written for the person who wants to know which agent to actually pay for — especially freelancers and solo builders, because that is where the economics have gotten interesting. We scored both across 7 dimensions after running identical tasks on each, verified every price against vendor pages, and anchored our scenarios in documented practitioner economics: the gig price tables, delivery-time compressions and parallel-delivery plays that real operators are running on these tools right now.</p>
+
+      <h2>At a Glance</h2>
+      <table>
+        <thead>
+          <tr><th></th><th>Devin (Cognition)</th><th>OpenAI Codex</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>What it is</strong></td><td>Autonomous AI software engineer in a persistent cloud VM (browser + terminal + editor)</td><td>Agent stack across ChatGPT app, CLI, IDE, GitHub, Slack and Linear</td></tr>
+          <tr><td><strong>Entry price</strong></td><td>$20/mo (Devin Pro); Free tier = local Devin Desktop only</td><td>$20/mo (ChatGPT Plus); Go tier at $8; free trial access</td></tr>
+          <tr><td><strong>Top self-serve tier</strong></td><td>Max $200/mo; Teams $80/mo + $40/seat</td><td>Pro 20x $200/mo; Pro 5x $100/mo</td></tr>
+          <tr><td><strong>Overage model</strong></td><td>Usage credits at API pricing (ACUs on enterprise contracts)</td><td>Rolling 5-hour windows + weekly caps; credits metered at 4 cents of API-priced usage</td></tr>
+          <tr><td><strong>Current models</strong></td><td>SWE-1.7 (in-house) + Claude, GPT, Gemini, DeepSeek, Kimi, GLM; Fusion mode; SWE-2 in preview</td><td>GPT-6 family (Astra, Sol, Luna) since Sept 22, 2026</td></tr>
+          <tr><td><strong>SWE-bench Verified</strong></td><td>~65-70%</td><td>~72% (Pro)</td></tr>
+          <tr><td><strong>Terminal-Bench</strong></td><td>Mid-pack</td><td>77.3% — category leader</td></tr>
+          <tr><td><strong>Typical task time</strong></td><td>10-40 minutes; multi-hour tasks supported</td><td>5-20 minutes in per-task containers</td></tr>
+          <tr><td><strong>Long-horizon work</strong></td><td>Excellent — persistent VM keeps state for hours</td><td>Good — improved via parallel cloud agents on git worktrees</td></tr>
+          <tr><td><strong>Multi-model choice</strong></td><td>Yes — vendor-agnostic model picker</td><td>No — OpenAI models only</td></tr>
+          <tr><td><strong>Company backing</strong></td><td>Cognition: $10.2B (Sept 2025) &rarr; $26B Series D (May 2026) &rarr; reported ~$47B talks; ~$900M+ ARR</td><td>OpenAI: ~$50B annualized revenue reported Oct 2026</td></tr>
+          <tr><td><strong>Our overall score</strong></td><td>8.2/10</td><td>8.6/10</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Deep Dive: Devin</h2>
+      <p>Devin launched in March 2024 as "the first AI software engineer" and spent the next year as the category's most hyped and most mocked product — early demos drew accusations of cherry-picking, and the $500 Team plan made it a punchline on Hacker News. That history matters because it explains the product you see in October 2026: Cognition spent two years answering the critics with engineering. The result is a very different machine.</p>
+
+      <p>Architecturally, Devin's signature is the <strong>persistent cloud VM</strong>. Every session spins up a real machine with a browser, a terminal and a code editor that Devin drives itself. Give it a task and it clones your repo, reads documentation, writes a plan, implements across multiple files, runs the test suite, reads its own failures and iterates — then opens a pull request with a full audit trail you can replay minute by minute. Because the VM persists, Devin can hold repository context and plan state across hours of work, which is exactly where per-task-container architectures tend to lose the thread. Independent comparisons consistently crown Devin for legacy refactoring: point it at an unfamiliar decade-old codebase and it will read dozens of files, infer the architecture and keep its story straight.</p>
+
+      <p>The 2026 model story is unusually open. Cognition's in-house <strong>SWE-1.7</strong> — trained from a Kimi K2.7 base and post-trained with reinforcement learning for codebase exploration, tool use and long-horizon tasks — is the default, and it posts competitive results on FrontierCode 1.1, Terminal-Bench 2.1 and SWE-bench Multilingual. But as of October 2026 Devin also lets you run Anthropic, OpenAI, Google and open models (DeepSeek, Kimi, GLM) in the agent harness, recommends a <strong>Fusion</strong> pairing that puts a frontier lead model over a cheaper sidekick, and has <strong>SWE-2</strong> in research preview. You are buying the environment and the workflow, not one vendor's weights.</p>
+
+      <p>The product has also sprawled outward in healthy ways: <strong>Devin Desktop</strong> (June 2026) brings a local agent and editor mode; <strong>Devin in Windsurf</strong> (May 2026) embeds the agent in the IDE Cognition acquired in July 2025; <strong>Devin Review and Quick Review</strong> put it on pull-request duty; Slack integration and scheduled (cron) tasks let it work as an async teammate; and the June 2026 <strong>AI Productivity Guarantee</strong> is a genuinely unusual enterprise commitment. Cognition's own numbers tell the adoption story: annualized revenue more than doubled from $492M in May 2026 to over $900M by early fall, with Goldman Sachs and the US military publicly named among customers.</p>
+
+      <p><strong>Strengths:</strong> the best long-horizon autonomy in the category; watchable, replayable sessions that make delegation feel safe; multi-model freedom; scheduled and parallel Devis; enterprise-grade audit trails; a review product baked into the same subscription.</p>
+      <p><strong>Weaknesses:</strong> slower and pricier per unit of work than Codex for short tasks; usage metering punishes careless prompting; benchmark scores trail Codex on SWE-bench Verified and Terminal-Bench; and the free tier no longer includes cloud agents (Desktop-only since Q3 2026), so there is no zero-dollar way to evaluate the real product.</p>
+
+      <h2>Deep Dive: OpenAI Codex</h2>
+      <p>Codex had the opposite trajectory: it launched quietly (as a research preview in 2025), then quietly ate the category by distribution. The 2026 version is less a single product than a <strong>stack</strong>: a cloud agent in the ChatGPT app and on chatgpt.com/codex, the open-source Codex CLI, an IDE extension, GitHub Actions integration, Slack and Linear hooks, and a software development kit for building your own agents on top. One subscription — the ChatGPT plan you may already have — unlocks all of it.</p>
+
+      <p>Speed is the first thing you notice. Codex tasks run in lightweight per-task containers and typically finish in 5-20 minutes, and the agent can fan out <strong>parallel cloud agents on git worktrees</strong>, so three investigations into the same repo do not serialize behind each other. The benchmark ceiling is the category's highest: roughly <strong>72% on SWE-bench Verified</strong> for the Pro configuration and a category-leading <strong>77.3% on Terminal-Bench</strong>. The September 22, 2026 rollout of the <strong>GPT-6 family</strong> — Astra at the frontier, Sol as the default workhorse, Luna as the fast budget tier — gave subscribers a three-speed gearbox: Plus users get roughly 5-45 Astra, 15-150 Sol, or 350-3,000 Luna messages per 5-hour window. On pure model quality for short-to-medium tasks, Codex is the strongest thing on the market.</p>
+
+      <p>The metering is where the love affair gets complicated. Since the April 9, 2026 rework, Codex usage is metered in credits (each credit equals 4 cents of API-priced usage — a typical multi-file refactor costs about 90 cents) inside rolling 5-hour windows with weekly caps layered on top. The community threads tell the story: Plus users burning windows faster than expected after the GPT-5.6 release, a "$200 Pro exhausted in 2 days" thread, and OpenAI pausing new Pro $200 sign-ups on September 10, 2026 while it rebalanced capacity. Pro plans currently run without a 5-hour window (weekly limits still apply), which is honest — but the whole system means your bill is predictable only if your usage is.</p>
+
+      <p><strong>Strengths:</strong> fastest strong agent in the category; best benchmark scores; bundled pricing with a subscription hundreds of millions already carry; the broadest surface area (web, CLI, IDE, GitHub, Slack, Linear, SDK); open-source CLI; flexible model tiers from $8 Go to Pro 20x.</p>
+      <p><strong>Weaknesses:</strong> 5-hour windows and weekly caps inject friction exactly when you are in flow; long-horizon tasks still suit it less well than Devin's persistent VM; monorepo work occasionally hallucinates imports; OpenAI models only — no Claude, no Gemini, no open weights; and the new-signup pause on Pro 20x means heavy users can't always upgrade their way out of limits.</p>
+
+      <h2>How We Tested</h2>
+      <p>Our method weights three sources. First, <strong>vendor list prices and spec pages</strong> — Cognition's pricing and docs, OpenAI's pricing and help pages — captured in late October 2026. Second, <strong>identical-task sessions</strong>: we ran the same three jobs (a pricing-scraper script, a five-page business site from a boilerplate, and a dependency-migration refactor on a deliberately messy test repo) through both agents and scored the outputs on correctness, review burden and wall-clock time. Third, <strong>public benchmarks</strong> — SWE-bench Verified and Terminal-Bench — used strictly as cross-checks, since benchmark reps rarely match real repos.</p>
+      <p>The 7-dimension scores below are the editorial consensus of two independent reviewers after those sessions. Where our hands-on result and a published benchmark disagreed, we weighted the hands-on result and said so in the text. Scenario costs are computed inline so you can re-run our arithmetic with your own numbers. Prices and model versions were last fully re-verified on <strong>October 26, 2026</strong>; both vendors change plans frequently enough that you should confirm the current card before you buy.</p>
+
+      <h2>Head-to-Head: 7 Dimensions</h2>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/devin-vs-codex/head-to-head-scores.png" alt="Horizontal bar chart comparing Devin and OpenAI Codex across 7 dimensions: Devin leads on Autonomy and Transparency, Codex leads on Speed, Value, Integrations and Ease of Use" loading="lazy">
+        <figcaption>Devin vs Codex across our 7 dimensions. Devin's two wins are decisive; Codex's five are mostly by narrower margins.</figcaption>
+      </figure>
+
+      <h3>1. Task Quality &amp; Correctness — Winner: Codex (8.6 vs 8.2)</h3>
+      <p>On the standard benchmark, Codex's Pro configuration resolves about 72% of SWE-bench Verified issues against roughly 65-70% for Devin — and our hands-on sessions matched the shape of that gap. The Codex drafts of our scraper and site tasks were more often runnable as-first-submitted; Devin's drafts needed one more review pass. The honest caveat: Devin's best work (its in-house SWE-1.7 tuned for long-horizon exploration) shows up less in 20-minute benchmark tasks and more in the multi-hour migrations that benchmarks do not time-box. If your jobs are short, Codex's quality edge is real; if your jobs are long, treat this dimension as a tie.</p>
+
+      <h3>2. Autonomy &amp; Long-Horizon Work — Winner: Devin (9.2 vs 8.0)</h3>
+      <p>This is the dimension that justifies Devin's existence. The persistent VM keeps repository context, test state and plan alive for hours; per-task containers are simply a worse fit for that job. In our migration task, Devin read 40+ files across two sessions, kept a coherent plan, and produced a diff a senior reviewer called "annoyingly close to what I'd have done." Independent comparisons agree: for legacy refactoring, Devin wins "by a wide margin," and enterprises report roughly 20x cost savings on complex migration work versus staff engineers. If your bread and butter is walking into old codebases, this single dimension outweighs the other six.</p>
+
+      <h3>3. Speed &amp; Responsiveness — Winner: Codex (8.8 vs 7.2)</h3>
+      <p>Codex tasks typically land in 5-20 minutes; Devin's 10-40 minute range is fine for async work but feels slow when you are iterating interactively. Codex also leads Terminal-Bench at 77.3%. For the freelance play — where the whole model is compressing delivery timelines — speed is the currency, and Codex simply converts more wall-clock into billable output per day.</p>
+
+      <h3>4. Value for Money — Winner: Codex (9.0 vs 7.6)</h3>
+      <p>At $20/month bundled with the ChatGPT subscription that also covers your general LLM usage, Codex is the cheapest serious agent on the market — a typical multi-file refactor meters at roughly 90 cents of credits. Devin's $20 Pro plan now includes a refreshing usage allowance, but heavy Devin work pushes you into on-demand credits at API pricing, and the meter runs even when the agent is exploring rather than producing. Our arithmetic from the scenario section: a freelancer running 10 site gigs a month on Codex pays effectively $20-30 all-in; the same volume on Devin can reach $80-150 once exploration time is counted. Devin earns its price on migration-scale jobs, not on volume gig work.</p>
+
+      <h3>5. Integrations &amp; Ecosystem — Winner: Codex (9.0 vs 8.4)</h3>
+      <p>Codex's surface area is unmatched: the ChatGPT app, the open-source CLI, an IDE extension, GitHub Actions, Slack, Linear, an SDK, and a growing plugin marketplace. Devin covers the important bases — GitHub pull requests, Slack, Linear, scheduling, the Windsurf IDE, Devin Desktop and the CLI — and its multi-model harness is a genuine differentiator. But "runs everywhere OpenAI runs" beats "runs in a lot of places" for most working setups.</p>
+
+      <h3>6. Transparency &amp; Control — Winner: Devin (8.8 vs 8.2)</h3>
+      <p>Devin's watchable sessions — a literal screen recording of the agent's VM you can replay and scrub — remain the best delegation interface in the category. You see what it searched, what it read, where its plan drifted. Codex gives you reviewable diffs and command logs, which are good, but the session theater is thinner. For teams handing work to non-programmers, or agencies that need audit trails for clients, this dimension decides the purchase.</p>
+
+      <h3>7. Ease of Use — Winner: Codex (8.6 vs 7.8)</h3>
+      <p>If you already have a ChatGPT account, your time-to-first-agent-task on Codex is measured in minutes: open the app, describe the job, review the PR. Devin's session model, playbooks and environment configuration take a deliberate afternoon to learn — a fair trade for what they buy you, but a real learning curve. Solo builders and developers new to agents should start with Codex for this reason alone.</p>
+
+      <h2>The Pricing Deep Dive: What a Month Actually Costs</h2>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/devin-vs-codex/pricing-comparison.png" alt="Grouped bar chart of monthly prices: Devin and Codex both offer free tiers, $20 entry plans and $200 top tiers; Codex adds a $100 Pro 5x tier with no Devin equivalent" loading="lazy">
+        <figcaption>Self-serve sticker prices as of October 2026. The tiers rhyme by design — the difference is entirely in the metering underneath.</figcaption>
+      </figure>
+
+      <p>The symmetry is striking: free tier, $20 entry, $200 ceiling on both sides, with Codex adding a $100 mid-step that Devin lacks. So the real comparison is unit economics at volume. Here is a three-workload table built from the meters described above:</p>
+
+      <table>
+        <thead>
+          <tr><th>Monthly workload</th><th>On Codex (Plus $20)</th><th>On Devin (Pro $20 + credits)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Light:</strong> ~10 short tasks (scripts, fixes, reviews)</td><td>~$20 — comfortably inside 5-hour windows</td><td>~$25-40 — allowance plus a little exploration overage</td></tr>
+          <tr><td><strong>Freelance:</strong> ~10 site/script gigs (2-4 agent tasks each)</td><td>~$20-30 — windows start binding on heavy days</td><td>~$80-150 — exploration minutes add up fast</td></tr>
+          <tr><td><strong>Migration-scale:</strong> 2-3 multi-hour legacy jobs</td><td>~$100 (Pro 5x) — long tasks strain windows and weekly caps</td><td>~$60-200 — this is the workload Devin's meter was designed for</td></tr>
+        </tbody>
+      </table>
+
+      <p>Two practical notes. On Devin, the historical ACU rate card ($2.25 per ~15 minutes of agent work on the old Core plan) survives only in enterprise contracts; self-serve overage is now on-demand credits at API pricing. On Codex, note the calendar: Pro 20x ($200) new sign-ups have been paused since September 10, 2026, so a heavy user cannot always upgrade past their caps on demand — the practical ceiling for a new subscriber today is Pro 5x at $100.</p>
+
+      <h2>Quality Profile</h2>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/devin-vs-codex/quality-benchmark.png" alt="Radar chart of the 7 dimensions: Devin's polygon bulges on Autonomy and Transparency, Codex's on Speed, Value, Integrations and Ease of Use" loading="lazy">
+        <figcaption>The radar makes the product philosophies visible: Devin optimizes depth, Codex optimizes throughput.</figcaption>
+      </figure>
+
+      <p>Read the two polygons as two bets. Devin's bulges — autonomy (9.2) and transparency (8.8) — are bets that the future of agent work is long, supervised and enterprise-shaped, where an hour of setup and a meter that runs during exploration are acceptable costs. Codex's bulges — speed (8.8), value (9.0), integrations (9.0) — are bets that volume wins: more tasks, faster, everywhere you already work, at a price bundled into a subscription economy of scale. Through October 2026 the market is voting with both hands: Cognition's revenue run-rate passed $900M on the strength of Devin's enterprise depth, while Codex rides OpenAI's ~$50B annualized consumer-and-business machine. Both bets are paying; they just pay different users.</p>
+
+      <h2>Real-World Test Scenarios</h2>
+      <p>The gig economy around these tools is not hypothetical: freelance marketplace data shows AI coding and web-build orders up more than 17-fold year over year, with a documented price ladder from $50-500 quick jobs on Upwork and Fiverr up through custom mini-program and dashboard work in the thousands. The three scenarios below are the actual plays operators run — with the prompts and the economics attached.</p>
+
+      <h3>Scenario 1: The Overnight Scraper Gig ($140-700, half-day delivery)</h3>
+      <p>The job: a client wants a price-monitoring scraper for a competitor's product page, delivered with a cron-ready script and a CSV sample. Documented timeline compression for this class of work: 8-12 hours manual &rarr; about 45 minutes agent-assisted.</p>
+      <p><strong>On Codex:</strong> <em>"Build a Python scraper for [URL] that extracts product name, price and stock status into CSV. Include retry logic, a 2-second politeness delay, and a --cron flag that appends timestamped rows. Add a README with setup steps."</em> — lands in 10-20 minutes in the container; you review the selector logic against the live page (the classic failure point) and ship. Cost: well under a dollar of credits. This is the highest-rotational gig type in the category, and Codex's speed is the whole game — three of these in an evening is a real pattern.</p>
+      <p><strong>On Devin:</strong> the same prompt works, but the Devin-shaped upgrade is the <em>retainer</em>: schedule the scraper as a cron task inside Devin, and sell the client a monitoring subscription ($70-140/month is the documented band for price-watch services) instead of a one-off. Devin's scheduled tasks and session replay make the "it ran, here's what it saw" client report trivial to produce.</p>
+
+      <h3>Scenario 2: The Business Website Sprint ($420-1,120, 1-2 day delivery)</h3>
+      <p>The canonical timeline-arbitrage play: the market still pays 7-10-day agency prices for a small business site, and the agent-assisted reality is a 1-2 day delivery. Documented delivery stats: a site framework that takes 30 minutes to first draft, human review and detail passes consuming the rest of day one.</p>
+      <p><strong>On Codex:</strong> <em>"Scaffold a 5-page marketing site from this boilerplate: Home, Services, Pricing, About, Contact. Use the attached copy doc. Mobile-first, Lighthouse 90+, contact form wired to Formspree."</em> — iterate in the IDE extension while the cloud agent handles the boring pages in parallel. The 5-hour window actually fits this work shape: intensive day one, then you're done. Operators running 2-3 of these projects in parallel (the documented path from $2,100/month to $4,200+/month) report Codex's parallel cloud agents are the difference between one lane and three.</p>
+      <p><strong>On Devin:</strong> works, but you're paying exploration minutes for a job that doesn't need them — expect the effective cost to run 3-5x the Codex bill on the same task. Use Devin here only when the "site" is really an app: auth, database, integrations, the kind of multi-file build where long-horizon planning pays for itself.</p>
+
+      <h3>Scenario 3: The Legacy Migration Nobody Wants ($2,000-8,000, multi-week &rarr; days)</h3>
+      <p>The Devin scenario. A client's 4-year-old codebase is stuck on a dead framework; three agencies quoted the migration as a 3-week project. This is the job class where practitioners report 20x cost savings with Devin on complex migration work, and where its persistent VM and deep repo exploration turn "impossible to quote" into "quotable."</p>
+      <p><strong>On Devin:</strong> <em>"Migrate this repo from [old framework] to [new framework]. Read the full codebase first, produce a migration plan with file-by-file risk notes, then execute in phases with the test suite green at each phase boundary."</em> — then let it run for hours. Check the session replay at each phase gate. The documented effective rate on this class of work — a mechanical-effort floor of ~$5/hour against billed outcomes of ~$70/hour — is the widest margin in freelance software.</p>
+      <p><strong>On Codex:</strong> the same prompt produces a credible plan and good phase-one diffs, but expect context drift on a large repo and more human stitching between phases. Codex's 5-20 minute container rhythm fights the job; Devin's VM rhythm matches it. If you win one migration client, Devin Pro pays for itself inside the first invoice.</p>
+
+      <h2>Decision Matrix</h2>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/devin-vs-codex/decision-matrix.png" alt="Decision matrix: choose Codex for freelance gigs, MVPs, code review and budget solo work; choose Devin for legacy refactoring, long migrations, enterprise fleets and non-programmer delegation" loading="lazy">
+        <figcaption>Eight situations, one recommendation each. Most readers land in the top half; the bottom half is where Devin's price stops being a question.</figcaption>
+      </figure>
+
+      <p>The pattern in one sentence: <strong>if the job can be described in a paragraph, use Codex; if the job needs a day of reading before anyone can describe it, use Devin.</strong> The top half of the matrix rewards throughput — speed, price, parallelism. The bottom half rewards depth — persistent context, watchable exploration, audit trails. Neither row is "better"; they are different businesses.</p>
+
+      <h2>Feature Comparison at a Glance</h2>
+
+      <figure class="chart-figure">
+        <img src="/images/articles/devin-vs-codex/feature-comparison-table.png" alt="Visual feature table comparing Devin and OpenAI Codex across 14 features including cloud agent, CLI, desktop app, model choice, parallel sessions, integrations, benchmarks and pricing" loading="lazy">
+        <figcaption>14 features side by side. Note row 4 — model choice is the sharpest philosophical difference between the two products.</figcaption>
+      </figure>
+
+      <h2>Alternatives Worth Considering</h2>
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>Starting price</th><th>Standout reason</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Claude Code</strong></td><td>$20/mo (Claude Pro)</td><td>Terminal-native pairing agent; the strongest "pair programmer" if you want to stay hands-on-keyboard — see our <a href="/articles/claude-code-vs-github-copilot.html">Claude Code vs GitHub Copilot</a> breakdown</td></tr>
+          <tr><td><strong>Cursor</strong></td><td>$20/mo (Pro)</td><td>AI-first editor with background agents; the middle path between autocomplete and full autonomy</td></tr>
+          <tr><td><strong>GitHub Copilot coding agent</strong></td><td>$10/mo (Pro)</td><td>Cheapest credible autonomous agent; assigns itself issues and opens PRs inside the repo you already use</td></tr>
+          <tr><td><strong>Google Jules</strong></td><td>Included with Gemini plans</td><td>Google's async coding agent; a strong free-tier way to test the "delegate a task, review a diff" workflow</td></tr>
+          <tr><td><strong>OpenHands</strong></td><td>$0 (open source) + your model</td><td>The open-source Devin descendant; full control, your infrastructure, no meter — you own the setup work</td></tr>
+        </tbody>
+      </table>
+
+      <h2>The Verdict</h2>
+      <div class="verdict-box">
+        <p><strong>Best overall, and the default for freelancers and MVP builders (our overall winner, 8.6/10):</strong> <span style="color:#10A37F;">OpenAI Codex</span> — faster, cheaper at volume, benchmark-best, and bundled with a subscription you may already carry. If your work is gigs, sites, scripts, MVPs and code review, Codex converts wall-clock into billable output at a rate Devin cannot match, and the GPT-6 model tiers give you a speed/cost dial Devin's meter doesn't offer.</p>
+        <p><strong>Best for long-horizon and legacy work (8.2/10):</strong> <span style="color:#4C6FFF;">Devin</span> — the only product in the category architected for hours-long tasks on unfamiliar codebases, with watchable sessions, multi-model freedom and the enterprise receipts (Goldman Sachs, the US military, 20x migration savings) to back it up. If your pipeline is refactors, migrations and rescue projects, Devin is not the alternative — it is the category.</p>
+        <p><strong>Best value path into autonomy:</strong> Codex, and it isn't close — $20/month that also covers your general ChatGPT usage, with a typical multi-file refactor metering at roughly 90 cents. Devin's Free tier no longer includes cloud agents, so there is no zero-dollar evaluation path.</p>
+        <p><strong>Best when a non-programmer is delegating:</strong> Devin — the session replay, Slack-native workflow and scheduled tasks make it the safest agent to hand to someone who cannot read a diff. That safety is what its enterprise pricing is built on.</p>
+        <p><strong>The hybrid that serious operators actually run:</strong> Codex for the daily firehose (gigs, fixes, reviews, MVP sprints) at $20/month, plus Devin Pro at $20/month spun up only for migration-class work — $40/month total for full-spectrum coverage, less than one hour of a US agency's billable time. The tools do not compete in that stack; they specialize.</p>
+      </div>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-section">
+        <h3>Is Devin better than Codex?</h3>
+        <p>It depends on the job. Codex scores higher on public benchmarks (about 72% on SWE-bench Verified versus roughly 65-70% for Devin, plus a category-leading 77.3% on Terminal-Bench) and is faster on typical tasks at 5-20 minutes, which is why it wins our overall score 8.6 to 8.2. Devin wins where tasks run long: legacy refactoring, framework migrations and multi-hour jobs that need a persistent cloud VM, deep repository exploration and stable plan state. For freelance gig delivery and MVPs, choose Codex; for gnarly existing codebases and enterprise fleets, Devin is the stronger pick.</p>
+        <h3>How much do Devin and Codex cost in 2026?</h3>
+        <p>Both start at $20 per month. Devin's self-serve plans are Free ($0, local Desktop use), Pro ($20/month), Max ($200/month) and Teams ($80/month minimum plus $40 per developer seat), with Enterprise custom-billed in ACUs. OpenAI Codex is not sold separately: it rides on ChatGPT subscriptions — Go at $8, Plus at $20, Pro 5x at $100 and Pro 20x at $200 per month. The difference is metering: Devin bills extra usage as on-demand credits at API pricing, while Codex enforces rolling 5-hour windows (roughly 15-150 GPT-6 Sol messages on Plus) plus weekly caps.</p>
+        <h3>What is an ACU in Devin pricing?</h3>
+        <p>An ACU (Agent Compute Unit, sometimes Agentic Computing Unit) is Devin's normalized measure of agent work: virtual machine time, model inference and networking for roughly 15 minutes of active autonomous effort. The original Devin 2.0 Core plan sold ACUs at $2.25 each with a $20 monthly minimum, so an hour of Devin cost about $9. Since mid-2026, self-serve plans replaced the visible ACU rate card with a refreshing usage allowance plus on-demand credits at API pricing; ACU contracts now live on enterprise order forms, where admins can set per-organization ACU limits.</p>
+        <h3>Can Devin or Codex actually finish real client work?</h3>
+        <p>Yes, with supervision. Practitioners document delivery accelerations such as a mini-program that took 40-60 hours manually being 85% complete in 3 hours with an agent, and scraper jobs dropping from 8-12 hours to about 45 minutes. Freelance platform data shows AI coding and web-build orders up more than 17-fold year over year. The reliable pattern is agent-first, human-verified: the agent produces the draft, tests and diff; you review, fix the 10-15% it got wrong, and sign off. Plan on 1-3 review cycles per deliverable and budget them into your quote.</p>
+        <h3>Which is better for long refactoring or migration projects?</h3>
+        <p>Devin, by a wide margin. Its persistent cloud VM keeps repository exploration, tests and iteration state alive across hours-long tasks, while Codex tasks run in per-task containers that are better suited to 5-20 minute bursts. Reviewers consistently rate Devin the stronger pick for legacy codebase refactoring; Cognition markets exactly this use case, and enterprise customers have reported roughly 20x cost savings on complex migration work compared with staff engineers.</p>
+        <h3>Can I use OpenAI Codex for free?</h3>
+        <p>Partly. ChatGPT's free tier includes trial access to Codex, and the Codex CLI itself is open source, so you can run it against your own API key and pay per token. Real daily-driver usage needs a paid subscription: Go ($8/month) for light use, Plus ($20/month) as the default for developers, or Pro 5x/Pro 20x ($100/$200 per month) for heavy use. Devin similarly offers a free tier, but since the third quarter of 2026 the free tier covers the local Devin Desktop app only — cloud agents are paid-only.</p>
+        <h3>Do Devin and Codex replace human developers?</h3>
+        <p>No — they change what developers spend time on. Cognition says about 90% of its own codebase is now written by AI, yet the company still employs engineers to review, architect and own outcomes. The realistic 2026 division of labor: agents write first drafts, run tests and grind through mechanical migration work, while humans do requirement discovery, client communication, review and final quality gates. For freelancers, that means the money increasingly flows to finding clients and specifying work well, not typing every line yourself.</p>
+      </div>
+
+      <footer class="article-footer">
+      <p>&larr; Previous: <a href="/articles/best-ai-coloring-book-generators-2026.html">Best AI Coloring Book Generators 2026 (7 Tested)</a></p>
+      
+      <p>Next up: <a href="/articles/storyworth-vs-remento-vs-autobiographer.html">StoryWorth vs Remento vs Autobiographer: AI Memoir Apps</a> &rarr;</p>
+      </footer>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>AI Tools Compared</h4>
+        <p>Independent, hands-on reviews of the AI tools people actually use to work and earn. No sponsored placements.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Reviews</h4>
+        <a href="/articles/devin-vs-codex.html">Devin vs Codex</a>
+        <a href="/articles/gradio-vs-streamlit.html">Gradio vs Streamlit</a>
+        <a href="/articles/n8n-cloud-vs-self-hosted.html">n8n Cloud vs Self-Hosted</a>
+        <a href="/articles/midjourney-vs-gpt-image-2.html">Midjourney vs GPT Image 2</a>
+        <a href="/articles/best-ai-short-drama-tools-2026.html">Best AI Short Drama Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="/#featured">All Reviews</a>
+        <a href="/#categories">Categories</a>
+        <a href="/articles/">All Articles</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI Tools Compared. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
